@@ -7,56 +7,61 @@
 <script type="text/javascript" src="{$_G['setting']['jspath']}forum_viewthread.js?{VERHASH}"></script>
 <script type="text/javascript">zoomstatus = parseInt($_G['setting']['zoomstatus']);var imagemaxwidth = '{$_G['setting']['imagemaxwidth']}';var aimgcount = new Array();</script>
 
+
 <!--frame_main-->
 <div class="frame_main public_width font_yahei text">
-
 <!--{template common/left_menu}-->
 	<div class="left">
-    	<div class="Hot_satin">
-        	<div class="title">热门段子</div>
-            <ul class="main">
+    
+    <!--Author_info-->
+    	<div class="Author_info">
+        	<a href="home.php?mod=auther&uid=$thread[authorid]" target="_blank"><img class="img" src="uc_server/avatar.php?uid={$thread[authorid]}&size=middle"></a>
+        	<div class="info_tag">
+            	<p class="name"><a href="home.php?mod=auther&uid=$thread['authorid']">$thread[author]</a></p>
+                <p class="autograph">$auither_jianjie</p>
+                <p class="Subscribe">
+                
+        <!--{if $dingyuele}-->
+         <a class="follow on" href="javascript:;" >已订阅</a>
+    
+       <!--{else}-->
+        <a href="home.php?mod=auther&uid=$thread['authorid']" {if $_G['uid']}onClick="dingyue($thread['authorid'],this)"{else} onclick="showWindow('login', this.href)"{/if}>订阅</a>
+       <!--{/if}-->
+                
+                </p>
+            </div>
+            <ul>
             
-            
-              <!--{loop $duanzilist $list}-->
-            	<li>
-                	<p><a href="home.php?mod=auther&uid=$list[authorid]"><img src="uc_server/avatar.php?uid={$list[authorid]}&size=middle">{$list[author]}</a></p>
-                    <p><a href="forum.php?mod=viewthread&tid=$list[tid]">{$thread[message]}</a></p>
-                    <p><a href="forum.php?mod=viewthread&tid=$list[tid]" class="evaluate"><!--{if $thread[replies] > 0}-->{$list[replies]}<!--{else}-->0<!--{/if}-->评价</a><a href="javascript:;" class="praise $list[zanguo]" onClick="forumzan($list[tid],1,this)">{$list[ding]}</a></p>
-                </li>
-               <!--{/loop}-->
+            	<!--{loop $auither_arc_list $v}-->
+            	<li <!--{if $v[tid]==$thread['tid']}-->class="on"<!--{/if}-->><a href="forum.php?mod=viewthread&tid=$v[tid]"><span>$v[subject]</a></span></li>
+                <!--{/loop}-->
+                
+                
             </ul>
         </div>
+    <!--Author_info END-->
+    
+    
+    
+   
+    <!--{template common/left_article}-->
+    
+
     </div>
     
     <div class="right">
-         <div class="public_position"><a href="/">首页</a>&nbsp;&nbsp;&gt;&nbsp;&nbsp;<a href="forum.php?mod=forumdisplay&fid=$_G['forum']['fid']">$_G['forum']['name']</a>&nbsp;&nbsp;&gt;&nbsp;&nbsp;正文</div>
+        <div class="public_position"><a href="/">首页</a>&nbsp;&nbsp;&gt;&nbsp;&nbsp;<a href="forum.php?mod=forumdisplay&fid=$_G['forum']['fid']">$_G['forum']['name']</a>&nbsp;&nbsp;&gt;&nbsp;&nbsp;正文</div>
         <div class="details_main">
-        	
+        	<h1>$thread[subject]</h1>
+            <p class="details_author"><a href="home.php?mod=auther&uid=$thread['authorid']"><img src="uc_server/avatar.php?uid={$thread[authorid]}&size=middle">$thread[author]</a><span class="time">$thread['dateline']</span>
             
-            <div class="details_Satin_content">$thread[message]
+            {if $threadsortshow['optionlist']['laiyuan']['value']}<span>来源：$threadsortshow['optionlist']['laiyuan']['value']</span>{/if}
             
-            </div>
+            </p>
             
-            <div class="praise_despise"><a href="javascript:;" class="praise $zanguo" onClick="forumzan($thread[tid],1,this)">$thread[ding]</a><a href="javascript:;" class="despise $bishiguo" onClick="forumzan($thread[tid],2,this)">$thread[bishi]</a></div>
-            
-             <div class="details_function">
-             <p class="details_author"><a href="home.php?mod=auther&uid=$thread[authorid]"><img src="uc_server/avatar.php?uid={$thread[authorid]}&size=middle">$thread[author]</a><span class="time">$thread['dateline']</span><!--{if $post['authorid'] != $_G['uid']}-->
-							<a href="javascript:;" class="complain" onclick="showWindow('miscreport$thread[pid]', 'misc.php?mod=report&rtype=post&rid=$thread[pid]&tid=$_G[tid]&fid=$_G[fid]', 'get', -1);return false;">{lang report}</a>
-						<!--{/if}--></p>
-           
-                <p></p>
-                <p><span class="share">分享（$thread[sharetimes]）：</span><span class="bdsharebuttonbox"><a href="#" class="bds_sqq" data-cmd="sqq" title="分享到QQ好友"></a><a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a><a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a><a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a><a href="#" class="bds_tqq" data-cmd="tqq" title="分享到腾讯微博"></a></span>
-                
-               
-                <a href="home.php?mod=spacecp&ac=favorite&type=thread&id=$_G[tid]&formhash={FORMHASH}"  {if $_G['uid']}onclick="collection_arc($thread[tid],this)"{else} onclick="showWindow('login', this.href)"{/if}  class="collection $thread[shoucang]">收藏（<font>$thread[favtimes]</font>）</a>
-                </p>
-                
-             </div>
-            <span>
-          <!--{if (($_G['forum']['ismoderator'] && $_G['group']['alloweditpost'] && (!in_array($post['adminid'], array(1, 2, 3)) || $_G['adminid'] <= $post['adminid'])) || ($_G['forum']['alloweditpost'] && $_G['uid'] && ($post['authorid'] == $_G['uid'] && $_G['forum_thread']['closed'] == 0) && !(!$alloweditpost_status && $edittimelimit && TIMESTAMP - $post['dbdateline'] > $edittimelimit)))}-->
-						
-                        </span>
+                       
                         <!--{if $modmenu['thread']}-->
+                        
 	<div id="modmenu" class="xi2 pbm">
     <!--{if (($_G['forum']['ismoderator'] && $_G['group']['alloweditpost'] && (!in_array($post['adminid']) || $_G['adminid'] <= $post['adminid'])) || ($_G['forum']['alloweditpost'] && $_G['uid'] && ($post['authorid'] == $_G['uid'] && $_G['forum_thread']['closed'] == 0) && !(!$alloweditpost_status && $edittimelimit && TIMESTAMP - $post['dbdateline'] > $edittimelimit)))}-->
 						<a  href="forum.php?mod=post&action=edit&fid=$_G[fid]&tid=$_G[tid]&pid=$thread['pid']{if !empty($_GET[modthreadkey])}&modthreadkey=$_GET[modthreadkey]{/if}&page=$page"><!--{if $_G['forum_thread']['special'] == 2 && !$post['message']}-->{lang post_add_aboutcounter}<span class="pipe">|</span><!--{else}-->{lang edit}</a><span class="pipe">|</span><!--{/if}--><!--{/if}-->
@@ -86,9 +91,41 @@
 		<!--{hook/viewthread_modoption}-->
 	</div>
 <!--{/if}-->
+
+			
+            <!--{if $threadsortshow[optionlist]}-->
+            <p class="details_tag">[摘要]&nbsp;$threadsortshow['optionlist']['zhaiyao']['value']</p>
+            <!--{/if}-->
+            <div class="details_content hidden">
+            	$thread[message]
+            </div>
+            
+             <div class="details_function">
+             	<p><span  class="Keyword">
+                
+                <!--{if $thread[tags]}-->
+					<!--{eval $tagi = 0;}-->
+					<!--{loop $thread[tags] $var}-->
+						<a title="$var[1]" href="portal.php?keyword=$var[1]" target="_blank">$var[1]</a>
+						<!--{eval $tagi++;}-->
+					<!--{/loop}-->
 				<!--{/if}-->
-           
-          <div class="details_evaluate">
+              &nbsp;
+                
+                </span>
+                
+                
+							<a href="javascript:;" class="complain" onclick="showWindow('miscreport$thread[pid]', 'misc.php?mod=report&rtype=post&rid=$thread[pid]&tid=$_G[tid]&fid=$_G[fid]', 'get', -1);return false;">{lang report}</a>
+						
+                
+                </p>
+                <p></p>
+                <p><span class="share">分享（$thread[sharetimes]）：</span><span class="bdsharebuttonbox"><a href="#" class="bds_sqq" data-cmd="sqq" title="分享到QQ好友"></a><a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a><a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a><a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a><a href="#" class="bds_tqq" data-cmd="tqq" title="分享到腾讯微博"></a></span>
+                <a href="home.php?mod=spacecp&ac=favorite&type=thread&id=$_G[tid]&formhash={FORMHASH}"  {if $_G['uid']}onclick="collection_arc($thread[tid],this)"{else} onclick="showWindow('login', this.href)"{/if}  class="collection $thread[shoucang]">收藏（<font>$thread[favtimes]</font>）</a>
+               
+                <a href="javascript:;" class="despise $thread[bishiguo]" onClick="forumzan($thread[tid],2,this)">$thread[bishi]</a><a href="javascript:;" class="praise $thread[zanguo]" onClick="forumzan($thread[tid],1,this)">$thread[ding]</a></p>
+             </div>
+             <div class="details_evaluate">
            		<div class="evaluate_title">网友评价<span>{$commnetnum}条</span></div>
                 <div class="evaluate_content">
                 	<!--{if $fastpost}-->
@@ -114,11 +151,87 @@
                     <div class="info_page"><a href="javascript:;">点击加载更多</a></div>
                 </div>
            </div>
+           <div class="details_relevant">
+           
+           	
+           		<div class="relevant_title">相关阅读</div>
+                <ul class="listBox">
+                    <!--{eval $i = 0;}-->
+        <!--{loop $toutiaolist $thread}-->
+            <!--{eval $i++;}-->
+            <li>
+                
+            <!--{if $thread[attachment] == 2}-->
+                <!--{if $thread['piccount'] >= 1 && $thread['piccount'] < 4}-->
+                	<div class="pic  <!--{if $thread[fid] == 40}-->video<!--{/if}-->"><!--{subtemplate ceo/forumdisplay_list_pic}--><!--{if $thread[fid] == 40}--><span class="time">{$thread[videotime]}</span><!--{/if}--></div>
+                <div class="data">
+                	<div class="box">
+                    	<div class="title"><a href="forum.php?mod=viewthread&tid=$thread[tid]"><span>{$thread[subject]}</span></a></div>
+                        <!--{if $thread[message]}--><div class="abstract">{$thread['message']}</div><!--{/if}-->
+                        <div class="info"><a href="home.php?mod=auther&uid={$thread[authorid]}"><img src="uc_server/avatar.php?uid={$thread[authorid]}&size=middle">{$thread[author]}</a><a href="forum.php?mod=viewthread&tid=$thread[tid]"><!--{if $thread[replies] > 0}-->{$thread[replies]}<!--{else}-->0<!--{/if}-->评价</a><a>{$thread[dateline]}</a><a href="javascript:;" onClick="buganxingqu($thread[tid],this)" class="del"><span>不感兴趣</span></a></div>
+                    </div>
+                </div>
+                	
+               
+                <!--{elseif  $thread['piccount'] >= 4}-->
+                	<div class="data img">
+                	<div class="title"><a href="forum.php?mod=viewthread&tid=$thread[tid]"><span>{$thread[subject]}</span></a></div>
+                	<div class="box">
+                    	<div class="img">
+                         <!--{eval $iii=0;}-->
+                        <!--{loop $thread['pics'] $key}--> 
+                         <!--{eval $iii++;}-->                       
+    <a  href="forum.php?mod=viewthread&tid=$thread[tid]" target="_blank">
+        <img src="$key">
+        <!--{if $iii==4}-->
+        <span class="pic_number">{$thread['piccount']}图</span>
+         <!--{/if}-->
+    </a>
+        <!--{/loop}-->
+                      </div>
+                       <div class="info"><a href="home.php?mod=auther&uid={$thread[authorid]}"><img src="uc_server/avatar.php?uid={$thread[authorid]}&size=middle">{$thread[author]}</a><a href="forum.php?mod=viewthread&tid=$thread[tid]"><!--{if $thread[replies] > 0}-->{$thread[replies]}<!--{else}-->0<!--{/if}-->评价</a><a>{$thread[dateline]}</a><a href="javascript:;" onClick="buganxingqu($thread[tid],this)" class="del"><span>不感兴趣</span></a></div>
+                    </div>
+                </div>
+                	
+                	
+                  
+                <!--{else}-->
+                  
+               <div class="data words">
+                	<div class="box">
+                    	<div class="title"><a href="forum.php?mod=viewthread&tid=$thread[tid]"><span>{$thread[subject]}</span></a></div>
+                       <!--{if $thread[message]}--><div class="abstract">{$thread['message']}</div><!--{/if}-->
+                         <div class="info"><a href="home.php?mod=auther&uid={$thread[authorid]}"><img src="uc_server/avatar.php?uid={$thread[authorid]}&size=middle">{$thread[author]}</a><a href="forum.php?mod=viewthread&tid=$thread[tid]"><!--{if $thread[replies] > 0}-->{$thread[replies]}<!--{else}-->0<!--{/if}-->评价</a><a>{$thread[dateline]}</a><a href="javascript:;" onClick="buganxingqu($thread[tid],this)" class="del"><span>不感兴趣</span></a></div>
+                    </div>
+                </div>
+                <!--{/if}-->
+            <!--{else}-->
+            
+            		<div class="data words">
+                	<div class="box">
+                    	<div class="title"><a href="forum.php?mod=viewthread&tid=$thread[tid]"><span>{$thread[subject]}</span></a></div>
+                       <!--{if $thread[message]}--><div class="abstract">{$thread['message']}</div><!--{/if}-->
+                         <div class="info"><a href="home.php?mod=auther&uid={$thread[authorid]}"><img src="uc_server/avatar.php?uid={$thread[authorid]}&size=middle">{$thread[author]}</a><a href="forum.php?mod=viewthread&tid=$thread[tid]"><!--{if $thread[replies] > 0}-->{$thread[replies]}<!--{else}-->0<!--{/if}-->评价</a><a>{$thread[dateline]}</a><a href="javascript:;" onClick="buganxingqu($thread[tid],this)" class="del"><span>不感兴趣</span></a></div>
+                    </div>
+                </div>
+                
+                
+                
+            <!--{/if}-->
+                
+            </li>
+        <!--{/loop}-->
+              </ul>
+           </div>
+           
+           
            
 
         </div>
     </div>
 </div>
+<!--frame_main END-->
+
 
 
 
@@ -157,9 +270,30 @@
 	</div>
 <!--{/if}-->
 
-<!--frame_main END-->
-<script type="text/javascript">
-        var urlpage = 'forum.php?mod=viewthread&tid=$_G[tid]&ordertype={if $ordertype != 2}1{else}2{/if}';
+
+
+
+<!--complain_alert-->
+<div class="alert-background"></div>
+<div class="complain_alert font_yahei">
+	<div class="complain_title">举报此人<a href="javascript:;" class="close">×</a></div>
+    <div class="complain_content">
+    	<p><label><input type="radio" name="complain" value="淫秽色情"><span>淫秽色情</span></label></p>
+        <p><label><input type="radio" name="complain" value="营销广告"><span>营销广告</span></label></p>
+        <p><label><input type="radio" name="complain" value="恶意攻击谩骂"><span>恶意攻击谩骂</span></label></p>
+        <p><label><input type="radio" name="complain" class="textarea" value=""><span>我有话要说</span></label></p>
+        <textarea class="font_yahei" id="jubaonr"></textarea>
+    </div>
+    <div class="alert-button">
+       <a href="javascript:void(0)" class="close">取消</a>
+       <a href="javascript:void(0)" id="alert-post" class="a2" data-id="">确认提交</a>
+    </div>
+</div>
+<!--complain_alert END-->
+
+</body>
+ <script type="text/javascript">
+          var urlpage = 'forum.php?mod=viewthread&tid=$_G[tid]&ordertype={if $ordertype != 2}1{else}2{/if}';
         var pages=$_G['page'];
         var allpage=$totalpage;
 		jq(function(){

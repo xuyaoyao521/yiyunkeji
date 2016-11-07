@@ -4,9 +4,9 @@
 define('UC_CONNECT', 'mysql');
 
 define('UC_DBHOST', 'localhost');
-define('UC_DBUSER', 'yiyunkeji');
+define('UC_DBUSER', 'root');
 define('UC_DBPW', 'root');
-define('UC_DBNAME', 'root');
+define('UC_DBNAME', 'yiyunkeji');
 define('UC_DBCHARSET', 'utf8');
 define('UC_DBTABLEPRE', '`yiyunkeji`.yykj_ucenter_');
 define('UC_DBCONNECT', 0);

@@ -1,6 +1,6 @@
 <?php if(!defined('IN_DISCUZ')) exit('Access Denied'); 
 0
-|| checktplrefresh('./template/pc/common/header.htm', './template/default/common/header_common.htm', 1478488397, '5', './data/template/6_5_common_header_portal_index.tpl.php', './template/pc', 'common/header_portal_index')
+|| checktplrefresh('./template/pc/common/header.htm', './template/default/common/header_common.htm', 1478497827, '5', './data/template/6_5_common_header_portal_index.tpl.php', './template/pc', 'common/header_portal_index')
 ;?>
 <!doctype html>
 <html>

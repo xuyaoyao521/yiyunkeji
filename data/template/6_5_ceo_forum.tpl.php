@@ -1,6 +1,6 @@
 <?php if(!defined('IN_DISCUZ')) exit('Access Denied'); 
 0
-|| checktplrefresh('./template/pc/ceo/forum.htm', './template/pc/ceo/forumdisplay_list_pic.htm', 1478490215, '5', './data/template/6_5_ceo_forum.tpl.php', './template/pc', 'ceo/forum')
+|| checktplrefresh('./template/pc/ceo/forum.htm', './template/pc/ceo/forumdisplay_list_pic.htm', 1478497832, '5', './data/template/6_5_ceo_forum.tpl.php', './template/pc', 'ceo/forum')
 ;?>
 
         <?php $i = 0;?>        <?php if(is_array($toutiaolist)) foreach($toutiaolist as $thread) { ?>            <?php $i++;?>            <li>
