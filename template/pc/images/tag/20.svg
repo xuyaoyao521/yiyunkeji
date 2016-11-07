@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #ff5f67;
+        fill-rule: evenodd;
+      }
+    </style>
+  </defs>
+  <path id="history_channel.svg" class="cls-1" d="M411,841a10,10,0,1,1,10-10A10,10,0,0,1,411,841Zm4.9-8.5-3.9-2.251V826a1,1,0,0,0-2,0v5a1,1,0,0,0,1,1c0.009,0,.016,0,0.025,0l3.874,2.237A1,1,0,0,0,415.9,832.5Z" transform="translate(-401 -821)"/>
+</svg>

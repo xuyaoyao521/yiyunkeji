@@ -1,0 +1,12 @@
+<!--{if $imagelist}-->
+	<!--{loop $imagelist $image}-->
+    <!--{eval $imgid = $image[aid]}-->
+    <!--{eval $ubbarrtach = '[attachimg]' . $imgid . '[/attachimg]'}-->
+<li>
+<span aid="$image[aid]" class="del"><a href="javascript:;"><img src="{STATICURL}image/mobile/images/icon_del.png"></a></span>
+<span class="p_img"><a href="javascript:insertAtCursor(seditorkey,'$ubbarrtach');"><img style="height:54px;width:54px;" id="aimg_$image[aid]" title="$image[filename]" src="{echo getforumimg($image[aid], 1, 54, 54, 'fixnone')}" /></a></span>
+<input type="hidden" name="attachnew[$imgid][description]" />
+</li>
+
+	<!--{/loop}-->
+<!--{/if}-->

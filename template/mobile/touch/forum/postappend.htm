@@ -1,0 +1,33 @@
+<!--{template common/header}-->
+<link rel="stylesheet" href="template/mobile/toutiao_mobile/css/forum/post.css" type="text/css" media="all">
+<script>SetWebTitle("{lang postappend}");SetTopLeftNav("backpage");</script>
+
+<div class="postbox box_bg">
+<div class="post_from cl">
+
+<form method="post" autocomplete="off" id="postappendform" action="forum.php?mod=misc&action=postappend&tid=$post[tid]&pid=$_GET[pid]&extra=$extra{if !empty($_GET[page])}&page=$_GET[page]{/if}&postappendsubmit=yes&infloat=yes" onsubmit="this.postappendmessage.value = parseurl(this.postappendmessage.value);{if !empty($_GET['infloat'])}ajaxpost('postappendform', 'return_$_GET['handlekey']', 'return_$_GET['handlekey']', 'onerror');return false;{/if}">
+		<input type="hidden" name="formhash" id="formhash" value="{FORMHASH}" />
+		<input type="hidden" name="handlekey" value="$_GET['handlekey']" />
+		<div class="mbm">
+			<li>
+				<div class="area">
+					<textarea rows="3" cols="50" name="postappendmessage" id="postappendmessage" onKeyUp="strLenCalc(this, 'checklen_append')" onKeyDown="seditor_ctlent(event, '$(\'postappendsubmit\').click();')" tabindex="2" class="pt" style="overflow: auto"></textarea>
+				</div>
+				<script type="text/javascript" reload="1">
+					$('postappendmessage').focus();
+				</script>
+			</li>
+			<!--{if $secqaacheck || $seccodecheck}-->
+				<!--{block sectpl}--><sec>: <span id="sec<hash>" onclick="showMenu({'ctrlid':this.id,'win':'{$_GET[handlekey]}'})"><sec></span><div id="sec<hash>_menu" class="p_pop p_opt" style="display:none"><sec></div><!--{/block}-->
+				<div class="mtm"><!--{subtemplate common/seccheck}--></div>
+			<!--{/if}-->
+		</div>
+		<div class="cl">
+			<span class="y" style="margin-top:3px;">{lang comment_message1} <strong id="checklen_append">200</strong> {lang comment_message2}</span>
+			<button type="submit" id="postappendsubmit" class="btn_default btn_submit" value="true" name="postappendsubmit" tabindex="3"><span>{lang publish}</span></button>
+		</div>
+</form>
+
+</div>
+</div>
+<!--{template common/footer}-->

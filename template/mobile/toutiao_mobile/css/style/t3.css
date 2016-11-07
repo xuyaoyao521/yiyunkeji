@@ -1,0 +1,44 @@
+/*黑色[#26282d]*/
+@charset "utf-8";
+html,.content{background:#f8f8f8;}
+.box_bg{background:#fff !important;}
+.header_bg{background:#26282d !important;color:#fff; !important;}
+.header_bg a{color:#fff; !important;}
+.a, .a a, .pg strong {background-color:#26282d !important;color:#fff !important;}
+.button2,.btn_default,.btn_submit,.btn_search { border: 1px solid #26282d; background: #26282d; color:#fff; }
+
+/******************/
+.box_br{ border-top:1px solid #d8d8d8; border-bottom:1px solid #d8d8d8;}
+.box_brt{ border-top:1px solid #d8d8d8;}
+.box_brb{ border-bottom:1px solid #d8d8d8;}
+
+body {color:#505050;}
+a{ color:#505050;}
+h1,h3,h3 a{ color:#222222;}
+.ceo_info, .item_info {color:#999;}
+input,textarea,select{border:1px solid #ddd;background:#fff;color:#999;}
+
+.postlist, .ctt{background:#f8f8f8;}
+.postlist .li_brb, .ctt .li_brb{border-bottom:1px solid #e8e8e8;}
+.plc .pi .message,.plc .pi .message p,.ctt .mess,.ctt .mess p{color:#505050;}
+.plc .pi .message_pl, .plc .pi .message_pl p{color:#6c6c6c;} 
+.plc a{color:#999;}
+.plc a.author{ color:#406599;}
+.plc em a, .ctt em a{color:#406599;}
+.plc p{color:#d4d4d4;}
+.titls dt {border-bottom-color:#26282d; color:#505050;}
+
+.catlist h1:before{ background:#26282d;}
+.catlist ul li{border-bottom:1px solid #e8e8e8;}
+
+.tabox .hd ul li{ border-bottom:1px solid #d8d8d8;}
+.tabox .hd ul li.on a{ color:#26282d; border-bottom:2px solid #26282d;  }
+.tabBox .bd li a {border: 1px solid #26282d;color:#26282d;}
+
+.nv li, .nv li a{color:#fff;}
+.nv_menu li a{ border:1px dashed #fff;}
+
+.threadlist li a.act_link{border-bottom:1px solid #e8e8e8;}
+.pg_space #alist li{ border-bottom:1px solid #e8e8e8;}
+
+

@@ -1,0 +1,52 @@
+body,.content{background:none;}
+html {
+    min-height: 100%;
+    background-color: #ed344a;
+	background-image: url(../../img/bg/bg.jpg);
+	background-repeat:no-repeat;
+	background-position: 0 0;
+    background-size: 100% 100%;
+}
+
+.usertop{height: 14px; line-height: 14px; padding: 10px; font-size: 14px;}
+.usertop a{color:#fff;}
+.usertop a i{font-size: 14px;}
+.userbox{margin: 30px 0 50px 0;}
+/**wechat end**/
+.loginlogo{text-align:center; margin:0 auto;}
+.loginlogo img{max-width:100%;}
+.loginlogo a{text-align:center;}
+/*******member******/
+.loginbox{margin:0 auto; width:300px;background:none;}
+.loginbox p{line-height:26px;margin:0px 10px 5px;font-size:14px;color:#AFAFAF;}
+.login_from{padding:10px;}
+.login_from li{padding:5px 0px;color:#AFAFAF;font-size:14px;}
+/**/
+.btn_login .btn_default,.btn_register .btn_default{width:100%;}
+.btn_login .btn_default,.btn_register .btn_default{border: 1px solid #4078c0; background: #4078c0; color:#fff;}
+.btn_qq_login a{border:1px solid #508108;color:#fff;background:#669f0c;}
+.p_fre{width:100% !important;}
+.sel_list{width:100%;border:0;padding:2px 4px;font-size:14px;font-weight:700;}
+.login_select{display:block;position:relative;width:100%;height:35px;line-height:35px;border:1px solid #ddd;background:#fff;color:#999;padding:0px 6px;border-radius:3px;box-sizing: border-box;}
+.login_select .login-btn-inner{display:block;font-size:14px;font-weight:700;min-width:0.75em;overflow:hidden;position:relative;text-overflow:ellipsis;white-space:nowrap;}
+.login_select select{position:absolute;top:0;left:0;width:100%;z-index:2;cursor:pointer;max-height:100%;min-height:100%;opacity:0.0001;}
+.login_btn_text{float:left;}
+.login_select .icon-arrow{background:url(../../img/icon_arrow.png) no-repeat 10px 12px;width:20px;height:35px;float:right;}
+.log_tit{text-align:center;font-size:16px;font-weight:700;line-height:45px;}
+.icon_close{background:url(../img/icon_close.png) no-repeat 0 0;width:13px;height:11px;overflow:hidden;display:block;margin-top:17px;}
+/**wechat start**/
+.btn_qq_logintext{margin:10px 0;}
+.btn_qq_logintext a.text_qqlogin{width:120px;height:25px;display:block;line-height:2000px;overflow:hidden;}
+/**/
+.q_reg a{color:#A5A5A5;font-size:14px;}
+.s_code{color:#A5A5A5;}
+.s_code .px{color:#A5A5A5;}
+.s_code .px:focus{color:#4C4C4C;}
+a.other_c{color:#A5A5A5;margin-left:5px;}
+/**/
+.btn_login,.btn_qq_login,.btn_register{padding:0px 10px;}
+.sec_code.mbm{margin-bottom: 0px !important;}
+
+.regfield { position:relative;}
+.regfield input {width:100%; padding-left:60px;}
+.regfield .labs { position:absolute; top:10px; left:6px; display:inline-block;color: #999; font-size:15px;}

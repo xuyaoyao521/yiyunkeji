@@ -1,0 +1,53 @@
+/*活动*/
+.px, .txt {padding: 0px;border: 1px solid #ddd;}
+/*topbox*/
+.topbox{ position:fixed; left:0px; top:50px; width:100%; z-index:20; padding-top:10px;}
+.topbox_list{ padding:0 20px 20px 20px;}
+.topbox_list ul{ background:#ac493d; height:40px; line-height:40px;-moz-border-radius:10px; -webkit-border-radius:10px; border-radius:10px; border:1px solid #ac493d}
+.topbox_list ul li{ float:left; width:33.33%}
+.topbox_list ul li a{ text-align:center; display:block; color:#fff; -moz-border-radius:10px; -webkit-border-radius:10px; border-radius:10px; font-size:16px}
+.topbox_list ul li.a a{ background:#f65d5b}
+.topbox_list_2 ul li{ width:50%}
+.topbox_list_5 ul li{ width:20%}
+
+/*joinbox*/
+.joinbox{  -moz-border-radius:5px; -webkit-border-radius:5px; border-radius:5px; background:#f0f0f0; border:1px solid #e5e5e5; margin:15px 0; }
+.joinbox .box_header{ height:40px; line-height:40px; padding:5px 10px; font-size:18px}
+.joinbox .box_content{ padding:0 0  0 0 ; }
+.joinbox .px{ height:24px; line-height:24px; font-size:14px;}
+.joinbox .fp{ min-height:24px; line-height:24px; padding:8px 10px; border-bottom:1px solid #e5e5e5; font-size:14px;}
+.joinbox .fp_li span{ font-size:14px}
+.joinbox .fp_li{ padding:8px 10px 8px 80px;}
+.joinbox .fp_li label { display:block;}
+.joinbox .fp_li em.arrow{ width:24px; height:24px;}
+.joinbox .post_form_area {}
+
+/*--------------------special--------------------*/
+/*thread_btn*/
+.thread_btn{ height:50px; line-height:50px;}
+.thread_btn a{ padding:5px 10px; float:left;}
+.thread_btn span{ padding-left:10px;}
+/*act_info*/
+.act_info{ padding-bottom:10px;}
+.act_info img{ width:100%; margin-bottom:10px;}
+.act_info table { border:1px solid #ddd; width:100%; }
+.act_info table th{ width:80px; text-align:left; padding:10px; line-height:22px; font-size:14px; border-bottom:1px solid #ddd; background:#f6f6f6}
+.act_info table td{ padding:10px; line-height:22px; border-left:1px solid #ddd; border-bottom:1px solid #ddd; font-size:14px}
+.act_info .xg1 { color:#36F !important; }
+
+/*thread_block*/
+.thread_block{ margin:0 0 15px 0;}
+.thread_block h3{ font-size:14px; font-weight:400; line-height:40px;color: #ff6600;}
+
+/*applylist*/
+.applylist{}
+.applylist li{ padding:5px 10px 5px 60px;position: relative; display:block; border-bottom: 1px solid #ddd; border-left: 1px solid #ddd; border-right: 1px solid #ddd; background:#fafafa;}
+.applylist li:first-child { border-top: 1px solid #ddd;}
+.applylist li div.avatar{ position:absolute; width:48px; top:10px; left:5px;}
+.applylist li div.info{ float:left;}
+.applylist li img{ width:48px; height:48px; vertical-align:top; }
+.applylist li h4{ font-size:16px; padding: 5px 0; line-height:22px;}
+.applylist li h4 a { color: #000;}
+.applylist li h4 span{ font-size:12px; padding-left:5px; font-weight:400}
+.applylist li p.message{ line-height:1.5; font-size:14px !important; padding:0 0 0 0 !important;}
+.applylist li .date{ float:right; font-size:12px}

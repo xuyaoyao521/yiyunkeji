@@ -1,0 +1,24 @@
+<!--{template common/header}-->
+<link rel="stylesheet" href="template/mobile/toutiao_mobile/css/forum/forumdisplay.css" type="text/css" media="all">
+
+<div class="bm_c box_bg">
+    <div class="pass b_p">{lang forum_password_require}</div>
+    <div class="search">
+        <form method="post" autocomplete="off" action="forum.php?mod=forumdisplay&fid=$_G[fid]&action=pwverify">
+            <input type="hidden" name="formhash" value="{FORMHASH}" />
+            <table width="100%" cellspacing="0" cellpadding="0">
+                <tbody>
+                    <tr>
+                        <td>						
+                            <input type="password" name="pw" value="" class="txt">
+                        </td>
+                        <th><button type="submit" name="loginsubmit" value="true" class="btn_search" ><strong>{lang submit}</strong></button></th>
+                    </tr>
+                </tbody>
+            </table>
+        </form>
+    </div>
+    <div class="goback"><a href="forum.php">{lang return_forum}</a></div>
+</div>
+
+<!--{template common/footer}-->

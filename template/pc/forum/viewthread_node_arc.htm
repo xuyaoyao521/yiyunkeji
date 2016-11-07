@@ -1,0 +1,135 @@
+<!--{eval
+$needhiddenreply = ($hiddenreplies && $_G['uid'] != $post['authorid'] && $_G['uid'] != $_G['forum_thread']['authorid'] && !$post['first'] && !$_G['forum']['ismoderator']);
+$postshowavatars = !($_G['setting']['bannedmessages'] & 2 && ($post['memberstatus'] == '-1' || ($post['authorid'] && !$post['username']) || ($post['groupid'] == 4 || $post['groupid'] == 5) || ($post['status'] & 1)));
+}-->
+
+
+
+
+<!--{if $post[first]!=1}-->
+
+<dl class="info">
+                    	<dt><p><img src="uc_server/avatar.php?uid={$post[authorid]}&size=middle"></p><p>$post[author]</p></dt>
+                        <dd>
+                        	<div class="info_title">$post[dateline]<i>|</i><!--{if $post['status'] & 8}-->{lang from_mobile}<!--{else}-->{lang from_pc_computer}<!--{/if}--></div>
+                            <div class="info_content">
+            <!--{if $post['first']}--><!--{if $_G['forum_thread']['replycredit'] > 0 || $rushreply}-->
+            <div class="thread_info">
+            <dl>
+            	<dt>
+                <strong>{$_G['forum_thread']['replycredit']} {$_G['setting']['extcredits'][$_G[forum_thread][replycredit_rule][extcreditstype]][unit]}{$_G['setting']['extcredits'][$_G[forum_thread][replycredit_rule][extcreditstype]][title]}</strong>
+                </dt>
+                <dd>
+                {lang thread_replycredit_tips1} {lang thread_replycredit_tips2}<!--{if $_G['forum_thread']['replycredit_rule'][random] > 0}--><span class="xg1">{lang thread_replycredit_tips3}</span><!--{/if}-->
+                </dd>
+            </dl>
+            </div>
+            <!--{/if}--><!--{/if}-->
+                	<!--{if $post['warned']}-->
+                        <span class="grey quote">{lang warn_get}</span>
+                    <!--{/if}-->
+                    <!--{if !$post['first'] && !empty($post[subject])}-->
+                        <h2><strong>$post[subject]</strong></h2>
+                    <!--{/if}-->
+                    <!--{if $_G['adminid'] != 1 && $_G['setting']['bannedmessages'] & 1 && (($post['authorid'] && !$post['username']) || ($post['groupid'] == 4 || $post['groupid'] == 5) || $post['status'] == -1 || $post['memberstatus'])}-->
+                        <div class="grey quote">{lang message_banned}</div>
+                    <!--{elseif $_G['adminid'] != 1 && $post['status'] & 1}-->
+                        <div class="grey quote">{lang message_single_banned}</div>
+                    <!--{elseif $needhiddenreply}-->
+                        <div class="grey quote">{lang message_ishidden_hiddenreplies}</div>
+                    <!--{elseif $post['first'] && $_G['forum_threadpay']}-->
+						<!--{template forum/viewthread_pay}-->
+					<!--{else}-->
+
+                    	<!--{if $_G['setting']['bannedmessages'] & 1 && (($post['authorid'] && !$post['username']) || ($post['groupid'] == 4 || $post['groupid'] == 5))}-->
+                            <div class="grey quote">{lang admin_message_banned}</div>
+                        <!--{elseif $post['status'] & 1}-->
+                            <div class="grey quote">{lang admin_message_single_banned}</div>
+                        <!--{/if}-->
+                        <!--{if $post['first'] &&  $_G['forum_thread']['price'] > 0 && $_G['forum_thread']['special'] == 0}-->
+                        <div class="locked">
+                            {lang pay_threads}: <strong>$_G[forum_thread][price] {$_G['setting']['extcredits'][$_G['setting']['creditstransextra'][1]][unit]}{$_G['setting']['extcredits'][$_G['setting']['creditstransextra'][1]][title]} </strong><em class="y"><a href="forum.php?mod=misc&action=viewpayments&tid=$_G[tid]" >{lang pay_view}</a></em>
+                        </div>
+                        <!--{/if}-->
+
+                        <!--{if $post['first'] && $threadsort && $threadsortshow && $ceo_sortopen}-->
+                            <!--{template forum/viewthread_sort}-->
+                        <!--{/if}-->
+                        
+                        <!--{if $post['first']}-->
+                            <!--{if !$_G[forum_thread][special]}-->
+                                $post[message]
+                            <!--{elseif $_G[forum_thread][special] == 1}-->
+                                <!--{template forum/viewthread_poll}-->
+                            <!--{elseif $_G[forum_thread][special] == 2}-->
+                                <!--{template forum/viewthread_trade}-->
+                            <!--{elseif $_G[forum_thread][special] == 3}-->
+                                <!--{template forum/viewthread_reward}-->
+                            <!--{elseif $_G[forum_thread][special] == 4}-->
+                                <!--{template forum/viewthread_activity}-->
+                            <!--{elseif $_G[forum_thread][special] == 5}-->
+                                <!--{template forum/viewthread_debate}-->
+                            <!--{elseif $threadplughtml}-->
+                                $threadplughtml
+                                $post[message]
+                            <!--{else}-->
+                            	$post[message]
+                            <!--{/if}-->
+                        <!--{else}-->
+                            $post[message]
+                        <!--{/if}-->                       
+
+					<!--{/if}-->
+                <!--{if $_G['setting']['mobile']['mobilesimpletype'] == 0 || !$post[first]}-->
+                <!--{if $post['attachment']}-->
+                   <div class="grey quote">
+                   {lang attachment}: <em><!--{if $_G['uid']}-->{lang attach_nopermission}<!--{else}-->{lang attach_nopermission_login}<!--{/if}--></em>
+                   </div>
+                <!--{elseif $post['imagelist'] || $post['attachlist']}-->
+                   <!--{if $post['imagelist']}-->
+                    <!--{if count($post['imagelist']) == 1}-->
+                    <ul class="img_list cl vm">{echo showattach($post, 1)}</ul>
+                    <!--{else}-->
+                    <ul class="img_list cl vm">{echo showattach($post, 1)}</ul>
+                    <!--{/if}-->
+                    <!--{/if}-->
+                    <!--{if $post['attachlist']}-->
+                    <ul>{echo showattach($post)}</ul>
+                    <!--{/if}-->
+                <!--{/if}-->
+                <!--{/if}-->
+		
+                            <div class="info_function">
+                          
+                          
+                           
+                           
+                           <a href="javascript:;" onclick="plunzan($post[pid],this);return false;" title="点赞" class="$post[zanguo]"> <font id="review_support_$post[pid]"><!--{if $post[postreview][support]}-->$post[postreview][support]<!--{else}-->0<!--{/if}--></font></span>
+                           
+                            <!--{if (!$_G['uid'] || $allowpostreply) && !$needhiddenreply}-->
+						
+							<a  href="forum.php?mod=post&action=reply&fid=$_G[fid]&tid=$_G[tid]&repquote=$post[pid]&type=arc"  title="回复">回复</a>
+						
+					<!--{/if}-->
+                            <!--{if !$post['first'] && $modmenu['post']}-->
+				<span class="y">
+				<label for="manage$post[pid]">
+				<input type="checkbox" id="manage$post[pid]" class="pc" {if !empty($modclick)}checked="checked" {/if}onclick="pidchecked(this);modclick(this, $post[pid])" value="$post[pid]" autocomplete="off" />
+				{lang manage}
+				</label>
+				</span>
+			<!--{/if}-->
+                          
+                            <!--{if $post['authorid'] != $_G['uid']}-->
+							<a href="javascript:;" class="complain" onclick="showWindow('miscreport$post[pid]', 'misc.php?mod=report&rtype=post&rid=$post[pid]&tid=$_G[tid]&fid=$_G[fid]', 'get', -1);return false;">{lang report}</a>
+						<!--{/if}-->
+                        </div>
+                        </dd>
+</dl>
+<!--{/if}-->
+
+
+
+
+
+<!--{hook/viewthread_endline $postcount}-->

@@ -1,0 +1,56 @@
+/*红色（默认）*/
+@charset "utf-8";
+html,.content{background:#e8e8e8;}
+.box_bg, .wmt{background:#fff;}
+.header_bg{background:#ed344a;color:#fff;;}
+.header_bg a{color:#fff;;}
+.a, .a a, .pg strong {background-color:#ed344a !important;color:#fff !important;}
+.button2,.btn_default,a.btn_default,.btn_submit,.btn_search { border: 1px solid #ed344a; background: #ed344a; color:#fff; }
+
+/******************/
+.box_br{ border-top:1px solid #d8d8d8; border-bottom:1px solid #d8d8d8;}
+.box_brt{ border-top:1px solid #d8d8d8;}
+.box_brb{ border-bottom:1px solid #d8d8d8;}
+
+body {color:#505050;}
+a{ color:#505050;}
+h1,h3,h3 a{ color:#222222;}
+.ceo_info, .item_info {color:#999;}
+input,textarea,select{border:1px solid #ddd;background:#fff;color:#999;}
+
+.postlist, .ctt{background:#f8f8f8;}
+.postlist .li_brb, .ctt .li_brb{border-bottom:1px solid #e8e8e8;}
+.plc .pi .message,.plc .pi .message p,.ctt .mess,.ctt .mess p{color:#505050;}
+.plc .pi .message_pl, .plc .pi .message_pl p{color:#6c6c6c;} 
+.plc a{color:#999;}
+.plc a.author{ color:#406599;}
+.plc em a, .ctt em a{color:#406599;}
+.plc p{color:#d4d4d4;}
+.titls dt {border-bottom-color:#ed344a; color:#505050;}
+
+.catlist h1:before{ background:#ed344a;}
+.catlist ul li{border-bottom:1px solid #e8e8e8;}
+.catlist h3 span{color:#ed344a;}
+
+.tabox .hd ul li{ border-bottom:1px solid #d8d8d8;}
+.tabox .hd ul li.on a{ color:#ed344a; border-bottom:2px solid #ed344a;  }
+.tabBox .bd li a {border: 1px solid #ed344a;color:#ed344a;}
+
+.nv li, .nv li a{color:#fff;}
+.nv_menu li a{ border:1px dashed #fff;}
+
+.threadlist li a.act_link{border-bottom:1px solid #e8e8e8;}
+.pg_space #alist li{ border-bottom:1px solid #e8e8e8;}
+
+/*
+.pg_viewthread .header_bg{ background:#fff !important; color:#222; border-bottom:1px solid #b4b4b4;}
+.pg_viewthread .header_bg a{ color:#222;}
+.pg_post .header_bg{ background:#fff !important; color:#222; border-bottom:1px solid #b4b4b4;}
+.pg_post .header_bg a{ color:#222;}
+.pg_space .header_bg{ background:#fff !important; color:#222; border-bottom:1px solid #b4b4b4;}
+.pg_space .header_bg a{ color:#222;}
+.pg_spacecp .header_bg{ background:#fff !important; color:#222; border-bottom:1px solid #b4b4b4;}
+.pg_spacecp .header_bg a{ color:#222;}
+.pg_view .header_bg{ background:#fff !important; color:#222; border-bottom:1px solid #b4b4b4;}
+.pg_view .header_bg a{ color:#222;}
+*/

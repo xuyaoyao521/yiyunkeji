@@ -1,0 +1,62 @@
+<!--{template common/header}-->
+<style id="diy_style" type="text/css"></style>
+<div class="wp cl mtw">
+<div class="col0 z">
+    <div id="page-channel"><ul><!--[diy=diy_letnav]--><div id="diy_letnav" class="area"></div><!--[/diy]--></ul></div>
+</div>
+<div class="col1 z">
+	<div class="portal_picslide bp"><!--[diy=diy1]--><div id="diy1" class="area"></div><!--[/diy]--></div>
+    <!--[diy=diy_ad01]--><div id="diy_ad01" class="area"></div><!--[/diy]-->
+    <!--{template ceo/toutiao}-->
+
+</div>
+<div class="col2 y">
+	<div class="sd_btn bp"><!--[diy=diy_sd_btn]--><div id="diy_sd_btn" class="area"></div><!--[/diy]--></div>
+	<div class="mbm"><!--[diy=diy_ad11]--><div id="diy_ad11" class="area"></div><!--[/diy]--></div>
+	<div class="ceo_forum_hot bp"><!--[diy=diy3]--><div id="diy3" class="area"></div><!--[/diy]--></div>
+	<div class="mbm"><!--[diy=diy_ad12]--><div id="diy_ad12" class="area"></div><!--[/diy]--></div>
+	<div class="ceo_thread_top bp"><!--[diy=diy2]--><div id="diy2" class="area"></div><!--[/diy]--></div>
+	<div class="mbm"><!--[diy=diy_ad13]--><div id="diy_ad13" class="area"></div><!--[/diy]--></div>
+	<div class="ceo_act_hot bp"><!--[diy=diy10]--><div id="diy10" class="area"></div><!--[/diy]--></div>
+	<div class="mbm"><!--[diy=diy_ad14]--><div id="diy_ad14" class="area"></div><!--[/diy]--></div>
+	<div class="ceo_rep_hot bp"><!--[diy=diy8]--><div id="diy8" class="area"></div><!--[/diy]--></div>
+	<div class="mbm"><!--[diy=diy_ad15]--><div id="diy_ad15" class="area"></div><!--[/diy]--></div>
+	<div class="ceo_users bp"><!--[diy=diy4]--><div id="diy4" class="area"></div><!--[/diy]--></div>
+	<div class="mbm"><!--[diy=diy_ad16]--><div id="diy_ad16" class="area"></div><!--[/diy]--></div>
+	<div class="ceo_portal_slide bp"><!--[diy=diy5]--><div id="diy5" class="area"></div><!--[/diy]--></div>
+	<div class="mbm"><!--[diy=diy_ad17]--><div id="diy_ad17" class="area"></div><!--[/diy]--></div>
+	<div class="ceo_follow bp"><!--[diy=diy6]--><div id="diy6" class="area"></div><!--[/diy]--></div>
+	<div class="mbm"><!--[diy=diy_ad18]--><div id="diy_ad18" class="area"></div><!--[/diy]--></div>
+</div>
+</div>
+<script>
+jQuery(".picFocus").slide({ mainCell:".bd ul",effect:"left",autoPlay:true });
+
+jQuery(".ceo_scroll").slide({ mainCell:".bd ul", effect:"left", delayTime:800,vis:4,scroll:4,pnLoop:false,trigger:"click",easing:"easeOutCubic" });
+jQuery(".ceo_scroll li").hover(function(){
+jQuery(this).find(".ceoInfo").animate({height:'158px'}, 200);
+},function(){
+jQuery(this).find(".ceoInfo").animate({height:'40px'}, 200);
+})
+
+jQuery(".ceo_rep_hot").slide( { mainCell:".ceo_rep_hotboxs ul",autoPage:true,effect:"topLoop",autoPlay:true,vis:4,easing:"easeOutCirc"});
+
+jQuery(".slideBox").slide({titCell:".slidebar li",mainCell:".slideshow",effect:"left",autoPlay:true});
+jQuery(".slideshow li").hover(function(){
+jQuery(".slideshow li").find("h3").slideDown();
+}, function(){jQuery(".slideshow li").find("h3").slideUp();});
+
+var ceo_follow = jQuery('.ceo_follow').offset().top;
+
+</script>
+<script src="misc.php?mod=diyhelp&action=get&type=index&diy=yes&r={echo random(4)}" type="text/javascript"></script>
+<!-- Baidu Button BEGIN -->
+<script type="text/javascript" id="bdshare_js" data="type=tools&mini=1" ></script> 
+<script type="text/javascript" id="bdshell_js"></script> 
+<script type="text/javascript">
+var bds_config = {};
+document.getElementById('bdshell_js').src = "http://bdimg.share.baidu.com/static/js/shell_v2.js?cdnversion=" + new Date().getHours();
+</script>
+<!-- Baidu Button END -->
+
+<!--{template common/footer}-->

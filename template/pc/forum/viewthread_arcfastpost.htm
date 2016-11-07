@@ -1,0 +1,30 @@
+
+
+
+
+<!--{if $_G['uid']}-->
+
+<dl>
+                    	<dt><!--{echo avatar($_G['uid'])}--><p>$_G['username']</p></dt>
+                        <dd>
+                        	<div class="message">
+                            <form method="post" autocomplete="off" id="fastpostform" action="forum.php?mod=post&action=reply&fid=$_G[fid]&tid=$_G[tid]&extra=$_GET[extra]&replysubmit=yes{if $_GET['ordertype'] != 1}&infloat=yes&handlekey=fastpost{/if}{if $_GET[from]}&from=$_GET[from]{/if}"{if $_GET['ordertype'] != 1} onSubmit="return fastpostvalidate(this)"{/if}>
+                            	<div class="text"><textarea name="message" id="fastpostmessage" onKeyDown="seditor_ctlent(event, {if $_GET['ordertype'] != 1}'fastpostvalidate($(\'fastpostform\'))'{else}'$(\'fastpostform\').submit()'{/if});" tabindex="4" placeholder="写下您的评论..." class="font_yahei"></textarea></div>							<input type="hidden" name="posttime" id="posttime" value="{TIMESTAMP}" />
+                                <input type="hidden" name="formhash" value="{FORMHASH}" />
+                                <input type="hidden" name="usesig" value="$usesigcheck" />
+                                <input type="hidden" name="subject" value="  " />
+                                <div class="button">
+                                <button {if $allowpostreply}type="submit" {elseif !$_G['uid']}type="button" onclick="showWindow('login', 'member.php?mod=logging&action=login&guestmessage=yes')" {/if}{if !$seccodecheck}onmouseover="checkpostrule('seccheck_fastpost', 'ac=reply');this.onmouseover=null" {/if}name="replysubmit"  class="font_yahei" value="replysubmit" tabindex="5">发  表</button>
+                                </div>
+                                </form>
+                            </div>
+                        </dd>
+                    </dl>
+<!--{/if}-->
+
+
+
+
+
+
+

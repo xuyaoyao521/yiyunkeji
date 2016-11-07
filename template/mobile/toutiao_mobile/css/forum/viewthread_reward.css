@@ -1,0 +1,31 @@
+/********************特殊主题样式***************************/
+/*悬赏*/
+.thread_reward { display:block; height:60px; line-height:60px; background:#fd6; color:#000; font-size:16px; padding:0 10px;border-radius: 5px; margin-bottom:5px;}
+.thread_reward .z {display:inline-block; width:100px;}
+.thread_reward .z .xs3 {color:#fff;}
+.thread_reward .y {display:inline-block; width:100px; text-align:right;}
+.thread_reward .y .xs3 {color:#fff;}
+
+.psth {
+    width: 100%;
+    background:#F90;
+    color: #fff;
+    font-size: 14px; padding-left:10px;
+}
+.pstl { background:#f0f0f0;}
+.psta {
+    float: left;
+    width: 65px;
+    line-height: 24px;
+    overflow: hidden;
+}
+.psta img {
+    width: 40px;height: 40px;border-radius: 20px; margin:5px 5px 5px 10px !important;
+}
+.psti {
+    margin-left: 55px;
+    line-height: 24px;
+	font-size:12px;
+}
+
+

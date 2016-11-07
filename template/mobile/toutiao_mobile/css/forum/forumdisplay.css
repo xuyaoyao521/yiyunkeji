@@ -1,0 +1,55 @@
+/** forum::forumdisplay **/
+.forum_topb{height:0px;width:100%; overflow:hidden;}
+#forum_name{display:none;}
+.forum_top{background:#666 url(../../img/bg/forum_topbg.jpg) no-repeat center top; background-size:100%; width:100%; overflow:hidden;}
+.forum_top, .forum_top a, .forum_top h1{color:#fff;}
+.header{position:relative; height:45px; padding:0 80px 0 80px; overflow:hidden;}
+.header h1{width:100%; height:45px;line-height:45px; font-size:18px; text-align:center; overflow:hidden;}
+.header_left{position:absolute; top:0; left:0; width:45px; height:45px; line-height:45px; text-align:center;}
+.header_right{position:absolute; top:0; right:0; width:60px; height:45px; line-height:45px; text-align:center;}
+.header_right a{display:inline-block; max-width:50px; padding:0 6px; height:26px; line-height:26px; text-align:center;border-radius:5px; border:1px solid #fff; vertical-align:middle;}
+.a_but{}
+.favorite{}
+/*版块列表页_顶部版块信息*/
+.forum_head{position:relative;padding:10px 10px 15px 80px;;overflow:hidden;height:55px;}
+.forum_head .fh{position:relative;display:block;padding-left:75px;padding-right:65px;}
+.forum_head .flogo img{width:100%; height:100%;}
+.forum_head .flogo{position:absolute;top:10px;left:15px;display:block;width:55px;height:55px;overflow:hidden;}
+.forum_head h1{min-height:30px;line-height: 30px;font-size:16px;}
+.forum_head p{height:25px; line-height:25px;}
+.forum_head p span{font-size:12px; margin-right:15px;}
+.photo_list{padding:0px 10px;text-align:center;padding-top:10px;background:#fff; overflow:hidden;}
+.photo_list li{display:inline-block;width:150px;margin:0 5px;border:0px solid #fff;background:#f1f1f1; position:relative; float:left;margin-bottom:5px !important;}
+.photo_list a{display:block;border:0px solid #fff;position:relative; overflow:hidden;height:100%;}
+.photo_list img{vertical-align:middle;}
+.photo_list li h1{width:100%;background:rgba(0,0,0,0.5);color:#fff;position:absolute;bottom:10px;right:0px;text-indent:10px;font-size:12px;font-weight:400;width:100px;height:30px;line-height:30px;overflow:hidden;
+border-top-left-radius:15px;
+border-bottom-left-radius:15px;}
+
+.fontsearch{font-size:13px;}
+.fontsearch th,.fontsearch td{border-bottom:1px solid #e5e5e5;}
+.fontsearch th{width:45px;padding:5px 5px 5px 10px;white-space:nowrap;color:#999;}
+.fontsearch td{padding:5px 10px 5px 5px;}
+.fontsearch li{float:left;margin:3px 0;margin-right:10px;}
+.fontsearch li a{height:20px; line-height:22px; display:block;}
+.fontsearch li.a{}
+.fontsearch li.a a{padding:0px 5px;}
+/**/
+.formsearch{font-size:13px;}
+.formsearch div{width:100%; display:table;}
+.formsearch .th,.formsearch .td{border-bottom:1px solid #e5e5e5; display:block;}
+.formsearch .th{width:45px;padding:5px 5px 5px 10px;white-space:nowrap;color:#999; display:table-cell;}
+.formsearch .td{padding:5px 10px 5px 5px; display:table-cell;}
+.formsearch .ptm{height: 40px;line-height: 40px;font-size: 16px; display:block; padding:0 20px 0 75px;box-sizing:border-box;}
+.formsearch .ptm button{padding:0 30px;}
+/**/
+.pass{font-size:16px;}
+.goback{margin:10px 0 10px 0;}
+.goback a{display:block;margin:0 auto;width:200px;height:30px;line-height:30px;color:#666;border:1px solid #ddd;background:#e5e5e5;font-size:14px;text-align:center;}
+.forum_pay{padding:50px;}
+.forum_pay p{font-size:14px; line-height:30px; text-align:center; margin-bottom:10px;}
+.forum_pay .btn_default{width:100px;}
+/** end **/
+@media screen and (min-width: 760px){.photo_list{padding:10px 2%;}.photo_list li{width:22%;margin:0 1%;}}
+@media screen and (max-width: 600px){.photo_list{padding:10px 2%;}.photo_list li{width:29%;margin:0 1.5%;}}
+@media screen and (max-width: 450px){.photo_list{padding:5px 1%;}.photo_list li{width:47%;margin:0 1%;}}

@@ -1,0 +1,29 @@
+<!--{template common/header}-->
+<script>SetWebTitle("{lang pay_view}");SetTopLeftNav("backpage");</script>
+<link rel="stylesheet" href="template/mobile/toutiao_mobile/css/forum/misc.css" type="text/css" media="all">
+<div class="payview">
+	<div>
+		<table class="list" cellspacing="0" cellpadding="0">
+			<thead>
+				<tr>
+					<th>{lang username}</h>
+					<th>{lang time}</h>
+					<th>{$_G['setting']['extcredits'][$_G['setting']['creditstransextra'][1]][title]}</h>
+				</tr>
+			</thead>
+			<!--{if $loglist}-->
+				<!--{loop $loglist $log}-->
+					<tr>
+						<td><a href="home.php?mod=space&uid=$log[uid]">$log[username]</a></td>
+						<td>$log[dateline]</td>
+						<td>{$log[$extcreditname]} {$_G[setting][extcredits][$_G[setting][creditstransextra][1]][unit]}</td>
+					</tr>
+				<!--{/loop}-->
+			<!--{else}-->
+				<tr><td colspan="3">{lang pay_nobuyers}</td></tr>
+			<!--{/if}-->
+		</table>
+	</div>
+</div>
+
+<!--{template common/footer}-->

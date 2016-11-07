@@ -1,0 +1,404 @@
+<!--{template common/header}-->
+<script type="text/javascript">var fid = parseInt('$_G[fid]'), tid = parseInt('$_G[tid]');</script>
+<!--{if $modmenu['thread'] || $modmenu['post']}-->
+	<script type="text/javascript" src="{$_G['setting']['jspath']}forum_moderate.js?{VERHASH}"></script>
+<!--{/if}-->
+
+<script type="text/javascript" src="{$_G['setting']['jspath']}forum_viewthread.js?{VERHASH}"></script>
+<script type="text/javascript">zoomstatus = parseInt($_G['setting']['zoomstatus']);var imagemaxwidth = '{$_G['setting']['imagemaxwidth']}';var aimgcount = new Array();</script>
+
+<!--frame_pic_content-->
+<div class="frame_pic_content public_width font_yahei">
+	<div class="public_position"><a href="/">首页</a>&nbsp;&nbsp;&gt;&nbsp;&nbsp;<a href="forum.php?mod=forumdisplay&fid=$_G['forum']['fid']">$_G['forum']['name']</a>&nbsp;&nbsp;&gt;&nbsp;&nbsp;正文</div>
+    <div class="details_main">
+    	<h1>$thread[subject]</h1>
+        <p class="details_author"><a href="home.php?mod=auther&uid=$thread[authorid]"><img src="uc_server/avatar.php?uid={$thread[authorid]}&size=middle">$thread[author]</a>
+        
+       
+        
+        <!--{if $dingyuele}-->
+         <a class="subscription on" href="javascript:;" >已订阅</a>
+    
+       <!--{else}-->
+        <a class="subscription" href="home.php?mod=auther&uid=$thread['authorid']" {if $_G['uid']}onClick="dingyue($thread['authorid'],this)"{else} onclick="showWindow('login', this.href)"{/if}>订阅</a>
+       <!--{/if}-->
+        
+        
+        <span class="time">$thread['dateline']</span>
+         {if $threadsortshow['optionlist']['laiyuan']['value']}<span>来源：$threadsortshow['optionlist']['laiyuan']['value']</span>{/if}
+        </p>
+        
+        <div class="details_list picslide">
+        	<span class="pic_page"></span>
+            <span class="num"></span>
+        	<ul class="list">
+            	
+               
+               	 
+            	<!--{loop $thread['imagelist'] $vvv}-->
+                
+               
+                
+                <li><a href="javascript:;"><img src="data/attachment/forum/$vvv[image]"></a></li> 
+                <!--{/loop}-->
+                <li class="Related">
+                	<div class="Related_title"><span>图集已浏览完毕</span><a href="javascript:;" class="replay">重新浏览</a></div>
+                    <div class="Related_list">
+                    	
+                        <!--{eval $kkk=0;}-->
+                        <!--{loop $piclist $v}-->
+                         <!--{eval $kkk++;}-->
+                          <!--{if $kkk<4}-->
+               
+                        
+                        
+            <a class="Related_pic" href="forum.php?mod=viewthread&tid={$v[tid]}">
+            	<div class="pic">
+                    <span class="pic_number">{$v[picnum]}图</span>
+                    <!--{if $v[picnum]>2}-->
+                    	<!--{eval $i=0;}-->
+                    	 <!--{loop $v[piclist] $vvv}-->
+                         <!--{eval $i++;}-->
+                    <div class="img <!--{if $i==2}-->max<!--{/if}-->" ><img src="data/attachment/forum/{$vvv[attachment]}"></div>
+                    	<!--{/loop}-->
+                    <!--{else}-->
+                    
+                    <!--{eval $i=0;}-->
+                     <!--{loop $v[piclist] $vvv}-->
+                     <!--{eval $i++;}-->
+                     <!--{if $i==1}-->
+                    <img class="one" src="data/attachment/forum/{$vvv[attachment]}">
+                    <!--{/if}-->
+                    <!--{/loop}-->
+                    <!--{/if}-->
+                </div>
+                <div class="t"><span>{$v[title]}</span></div>
+            </a>
+            
+ <!--{/if}-->
+            
+          
+             <!--{/loop}-->
+                    
+                       
+                        
+                        
+                        
+                    </div>
+                </li>
+            </ul>
+            <ul class="screen" style="display:none;"></ul>
+            <a href="javascript:;" class="prev"></a>
+       		<a href="javascript:;" class="next" ></a>
+        </div>
+        <div class="details_function" style="margin-bottom:0">
+        
+             	<p><span  class="Keyword">
+                 <!--{if $thread[tags]}-->
+					<!--{eval $tagi = 0;}-->
+					<!--{loop $thread[tags] $var}-->
+						<a title="$var[1]" href="portal.php?keyword=$var[1]" target="_blank">$var[1]</a>
+						<!--{eval $tagi++;}-->
+					<!--{/loop}-->
+				<!--{/if}-->
+                <a style="background:none"></a>
+                </span> <!--{if $post['authorid'] != $_G['uid']}-->
+							<a href="javascript:;" class="complain" onclick="showWindow('miscreport$thread[pid]', 'misc.php?mod=report&rtype=post&rid=$thread[pid]&tid=$_G[tid]&fid=$_G[fid]', 'get', -1);return false;">{lang report}</a>
+						<!--{/if}--></p>
+                <p></p>
+                <p><span class="share">分享（$thread[sharetimes]）：</span><span class="bdsharebuttonbox"><a href="#" class="bds_sqq" data-cmd="sqq" title="分享到QQ好友"></a><a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a><a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a><a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a><a href="#" class="bds_tqq" data-cmd="tqq" title="分享到腾讯微博"></a></span>
+                
+                 <a href="home.php?mod=spacecp&ac=favorite&type=thread&id=$_G[tid]&formhash={FORMHASH}"  {if $_G['uid']}onclick="collection_arc($thread[tid],this)"{else} onclick="showWindow('login', this.href)"{/if}  class="collection $thread[shoucang]">收藏（<font>$thread[favtimes]</font>）</a>
+                
+                <a href="javascript:;" class="despise $bishiguo"  onClick="forumzan($thread[tid],2,this)">{$thread[bishi]}</a><a href="javascript:;" class="praise $zanguo" onClick="forumzan($thread[tid],1,this)">{$thread[ding]}</a></p>
+             </div>
+             
+             <span>
+          <!--{if (($_G['forum']['ismoderator'] && $_G['group']['alloweditpost'] && (!in_array($post['adminid'], array(1, 2, 3)) || $_G['adminid'] <= $post['adminid'])) || ($_G['forum']['alloweditpost'] && $_G['uid'] && ($post['authorid'] == $_G['uid'] && $_G['forum_thread']['closed'] == 0) && !(!$alloweditpost_status && $edittimelimit && TIMESTAMP - $post['dbdateline'] > $edittimelimit)))}-->
+						
+                       
+                        <!--{if $modmenu['thread']}-->
+	<div id="modmenu" class="xi2 pbm">
+    <!--{if (($_G['forum']['ismoderator'] && $_G['group']['alloweditpost'] && (!in_array($post['adminid']) || $_G['adminid'] <= $post['adminid'])) || ($_G['forum']['alloweditpost'] && $_G['uid'] && ($post['authorid'] == $_G['uid'] && $_G['forum_thread']['closed'] == 0) && !(!$alloweditpost_status && $edittimelimit && TIMESTAMP - $post['dbdateline'] > $edittimelimit)))}-->
+						<a  href="forum.php?mod=post&action=edit&fid=$_G[fid]&tid=$_G[tid]&pid=$thread['pid']{if !empty($_GET[modthreadkey])}&modthreadkey=$_GET[modthreadkey]{/if}&page=$page"><!--{if $_G['forum_thread']['special'] == 2 && !$post['message']}-->{lang post_add_aboutcounter}<span class="pipe">|</span><!--{else}-->{lang edit}</a><span class="pipe">|</span><!--{/if}--><!--{/if}-->
+		<!--{eval $modopt=0;}-->
+		<!--{if $_G['forum']['ismoderator']}-->
+			<!--{if $_G['group']['allowdelpost']}--><!--{eval $modopt++}--><a href="javascript:;" onclick="modthreads(3, 'delete')">{lang modmenu_deletethread}</a><span class="pipe">|</span><!--{/if}-->
+			
+			<!--{if $_G['group']['allowstickthread'] && ($_G['forum_thread']['displayorder'] <= 3 || $_G['adminid'] == 1) && !$_G['forum_thread']['is_archived']}--><!--{eval $modopt++}--><a href="javascript:;" onclick="modthreads(1, 'stick')">{lang modmenu_stickthread}</a><span class="pipe">|</span><!--{/if}-->
+		
+			<!--{if $_G['group']['allowdigestthread'] && !$_G['forum_thread']['is_archived']}--><!--{eval $modopt++}--><a href="javascript:;" onclick="modthreads(1, 'digest')">{lang modmenu_digestpost}</a><span class="pipe">|</span><!--{/if}-->
+			<!--{if $_G['group']['allowrecommendthread'] && !empty($_G['forum']['modrecommend']['open']) && $_G['forum']['modrecommend']['sort'] != 1 && !$_G['forum_thread']['is_archived']}--><!--{eval $modopt++}--><a href="javascript:;" onclick="modthreads(1, 'recommend')">{lang modmenu_recommend}</a><span class="pipe">|</span><!--{/if}-->
+		
+		
+			
+			<!--{if $_G['forum_thread']['is_archived'] && $_G['adminid'] == 1}--><!--{eval $modopt++}--><a href="javascript:;" onclick="modaction('restore', '', 'archiveid={$_G[forum_thread][archiveid]}')">{lang modmenu_archive}</a><span class="pipe">|</span><!--{/if}-->
+			<!--{if $_G['forum_firstpid']}-->
+				<!--{if $_G['group']['allowwarnpost']}--><!--{eval $modopt++}--><a href="javascript:;" onclick="modaction('warn', '$_G[forum_firstpid]')">{lang modmenu_warn}</a><span class="pipe">|</span><!--{/if}-->
+				<!--{if $_G['group']['allowbanpost']}--><!--{eval $modopt++}--><a href="javascript:;" onclick="modaction('banpost', '$_G[forum_firstpid]')">{lang modmenu_banthread}</a><span class="pipe">|</span><!--{/if}-->
+			<!--{/if}-->
+			<!--{if $_G['group']['allowremovereward'] && $_G['forum_thread']['special'] == 3 && !$_G['forum_thread']['is_archived']}--><!--{eval $modopt++}--><a href="javascript:;" onclick="modaction('removereward')">{lang modmenu_removereward}</a><span class="pipe">|</span><!--{/if}-->
+			<!--{if $_G['forum']['status'] == 3 && in_array($_G['adminid'], array('1','2')) && $_G['forum_thread']['closed'] < 1}--><a href="javascript:;" onclick="modthreads(5, 'recommend_group');return false;">{lang modmenu_grouprecommend}</a><span class="pipe">|</span><!--{/if}-->
+			<!--{if $_G['group']['allowmanagetag']}--><a href="javascript:;" onclick="showWindow('mods', 'forum.php?mod=tag&op=manage&tid=$_G[tid]', 'get', 0)">{lang post_tag}</a><span class="pipe">|</span><!--{/if}-->
+			<!--{if $_G['group']['alloweditusertag']}--><a href="javascript:;" onclick="showWindow('usertag', 'forum.php?mod=misc&action=usertag&tid=$_G[tid]', 'get', 0)">{lang usertag}</a><span class="pipe">|</span><!--{/if}-->
+		<!--{/if}-->
+		<!--{if $allowpusharticle && $allowpostarticle}--><!--{eval $modopt++}--><a href="portal.php?mod=portalcp&ac=article&from_idtype=tid&from_id=$_G['tid']">{lang modmenu_pusharticle}</a><span class="pipe">|</span><!--{/if}-->
+        
+		<!--{hook/viewthread_modoption}-->
+	</div>
+<!--{/if}-->
+				<!--{/if}-->
+    </div>
+    
+</div>
+<!--frame_pic_content END-->
+
+<!--frame_main-->
+<div class="frame_main public_width font_yahei text">
+	<div class="left" data-type="1">
+    
+
+    
+
+    
+    <!--Selected_pic-->
+    	<div class="Selected_pic" style="margin-top:0px;">
+        	<div class="title">精彩图片</div>
+            
+            <!--{loop $piclist $v}-->
+            <a class="list" href="forum.php?mod=viewthread&tid={$v[tid]}">
+            	<div class="pic">
+                    <span class="pic_number">{$v[picnum]}图</span>
+                    <!--{if $v[picnum]>2}-->
+                    	<!--{eval $i=0;}-->
+                    	 <!--{loop $v[piclist] $vvv}-->
+                         <!--{eval $i++;}-->
+                    <div class="img <!--{if $i==2}-->max<!--{/if}-->" ><img src="data/attachment/forum/{$vvv[attachment]}"></div>
+                    	<!--{/loop}-->
+                    <!--{else}-->
+                    
+                    <!--{eval $i=0;}-->
+                     <!--{loop $v[piclist] $vvv}-->
+                     <!--{eval $i++;}-->
+                     <!--{if $i==1}-->
+                    <img class="one" src="data/attachment/forum/{$vvv[attachment]}">
+                    <!--{/if}-->
+                    <!--{/loop}-->
+                    <!--{/if}-->
+                </div>
+                <div class="t"><span>{$v[title]}</span></div>
+            </a>
+            
+
+            
+          
+             <!--{/loop}-->
+           
+        </div>
+    <!--Selected_pic END-->
+    
+   
+
+    </div>
+    
+    <div class="right" style=" width:880px; float:left; margin:0px 0 30px">
+        
+        <div class="details_main">
+
+             <div class="details_evaluate">
+           		<div class="evaluate_title">网友评价<span>{$commnetnum}条</span></div>
+                <div class="evaluate_content">
+                	<!--{if $fastpost}-->
+	<!--{subtemplate forum/viewthread_arcfastpost}-->
+<!--{/if}-->
+				</div>
+                <div class="evaluate_content" id="alist">
+					<!--{eval $postcount = 0;}--> 
+	<!--{loop $postlist $post}-->
+		<!--{if $rushreply && $_GET['checkrush'] && $post['rewardfloor'] != 1}-->
+			<!--{eval continue;}-->
+		<!--{/if}-->
+        
+			<!--{subtemplate forum/viewthread_node_arc}-->  
+		
+		<!--{eval $postcount++;}-->
+	<!--{/loop}-->
+                 </div>   
+                   
+                    
+                  
+                 <div class="evaluate_content" id="loadmore">   
+                    <div class="info_page"><a href="javascript:;">点击加载更多</a></div>
+                </div>
+           </div>
+           
+
+        </div>
+    </div>
+</div>
+<!--frame_main END-->
+
+<!--frame_adv-->
+<div class="frame_adv public_width" style="display:none;"><!--{ad/custom_1}--></div>
+<!--frame_adv END-->
+
+<!--frame_main-->
+<div class="frame_pic_list public_width font_yahei hidden">
+<ul>
+   <!--{loop $piclist2 $v}-->
+   		<li>
+            <a class="list" href="forum.php?mod=viewthread&tid={$v[tid]}">
+            	<div class="pic">
+                    <span class="pic_number">{$v[picnum]}图</span>
+                    <!--{if $v[picnum]>2}-->
+                    	<!--{eval $i=0;}-->
+                    	 <!--{loop $v[piclist] $vvv}-->
+                         <!--{eval $i++;}-->
+                    <div class="img <!--{if $i==2}-->max<!--{/if}-->" ><img src="data/attachment/forum/{$vvv[attachment]}"></div>
+                    	<!--{/loop}-->
+                    <!--{else}-->
+                    
+                    <!--{eval $i=0;}-->
+                     <!--{loop $v[piclist] $vvv}-->
+                     <!--{eval $i++;}-->
+                     <!--{if $i==1}-->
+                    <img class="one" src="data/attachment/forum/{$vvv[attachment]}">
+                    <!--{/if}-->
+                    <!--{/loop}-->
+                    <!--{/if}-->
+                </div>
+                <div class="t"><span>{$v[title]}</span></div>
+            </a>
+            
+
+            </li>
+          
+             <!--{/loop}-->
+</ul>
+</div>
+
+
+
+<!--{if $modmenu['post']}-->
+	<div id="mdly" class="fwinmask" style="display:none;z-index:350;">
+		<table cellspacing="0" cellpadding="0" class="fwin">
+			<tr>
+				<td class="t_l"></td>
+				<td class="t_c"></td>
+				<td class="t_r"></td>
+			</tr>
+			<tr>
+				<td class="m_l">&nbsp;&nbsp;</td>
+				<td class="m_c">
+					<div class="f_c">
+						<div class="c">
+							<h3>{lang admin_select}&nbsp;<strong id="mdct" class="xi1"></strong>&nbsp;{lang piece}: </h3>
+							<!--{if $_G['forum']['ismoderator']}-->
+								<!--{if $_G['group']['allowwarnpost']}--><a href="javascript:;" onclick="modaction('warn')">{lang modmenu_warn}</a><span class="pipe">|</span><!--{/if}-->
+								<!--{if $_G['group']['allowbanpost']}--><a href="javascript:;" onclick="modaction('banpost')">{lang modmenu_banpost}</a><span class="pipe">|</span><!--{/if}-->
+								<!--{if $_G['group']['allowdelpost'] && !$rushreply}--><a href="javascript:;" onclick="modaction('delpost')">{lang modmenu_deletepost}</a><span class="pipe">|</span><!--{/if}-->
+							<!--{/if}-->
+							<!--{if $_G['forum']['ismoderator'] && $_G['group']['allowstickreply'] || $_G['forum_thread']['authorid'] == $_G['uid']}--><a href="javascript:;" onclick="modaction('stickreply')">{lang modmenu_stickpost}</a><span class="pipe">|</span><!--{/if}-->
+							<!--{if $_G['forum_thread']['pushedaid'] && $allowpostarticle}--><a href="javascript:;" onclick="modaction('pushplus', '', 'aid=$_G[forum_thread][pushedaid]', 'portal.php?mod=portalcp&ac=article&op=pushplus')">{lang modmenu_pushplus}</a><span class="pipe">|</span><!--{/if}-->
+						</div>
+					</div>
+				</td>
+				<td class="m_r"></td>
+			</tr>
+			<tr>
+				<td class="b_l"></td>
+				<td class="b_c"></td>
+				<td class="b_r"></td> 
+			</tr>
+		</table>
+	</div>
+<!--{/if}-->
+
+<!--frame_main END-->
+<script type="text/javascript">
+        var urlpage = 'forum.php?mod=viewthread&tid=$_G[tid]&ordertype={if $ordertype != 2}1{else}2{/if}';
+        var pages=$_G['page'];
+        var allpage=$totalpage;
+		jq(function(){
+			if(pages>=allpage){
+				jq("#loadmore").hide();	
+			}	
+			if(allpage==0){
+					jq("#loadmore").hide();	
+			}
+		})
+		
+		//图片详情
+jq(".frame_pic_content .details_main .picslide").slide({mainCell:".list",titCell:".screen li", delayTime:1000,effect:"left",autoPage:true,vis:1,startFun:function(i,c){
+		i=i+1;
+		if(i!=c){
+			c=c-1;
+			jq(".frame_pic_content .pic_page").show();
+			jq(".frame_pic_content .pic_page").html("<span>"+i+"</span>/"+c);
+			jq(".frame_pic_content .details_main .details_list").removeClass("hide");
+		}else{
+			jq(".frame_pic_content .pic_page").hide();
+			jq(".frame_pic_content .details_main .details_list").addClass("hide");
+		}		
+       
+}});
+
+
+
+jq("body,html").mousemove(function(){
+	element = jq(".frame_pic_content .details_main .details_list");
+	getWidth = element.width();
+	getHeight = element.height();
+	
+	getTop = element.offset().top;
+	getMaxTop = getTop+getHeight;
+	
+	getLeft = element.offset().left;
+	
+	getMaxLeft = getLeft+getWidth;
+	getLeftHalf = getMaxLeft-(getWidth/2);
+	
+	getX = getMousePos()[0];
+	getY = getMousePos()[1];
+	
+	if(element.hasClass("hide")){
+		jq(".frame_pic_content .details_main .details_list .prev,.frame_pic_content .details_main .details_list .next").hide();
+	}else{
+		//left_show
+		if(getX>getLeft&&getX<getLeftHalf&&getY>getTop&&getY<getMaxTop){
+			jq(".frame_pic_content .details_main .details_list .prev").show();
+		}else{
+			jq(".frame_pic_content .details_main .details_list .prev").hide();	
+		}
+		//right_show
+		if(getX>getLeftHalf&&getX<getMaxLeft&&getY>getTop&&getY<getMaxTop){
+			jq(".frame_pic_content .details_main .details_list .next").show();
+		}else{
+			jq(".frame_pic_content .details_main .details_list .next").hide();	
+		}
+		
+		//箭头跟随
+		jq(".frame_pic_content .details_main .details_list .prev").css({"left":getX-getLeft-5,"top":getY-getTop-10});
+		jq(".frame_pic_content .details_main .details_list .next").css({"left":getX-getLeft-5,"top":getY-getTop-10});	
+	}
+	
+	
+	//测试数据		
+	//element.find(".num").html(getX+",,,,,,,,,,,,"+getY+",,,,,,,,,,,,上边:"+getTop+",,,,,,,,,,,,左边:"+getLeft+",,,,,,,,,,,,宽度:"+getWidth+",,,,,,,,,,,,高度:"+getHeight+",,,,,,,,,,,,最大高度:"+getMaxTop+",,,,,,,,,,,,最大宽度:"+getMaxLeft+",,,,,,,,,,,,中心线:"+getLeftHalf);
+});
+
+jq(".frame_pic_content .details_main .details_list .Related_title .replay").click(function(){
+	jq(".frame_pic_content .details_main .details_list .next").click();
+});
+
+    </script> 
+<script src="template/pc/ceo/arc_ajaxpage.js"></script>
+<script type="text/javascript" src="/public/js/Public_index.js"></script>
+<form method="post" autocomplete="off" name="modactions" id="modactions">
+	<input type="hidden" name="formhash" value="{FORMHASH}" />
+	<input type="hidden" name="optgroup" />
+	<input type="hidden" name="operation" />
+	<input type="hidden" name="listextra" value="$_GET[extra]" />
+	<input type="hidden" name="page" value="$page" />
+</form>
+<!--{template common/footer}-->

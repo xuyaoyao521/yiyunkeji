@@ -1,0 +1,59 @@
+<!--{template yingxiao_toutiaom:default/header}-->
+<div id="wp">
+<div class="threadlist">
+    <!--{if $toutiaolist}-->
+    <ul id="alist">
+        <!--{eval $i = 0;}-->
+        <!--{loop $toutiaolist $thread}-->
+            <!--{eval $i++;}-->
+            <li><a class="act_link" href="portal.php?mod=view&aid=$thread['aid']">
+            <!--{if $thread['thumb'] == 1}-->
+                <!--{if $thread['piccount'] >= 1 && $thread['piccount'] < 3}-->
+                    <div class="desc">
+                        <!--{subtemplate yingxiao_toutiaom:default/portal_list_title1}-->
+                        <!--{subtemplate yingxiao_toutiaom:default/portal_list_info}-->
+                    </div>
+                    <!--{subtemplate yingxiao_toutiaom:default/portal_list_pic}-->
+                <!--{elseif  $thread['piccount'] >= 3}-->
+                    <!--{subtemplate yingxiao_toutiaom:default/portal_list_title1}-->
+                    <!--{subtemplate yingxiao_toutiaom:default/portal_list_piclist}-->
+                    <!--{subtemplate yingxiao_toutiaom:default/portal_list_info}-->
+                <!--{else}-->
+                    <!--{subtemplate yingxiao_toutiaom:default/portal_list_title1}-->
+                    <!--{subtemplate yingxiao_toutiaom:default/portal_list_message}-->
+                    <!--{subtemplate yingxiao_toutiaom:default/portal_list_info}-->
+                <!--{/if}-->
+            <!--{else}-->
+                <!--{subtemplate yingxiao_toutiaom:default/portal_list_title1}-->
+                <!--{subtemplate yingxiao_toutiaom:default/portal_list_message}-->
+                <!--{subtemplate yingxiao_toutiaom:default/portal_list_info}-->
+            <!--{/if}-->
+            </a></li>
+            <!--{if $ceo_ad[$i]}-->
+            <li><a class="act_link" href="$ceo_ad[$i][1]"><h3 class="ad_label"><span class="t_att">{echo p_lang('tads')}</span></h3><img src="$ceo_ad[$i][0]" width="100%" /></a></li>
+            <!--{/if}-->
+        <!--{/loop}-->
+    </ul>       
+    <div id="ajaxtag"></div>
+    <!--{else}-->
+    <li class="wmt">{echo p_lang('showmessage')}</li>
+    <!--{/if}-->
+</div>
+</div>
+<div class="a_pg" id="a_pg" style="display: none;">
+   <div id="ajaxld"><img src="template/yingxiao_toutiao2_m/toutiao_mobile/img/load.gif" /> {echo p_lang('load_pic')}</div>
+</div>
+      
+<script type="text/javascript">
+var url = 'plugin.php?id=yingxiao_toutiaom$ceo_url';
+var pages=$_G['page'];
+var allpage={echo $thispage = ceil($allnum / $ceo_num);};
+var first1 = "<ul id=\"alist\"";
+var last1 = "<div id=\"ajaxtag\"></div>";
+var first2 = ">";
+var last2 = "</ul>";
+</script> 
+<script src="source/plugin/yingxiao_toutiaom/template/touch/default/js/ajaxpage.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,58 @@
+﻿td, input, button, select, body { font-family: "Microsoft YaHei",Verdana; font-size: 12px; }
+form, body { margin: 0px; padding: 0px; }
+select, body, textarea { background: none repeat scroll 0% 0% rgb(255, 255, 255); font-size: 12px; }
+img { border: medium none; }
+a { text-decoration: underline; cursor: pointer; }
+.txt_center { text-align: center; }
+.right { float: right; }
+
+td, input, button, select, body { font-family: "Microsoft YaHei",Verdana; }
+body { text-align: center; }
+.addrtitle { color: rgb(121, 134, 153); }
+a { color: rgb(40, 85, 134); }
+input, select { vertical-align: middle; }
+body { background: none repeat scroll 0% 0% rgb(255, 255, 255); color: rgb(0, 0, 0); line-height: 1.5; font-family: "lucida Grande","Microsoft Yahei"; }
+a { text-decoration: none; }
+a:hover{ color:#4dacb8;}
+.loginWrap { background: url('../images/login_background.jpg') no-repeat scroll 50% 50%;height:470px; text-align: left; }
+.left_panel { width: 390px; position:absolute; right:0px;}
+.login_panel { width: 390px; background: none repeat scroll 0% 0% rgb(255, 255, 255); border-bottom: 1px solid rgb(202, 202, 202); min-height: 404px; }
+.login_panel .title { font-size: 16px; line-height: 56px; padding: 0px 24px; border-bottom: 1px solid rgb(202, 202, 202); color: rgb(36, 36, 36); margin-bottom:20px; }
+.login_panel .items_panel { padding: 0px 51px; font-size: 14px; position: relative; }
+.ret_msg { color: rgb(255, 255, 255); font-size: 16px; margin-bottom: 8px; min-height: 24px; }
+.login_panel .items_panel .err_tips { color: rgb(236, 32, 32); min-height: 21px; margin-top: 11px; }
+.login_panel .items_panel .item { position: relative; margin-top: 7px; }
+.login_panel .items_panel .input_tips { position: absolute; top: 9px; left: 9px; color: rgb(170, 170, 170); display: none; }
+.login_panel .items_panel .input_item { width: 268px; height: 20px; padding: 8px; font-size: 14px; border:solid 1px #53b6be; background:#f7ffff;outline-color:#52b5c1;}
+.login_panel .items_panel .hint { display:block;margin-top: 7px; color: rgb(170, 170, 170); margin-bottom: 10px; }
+.login_panel .items_panel .autologin_choice { margin-top: 20px; font-size: 12px; position: relative; clear:both;}
+.login_panel .items_panel .autologin_choice input { float: left; margin-top: 5px; margin-left: 0px; }
+.login_panel .items_panel .green_btn { height: 40px; width: 100%; background-color:#f48d28; font-size: 18px; margin-top: 13px; color: rgb(255, 255, 255); border:0px; cursor:pointer;-webkit-transition-duration:0.3s;-o-transition-duration:0.3s;-moz-transition-duration:0.3s;	}
+.login_panel .items_panel .green_btn:hover{background-color:#ff1e00;}
+ .forget_pwd_wrap { margin-top: 18px; margin-bottom: 25px; color:#999; text-align:center}
+.login_panel .items_panel .forget_pwd_wrap a { float: right; }
+.login_panel .items_panel a { text-decoration: none; }
+.login_panel .items_panel .verify_wrap { margin-top: 20px; }
+.login_panel .items_panel .verify_wrap .change_wrap { float:left; margin-left:20px; width:150px; margin-bottom:15px;}
+.right_panel { float: left; width:522px; height:450px; background:url(../images/login_background2.png) no-repeat center 180px;}
+.login_panel .items_panel .verify_wrap .change_wrap img{ height:35px; margin-right:10px;}
+.loginWrap .middle_line { position: absolute; top: 28px; left:565px; width: 1px; height: 398px;right: 0px; background: url('../images/login_middle.png') no-repeat scroll 50% 50% transparent; }
+
+.top a, .navPageBottom a {padding: 0px 8px 0px 4px; color:#000;}
+.top a, .navPageBottom a:hover{ color:#4dacb8;}
+#VerifyArea { display: none; margin-top: 20px;}
+.cLight { color: rgb(136, 136, 136); }
+.copyright { font-size: 11px; clear: both; margin-top:0px; }
+.wd { width: 960px; clear: both; margin: 0px auto; position: relative; }
+.background{background: url(../images/login_background.png); background-position:center center; background-repeat:repeat-y; height:100%; width:100%; padding-top:35px; padding-bottom: 40px;}
+.wd950 { width:1000px; clear: both; margin: 0px auto; position: relative;}
+.logo { float: left; margin-bottom: 10px; padding-left: 4px;margin-top: 18px;  }
+label { cursor:pointer;}
+.navPageBottom { height: 24px; line-height: 24px; margin-top: 20px; }
+.topLink { padding-top: 46px; font-size: 14px; color:#999; }
+.topLink a {color:#999; }
+.topLink a:hover{color:#333; }
+.topLink span{ color:#CCC; padding:0px 10px; font-family:"宋体"}
+.wd { width: 960px; clear: both; margin: 0px auto; }
+.wd1000 { width: 1000px; clear: both; margin: 0px auto; }
+.topheight { height: 90px; }

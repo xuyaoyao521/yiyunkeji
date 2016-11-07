@@ -1,0 +1,129 @@
+
+<link rel="stylesheet" href="template/mobile/toutiao_mobile/css/forum/viewthread.css" type="text/css" media="all">
+<!--{if $catid==42}-->
+  <ul id="alist">
+ <!--{loop $toutiaolist $thread}-->
+
+<div class="mobile_Satin_list">
+   <p><a href="forum.php?mod=viewthread&tid=$thread[tid]&ordertype=1">$thread[message]</a></p>
+   <p><a href="javascript:;" onclick="forumzan($thread[tid],1,this)" class="praise $thread[zanguo]">{$thread[ding]}</a><a href="javascript:;" onclick="forumzan($thread[tid],2,this)" class="despise $thread[bishiguo]">{$thread[bishi]}</a></p>
+   <p><a href="home.php?mod=auther&uid=$thread[authorid]&ordertype=1"><img src="uc_server/avatar.php?uid={$thread[authorid]}&size=middle">{$thread[author]}</a><a href="forum.php?mod=viewthread&tid=$thread[tid]&ordertype=1"><!--{if $thread[replies] > 0}-->{$thread[replies]}<!--{else}-->0<!--{/if}-->评价</a><span class="share"><a href="javascript:sharenv('share_qt')"></a></span><a class="Collection $thread[shoucang]"  href="javascript:;" onclick="collection_arc($thread[tid],this)" >收藏</a></p>
+</div>
+
+ <!--{/loop}-->
+ </ul>
+
+<!--{elseif $catid==40}-->
+ <!--{loop $toutiaolist $thread}-->
+<div class="mobile_public_list video">
+        <div class="pic">
+            <a href="forum.php?mod=viewthread&tid=$thread[tid]"><img data-original="$thread['pic']" class="fade" src="/public/images/placeholder.png"></a>
+            <span class="time">$thread['videotime']</span>
+         	<a class="play" href="forum.php?mod=viewthread&tid=$thread[tid]"></a>
+        </div>
+        <div class="title">
+        	<p><a href="forum.php?mod=viewthread&tid=$thread[tid]">{$thread[subject]}</a></p>
+            <p><a href="home.php?mod=auther&uid=$thread[authorid]"><img src="uc_server/avatar.php?uid={$thread[authorid]}&size=middle">{$thread[author]}</a><a class="evaluate"><!--{if $thread[replies] > 0}-->{$thread[replies]}<!--{else}-->0<!--{/if}-->评价</a><a class="like $thread[zanguo]" href="javascript:;" onclick="forumzan({$thread[tid]},1,this)">$thread[ding]</a><span class="share"><a href="javascript:sharenv('share_qt')"></a></span></p>
+        </div>
+</div>
+ <!--{/loop}-->
+ 
+ 
+ <!--{elseif $catid==41}-->
+ <!--{loop $toutiaolist $thread}-->
+<div class="mobile_public_list pic">
+		<!--{if $thread['pic']}-->
+        <div class="pic">
+       	 <a href="forum.php?mod=viewthread&tid=$thread[tid]&ordertype=1">
+            <img data-original="$thread['pic']" class="fade" src="/public/images/placeholder.png">
+            <span class="pic_number">{$thread['piccount']}图</span>
+          </a>
+          
+        </div>
+         <!--{/if}-->
+        <div class="title">
+        	<p> <a href="forum.php?mod=viewthread&tid=$thread[tid]&ordertype=1">{$thread[subject]}</a></p>
+            <p><a href="home.php?mod=auther&uid=$thread[authorid]"><img src="uc_server/avatar.php?uid={$thread[authorid]}&size=middle">{$thread[author]}</a><a href="forum.php?mod=viewthread&tid=$thread[tid]&ordertype=1&viewtype=2"><!--{if $thread[replies] > 0}-->{$thread[replies]}<!--{else}-->0<!--{/if}-->评价</a><a class="like  $thread[zanguo]" href="javascript:;" onclick="forumzan({$thread[tid]},1,this)">$thread[ding]赞</a><span class="del"></span><i class="del_confirm"><a href="javascript:;" onClick="buganxingqu($thread[tid],this)">不感兴趣</a></i></p>
+        </div>
+</div>
+ <!--{/loop}-->
+ 
+<!--{else}-->
+<div class="mobile_common_list"> 
+    <!--{if $toutiaolist}-->
+    <ul id="alist">
+        <!--{eval $i = 0;}-->
+        <!--{loop $toutiaolist $thread}-->
+            <!--{eval $i++;}-->
+          
+            <!--{if $thread[attachment] == 2}-->
+                <!--{if $thread['piccount'] >= 1 && $thread['piccount'] < 4}-->
+                	
+                  		 <!--{if $thread[fid] != 40}-->
+                         
+                         <dl>
+                            <dt>
+                                <div class="pic"><a href="forum.php?mod=viewthread&tid=$thread[tid]&ordertype=1"><img data-original="$thread['pic']" class="fade" src="/public/images/NO_IMG.jpg"></a></div>
+                                <a href="forum.php?mod=viewthread&tid=$thread[tid]&ordertype=1"><div class="text">{$thread[subject]}</div></a>
+                            </dt>
+                            <dd><a href="home.php?mod=auther&uid=$thread[authorid]"><img src="uc_server/avatar.php?uid={$thread[authorid]}&size=middle">{$thread[author]}</a><a class="evaluate" href="forum.php?mod=viewthread&tid=$thread[tid]&ordertype=1"><!--{if $thread[replies] > 0}-->{$thread[replies]}<!--{else}-->0<!--{/if}-->评价</a><a class="time">$thread[dateline]</a><span class="del"></span><i class="del_confirm"><a href="javascript:;" onClick="buganxingqu($thread[tid],this)">不感兴趣</a></i></i></dd>
+                        </dl>
+                         
+                        
+                   		<!--{else}-->
+                        
+                        	<dl class="video">
+                                <dt>
+                                    <div class="pic"><a href="forum.php?mod=viewthread&tid=$thread[tid]&ordertype=1"><img data-original="$thread['pic']" class="fade" src="/public/images/NO_IMG.jpg"></a><span class="time">$thread['videotime']</span></div>
+                                    <a href="forum.php?mod=viewthread&tid=$thread[tid]&ordertype=1"><div class="text">{$thread[subject]}</div></a>
+                                </dt>
+                                  <dd><a href="home.php?mod=auther&uid=$thread[authorid]&ordertype=1"><img src="uc_server/avatar.php?uid={$thread[authorid]}&size=middle">{$thread[author]}</a><a class="evaluate" href="forum.php?mod=viewthread&tid=$thread[tid]&ordertype=1"><!--{if $thread[replies] > 0}-->{$thread[replies]}<!--{else}-->0<!--{/if}-->评价</a><a class="time">$thread[dateline]</a><span class="del"></span><i class="del_confirm"><a href="javascript:;" onClick="buganxingqu($thread[tid],this)">不感兴趣</a></i></i></dd>
+                            </dl>
+                            
+                    	<!--{/if}-->	
+                <!--{elseif  $thread['piccount'] >= 4}-->
+                
+                <dl class="img">
+                    <dt>
+                        <a href="forum.php?mod=viewthread&tid=$thread[tid]&ordertype=1"><div class="text">{$thread[subject]}</div></a> 
+                        <ul class="pic_list">
+                           <!--{loop $thread['pics'] $key}-->          
+                            <li><a href="forum.php?mod=viewthread&tid=$thread[tid]&ordertype=1"><img data-original="$key" class="fade" src="/public/images/NO_IMG.jpg"></a></li>
+                             <!--{/loop}-->
+                            <span class="pic_number">{$thread['piccount']}图</span>
+                        </ul>
+                    </dt>
+                    <dd><a href="home.php?mod=auther&uid=$thread[authorid]"><img src="uc_server/avatar.php?uid={$thread[authorid]}&size=middle">{$thread[author]}</a><a class="evaluate" href="forum.php?mod=viewthread&tid=$thread[tid]&ordertype=1&viewtype=2"><!--{if $thread[replies] > 0}-->{$thread[replies]}<!--{else}-->0<!--{/if}-->评价</a><a class="time">$thread[dateline]</a><span class="del"></span><i class="del_confirm"><a href="javascript:;" onClick="buganxingqu($thread[tid],this)">不感兴趣</a></i></i></dd>
+                </dl>
+                
+                 
+                <!--{else}-->
+                 <dl class="words">
+                    <dt>
+                        <a href="forum.php?mod=viewthread&tid=$thread[tid]&ordertype=1"><div class="text">{$thread[subject]}</div></a>
+                    </dt>
+                      <dd><a href="home.php?mod=auther&uid=$thread[authorid]"><img src="uc_server/avatar.php?uid={$thread[authorid]}&size=middle">{$thread[author]}</a><a class="evaluate" href="forum.php?mod=viewthread&tid=$thread[tid]&ordertype=1"><!--{if $thread[replies] > 0}-->{$thread[replies]}<!--{else}-->0<!--{/if}-->评价</a><a class="time">$thread[dateline]</a><span class="del"></span><i class="del_confirm"><a href="javascript:;" onClick="buganxingqu($thread[tid],this)">不感兴趣</a></i></i></dd>
+                </dl>
+                <!--{/if}-->
+            <!--{else}-->
+              <dl class="words">
+                    <dt>
+                        <a href="forum.php?mod=viewthread&tid=$thread[tid]&ordertype=1"><div class="text">{$thread[subject]}</div></a>
+                    </dt>
+                      <dd><a href="home.php?mod=auther&uid=$thread[authorid]"><img src="uc_server/avatar.php?uid={$thread[authorid]}&size=middle">{$thread[author]}</a><a class="evaluate" href="forum.php?mod=viewthread&tid=$thread[tid]&ordertype=1"><!--{if $thread[replies] > 0}-->{$thread[replies]}<!--{else}-->0<!--{/if}-->评价</a><a class="time">$thread[dateline]</a><span class="del"></span><i class="del_confirm"><a href="javascript:;" onClick="buganxingqu($thread[tid],this)">不感兴趣</a></i></dd>
+                </dl>
+            <!--{/if}-->
+     
+            <!--{if $ceo_listad[$i]}-->
+            <li><a class="act_link" href="$ceo_listad[$i][1]"><h3><span class="tag_bg">{echo m_lang('tads')}</span></h3><img data-original="$ceo_listad[$i][0]" width="100%" class="fade" src="/public/images/NO_IMG.jpg"/></a></li>
+            <!--{/if}-->
+        <!--{/loop}-->
+    </ul>       
+    <!--{else}-->
+  
+    <!--{/if}-->
+
+   
+
+</div>
+ <!--{/if}--> 

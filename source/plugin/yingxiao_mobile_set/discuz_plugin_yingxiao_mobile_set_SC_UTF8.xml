@@ -1,0 +1,742 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<root>
+	<item id="Title"><![CDATA[Discuz! Plugin]]></item>
+	<item id="Version"><![CDATA[X3.2]]></item>
+	<item id="Time"><![CDATA[2016-08-07 21:31]]></item>
+	<item id="From"><![CDATA[Discuz手机模板—仿今日头条手机版V2 (http://127.0.0.1/discuz/3.2/utf8/)]]></item>
+	<item id="Data">
+		<item id="plugin">
+			<item id="available"><![CDATA[1]]></item>
+			<item id="adminid"><![CDATA[1]]></item>
+			<item id="name"><![CDATA[网络营销专家--手机版模板管理插件]]></item>
+			<item id="identifier"><![CDATA[yingxiao_mobile_set]]></item>
+			<item id="description"><![CDATA[E??]]></item>
+			<item id="datatables"><![CDATA[]]></item>
+			<item id="directory"><![CDATA[yingxiao_mobile_set/]]></item>
+			<item id="copyright"><![CDATA[网络营销专家]]></item>
+			<item id="version"><![CDATA[2.1]]></item>
+			<item id="__modules">
+				<item id="0">
+					<item id="name"><![CDATA[admin_lang]]></item>
+					<item id="param"><![CDATA[]]></item>
+					<item id="menu"><![CDATA[模板语言包]]></item>
+					<item id="url"><![CDATA[]]></item>
+					<item id="type"><![CDATA[3]]></item>
+					<item id="adminid"><![CDATA[0]]></item>
+					<item id="displayorder"><![CDATA[0]]></item>
+					<item id="navtitle"><![CDATA[]]></item>
+					<item id="navicon"><![CDATA[]]></item>
+					<item id="navsubname"><![CDATA[]]></item>
+					<item id="navsuburl"><![CDATA[]]></item>
+				</item>
+			</item>
+		</item>
+		<item id="version"><![CDATA[X3.2]]></item>
+		<item id="var">
+			<item id="0">
+				<item id="displayorder"><![CDATA[1]]></item>
+				<item id="title"><![CDATA[【全局】模板默认配色]]></item>
+				<item id="description"><![CDATA[模板共8种配色, 在此选择]]></item>
+				<item id="variable"><![CDATA[ceo_mobilecolor]]></item>
+				<item id="type"><![CDATA[select]]></item>
+				<item id="value"><![CDATA[1]]></item>
+				<item id="extra"><![CDATA[1=红色
+2=橙色
+3=黑色
+4=绿色
+5=蓝色
+6=粉色
+7=黄色
+8=紫色]]></item>
+			</item>
+			<item id="1">
+				<item id="displayorder"><![CDATA[2]]></item>
+				<item id="title"><![CDATA[【全局】是否开启模板自定义配色]]></item>
+				<item id="description"><![CDATA[]]></item>
+				<item id="variable"><![CDATA[ceo_diycolor]]></item>
+				<item id="type"><![CDATA[radio]]></item>
+				<item id="value"><![CDATA[1]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="2">
+				<item id="displayorder"><![CDATA[3]]></item>
+				<item id="title"><![CDATA[【全局】是否显示底部导航]]></item>
+				<item id="description"><![CDATA[是否显示底部的导航]]></item>
+				<item id="variable"><![CDATA[ceo_btoolopen]]></item>
+				<item id="type"><![CDATA[radio]]></item>
+				<item id="value"><![CDATA[1]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="3">
+				<item id="displayorder"><![CDATA[4]]></item>
+				<item id="title"><![CDATA[【全局】是否开启底部导航自定义配色]]></item>
+				<item id="description"><![CDATA[]]></item>
+				<item id="variable"><![CDATA[ceo_btooldiycolor]]></item>
+				<item id="type"><![CDATA[radio]]></item>
+				<item id="value"><![CDATA[0]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="4">
+				<item id="displayorder"><![CDATA[5]]></item>
+				<item id="title"><![CDATA[【全局】右侧菜单代码]]></item>
+				<item id="description"><![CDATA[按格式增加或替换代码即可]]></item>
+				<item id="variable"><![CDATA[ceo_sidemenus]]></item>
+				<item id="type"><![CDATA[textarea]]></item>
+				<item id="value"><![CDATA[]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="5">
+				<item id="displayorder"><![CDATA[6]]></item>
+				<item id="title"><![CDATA[【全局】翻页方式]]></item>
+				<item id="description"><![CDATA[启用此功能后, 将使用ajax的方式替代传统的分页功能, 节省上网流量]]></item>
+				<item id="variable"><![CDATA[ceo_norepages]]></item>
+				<item id="type"><![CDATA[select]]></item>
+				<item id="value"><![CDATA[3]]></item>
+				<item id="extra"><![CDATA[1=传统翻页方式
+2=无刷新翻页（点击按钮）
+3=无限下拉加载]]></item>
+			</item>
+			<item id="6">
+				<item id="displayorder"><![CDATA[11]]></item>
+				<item id="title"><![CDATA[【首页】是否启用自定义首页]]></item>
+				<item id="description"><![CDATA[启用自定义首页功能]]></item>
+				<item id="variable"><![CDATA[ceo_indexdiyopen]]></item>
+				<item id="type"><![CDATA[radio]]></item>
+				<item id="value"><![CDATA[1]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="7">
+				<item id="displayorder"><![CDATA[12]]></item>
+				<item id="title"><![CDATA[【首页】选择自定义默认首页]]></item>
+				<item id="description"><![CDATA[设置手机网站的默认首页, 启用自定首页功能后, 此设置才有效, 同时只对开启页面有效]]></item>
+				<item id="variable"><![CDATA[ceo_indexdefault]]></item>
+				<item id="type"><![CDATA[select]]></item>
+				<item id="value"><![CDATA[3]]></item>
+				<item id="extra"><![CDATA[1=论坛
+2=门户
+3=今日头条式图文列表首页
+4=导读（最新帖子）
+5=图墙(美图)
+6=自定义链接...]]></item>
+			</item>
+			<item id="8">
+				<item id="displayorder"><![CDATA[13]]></item>
+				<item id="title"><![CDATA[【首页】自定义首页链接]]></item>
+				<item id="description"><![CDATA[如果选择首页为“自定义链接”，则当前配置生效！]]></item>
+				<item id="variable"><![CDATA[ceo_indexurl]]></item>
+				<item id="type"><![CDATA[text]]></item>
+				<item id="value"><![CDATA[]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="9">
+				<item id="displayorder"><![CDATA[14]]></item>
+				<item id="title"><![CDATA[【首页】门户页面代码]]></item>
+				<item id="description"><![CDATA[在此填入门户页面代码]]></item>
+				<item id="variable"><![CDATA[ceo_portalcode]]></item>
+				<item id="type"><![CDATA[textarea]]></item>
+				<item id="value"><![CDATA[<link rel="stylesheet" href="template/mobile/toutiao_mobile/css/tpl.css" type="text/css" media="all">
+<style type="text/css">
+section{ margin-top:10px;}
+
+.mybox {background: #fff;font-size: 16px;}
+.mybox .tit { display:block; height:40px;line-height: 40px; padding:0 15px; position:relative;}
+.mybox .tit h3 { display:inline-block; width:100px;}
+.mybox .tit ul { display:inline-block; float:right; height:20px;}
+.mybox .tit ul li { display:inline-block; padding:0 10px;  border-left:1px solid #eaeaea; }
+.mybox .tit span { position:absolute; top:12px; right:10px; padding:0 5px;-webkit-border-radius: 9px;-moz-border-radius: 9px;border-radius: 9px; display:block; height:18px; line-height:18px; color:#aaa;border:1px solid #aaa;}
+.mybox .tit span a { font-size:12px; color:#aaa;}
+.mybox .h1, .mybox .h3, .mybox .h4 { color:#4c4c4c;}
+.mybox .ft {height: 40px;padding: 0 15px;border-bottom: 1px solid #eaeaea;border-top: 0px solid #eaeaea; text-align:right;}
+.mybox a { color:#4c4c4c;}
+.mybox a img { vertical-align:top;}
+
+.myads {padding:10px;}
+.myads h3 { font-size:15px;}
+
+/* 灯箱 */
+.autoscroll { margin:auto; position:relative; overflow:hidden; }
+.autoscroll #slider li { position:relative; overflow:hidden; }
+.autoscroll, .autoscroll #slider, .autoscroll #slider li, .autoscroll #slider li img { width:100%; height::100%; }
+.autoscroll #slider li a { display:block; }
+.autoscroll .stbg { width:100%; height:15px; padding:5px 0px; color:#fff; text-indent:10px; margin-top:-30px; position:relative; z-index:1; }
+
+.autoscroll #position { position:absolute; bottom:0px; right:10px; }
+.autoscroll #position em { display: inline-block; width:8px; height:8px; margin:0px 2px; text-indent:-9999px; background:#aaa; border-radius:6px; overflow:hidden; }
+.autoscroll #position em.on { background: #fff; }
+
+/* tab */
+.th_tab { height:39px; border-bottom:1px solid #eaeaea;position:relative; }
+.th_tab a { float:left; display:block; padding:0 10px; color:#333; text-align:center; font-size:14px; line-height:40px; font-weight:700; overflow:hidden; } 
+.th_tab a.on {position:relative; height:38px; background:#fff; border-bottom:2px solid #ed344a; bottom:0px; z-index:1; } 
+
+.th { display:none; }
+.th a { display:block; height:64px; padding:10px 100px 10px 10px; position:relative; }
+.th h1 { height:16px; line-height:16px; font-size:16px; margin:2px 0px 5px; overflow:hidden; }
+.th h3 { height:20px;line-height:20px; font-weight:100; font-size:14px; overflow:hidden; }
+.th p { color:#999; max-height:36px; line-height:18px; font-size:13px; overflow:hidden; }
+.th img { position:absolute; top:9px; right:10px; width:80px; height:64px; }
+
+.th_np a { height:auto; padding:10px; }
+.th_np h1 { margin:0px 0px 4px; line-height:20px; }
+.th_np span {color:#F30; margin-right:5px;}
+.th_np1 a { height:auto; padding:10px 45px 10px 10px;height:20px; }
+.th_np1 span.f {color:#F30; margin-right:5px;}
+.th_np1 span.d {position:absolute; top:0px; right:10px; width:40px; padding:10px 0;font-size:12px;line-height:20px; text-align:right; color:#999;}
+
+/* 热门频道 */
+.hot_channel { padding:0 15px; height:40px; line-height:40px; overflow:hidden;}
+.hot_channel span.ct { color:#999; font-size:14px; }
+.hot_channel span { color:#bbb; font-size:12px; }
+.hot_channel a { color:#4c4c4c; font-size:14px; margin:0 8px;}
+
+.th li, .hot_channel li { border-bottom:1px solid #eaeaea; }
+
+.mypic3 ul{padding:0 10px 10px 10px;overflow: hidden; background:#fff;height:auto;}
+.mypic3 ul li{width: 33.33%;padding-top: 10px;display: table-cell;vertical-align: middle;text-align: center;float: left;overflow: hidden;}
+.mypic3 ul li a{ display:block; margin:0 auto;overflow: hidden;position: relative;}
+.mypic3 ul li img{width:100%; vertical-align: bottom; width:105px; height:80px;background-color: #efefef;-webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px;border:1px solid #eaeaea;}
+.mypic3 ul li h4{font-size: 12px;font-weight: normal;overflow: hidden;white-space: nowrap;
+text-overflow: ellipsis;padding: 0 3%;text-align: center;height: 24px;line-height: 24px;width: 94%;}
+.mypic3 ul li p{font-size: 12px;overflow: hidden;padding: 0 5%;text-align: center;line-height: 16px;width: 90%;}
+
+.myforum3 ul{padding:0px 10px 5px 10px;overflow: hidden; background:#fff;}
+.myforum3 ul li{width: 33.33%;display: table-cell;vertical-align: middle;float: left;}
+.myforum3 ul li a { display:block; height:32px; padding:10px 10px 10px 40px; position:relative;}
+.myforum3 ul li img{ position:absolute; top:9px; left:0px;width: 32px;height: 32px;-webkit-border-radius: 6px;-moz-border-radius: 6px;border-radius: 6px;}
+.myforum3 ul li h4{height: 18px;line-height: 18px; font-size:14px; overflow: hidden;}
+.myforum3 ul li p {color: #999;font-size: 12px;line-height: 14px;height: 14px;overflow: hidden;text-overflow: ellipsis;}
+.myforum3 ul li.hr { display:block; width:100%; height:1px;border-top: 1px solid #eaeaea;font-size:1px; padding:0;}
+
+.myforum4 ul{padding:0 0 10px 0;width: 100%;overflow: hidden; background:#fff;}
+.myforum4 ul li{width: 24.925%;padding-top: 10px;display: table-cell;vertical-align: middle;text-align: center;float: left;}
+.myforum4 ul li img{middle;width: 40px;height: 40px;-webkit-border-radius: 6px;-moz-border-radius: 6px;border-radius: 6px;}
+.myforum4 ul li h4{margin: 0 auto;height: 24px;line-height: 24px;overflow: hidden;text-align: center; font-weight:400; font-size:14px;}
+/* 头条 */
+.my_ttl{width: 96%; margin: 0 auto; padding-top:5px;}
+.my_ttl .list{padding:10px;}
+.my_ttl .my_nnbox a{font-size: 18px;font-weight: 700;display: block;text-align: center;height: 20px;line-height: 20px;overflow: hidden; }
+.my_ttl .my_nnbox span{margin-top: 3px;height: 44px; text-align:center;line-height: 22px;font-size: 14px;color: #999;overflow: hidden;display: block;}
+
+</style>
+
+<div class="ct">
+<!--{block/4}-->
+
+<style type="text/css">
+.scrollDiv{ position:relative; padding:10px 90px 10px 15px;height:20px;font-size:14px;overflow:hidden}
+.scrollDiv span { position:absolute; top:0px; right:10px;height:40px;text-align: center;}
+.scrollDiv span img { width:70px; height:40px;}
+#scrollDiv{border-right: 1px solid #ddd;padding-left:20px;padding-right:10px;height: 20px; background:url(template/mobile/toutiao_mobile/img/icon_hot.png) no-repeat; background-size:16px;overflow: hidden;}
+#scrollDiv ul li {height:20px;line-height:20px;overflow:hidden;}
+#scrollDiv ul li a {color:#666;}
+</style>
+    <div class="mybox">
+        <div class="scrollDiv">
+            <span><a href="#"><img src="template/mobile/toutiao_mobile/img/qiandao.png" /></a></span>
+            <div id="scrollDiv">
+        <!--{block/20}-->
+            </div>
+        </div>
+    </div>
+<script>
+function AutoScroll(obj){
+        $(obj).find("ul:first").animate({
+                marginTop:"-20px"
+        },500,function(){
+                $(this).css({marginTop:"0px"}).find("li:first").appendTo(this);
+        });
+}
+$(document).ready(function(){
+	setInterval('AutoScroll("#scrollDiv")',3000)
+});
+</script>
+
+
+<section>
+<div class="mybox"><!--{block/9}--></div>
+</section>
+
+
+<section>
+    <div class="mybox">
+        <div class="myforum4">
+<!--{block/11}-->
+        </div>
+    </div>  
+</section>
+
+<!--广告-->
+<section><div class="mybox myads"><!--{block/16}--></div></section>
+
+<section>
+    <div class="mybox">
+<!--{block/3}-->
+    </div>
+</section>
+
+
+<section>
+    <div class="mybox">
+        <div class="tit">
+            <h3>限时抢购</h3><span><a href="forum.php?mod=forumdisplay&fid=46" target="_blank">更多</a></span>
+        </div>
+        <div class="mypic3">
+        <!--{block/13}-->
+        </div>
+    </div>  
+</section>
+
+<!--广告-->
+<section><div class="mybox myads"><!--{block/17}--></div></section>
+
+<section>
+    <div class="mybox">
+<div class="th_tab">
+<a id="tab_a1" onclick="javascript:view_a(1);" class="on" >推荐主题</a>    
+<a id="tab_a2" onclick="javascript:view_a(2);" >最新主题</a>
+<a id="tab_a3" onclick="javascript:view_a(3);" >热门文章</a>
+<a id="tab_a4" onclick="javascript:view_a(4);" >分类信息</a>
+</div>
+
+<div id="box_a1" class="th" style="display:block;"><!--{block/5}--></div>
+<div id="box_a2" class="th th_np"><!--{block/6}--></div>
+<div id="box_a3" class="th"><!--{block/7}--></div>
+<div id="box_a4" class="th th_np1"><!--{block/21}--></div>
+    </div>
+</section>
+
+<!--广告-->
+<section><div class="mybox myads"><!--{block/18}--></div></section>
+
+<section>
+    <div class="mybox">
+        <div class="tit">
+            <h3>热门版块</h3>
+        </div>
+        <div class="myforum3">
+            <!--{block/8}-->    
+        </div>
+    </div>
+</section>
+
+
+<section>
+    <div class="mybox">
+        <div class="tit">
+            <h3>最新美图</h3><span><a href="forum.php?mod=forumdisplay&fid=51" target="_blank">更多</a></span>
+        </div>
+        <div class="mypic3">
+        <!--{block/12}-->
+        </div>
+    </div>  
+</section>
+</div>
+
+<script src="./template/mobile/toutiao_mobile/js/swipe.js"></script>
+
+<script type="text/javascript">
+var slider = new Swipe(document.getElementById('slider'), {
+      callback: function(e, pos) {
+        
+        var i = bullets.length;
+        while (i--) {
+          bullets[i].className = ' ';
+        }
+        bullets[pos].className = 'on';
+
+      }
+    }),
+    bullets = document.getElementById('position').getElementsByTagName('em');
+	
+</script>
+
+    <script type="text/javascript">
+        function view_a(a) {
+			for(var i=1;i<=4;i++){
+			document.getElementById('box_a' + i).style.display = 'none';
+			document.getElementById('tab_a' + i).className = '';
+			}
+			document.getElementById('box_a'+a).style.display='block';
+			document.getElementById('tab_a'+a).className='on';
+        }		
+        function view_a1(a) {
+			for(var i=1;i<=4;i++){
+			document.getElementById('box1_a' + i).style.display = 'none';
+			document.getElementById('tab1_a' + i).className = '';
+			}
+			document.getElementById('box1_a'+a).style.display='block';
+			document.getElementById('tab1_a'+a).className='on';
+        }		
+        function view_b(a) {
+	    for(var i=1;i<=3;i++){
+		document.getElementById('box_b' + i).style.display = 'none';
+		document.getElementById('tab_b' + i).className = '';
+	    }
+	    document.getElementById('box_b'+a).style.display='block';
+	    document.getElementById('tab_b'+a).className='on';
+        }		
+    </script>]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="10">
+				<item id="displayorder"><![CDATA[15]]></item>
+				<item id="title"><![CDATA[【首页】今日头条页面代码]]></item>
+				<item id="description"><![CDATA[今日头条型首页的页面代码]]></item>
+				<item id="variable"><![CDATA[ceo_piclistcode]]></item>
+				<item id="type"><![CDATA[textarea]]></item>
+				<item id="value"><![CDATA[<link rel="stylesheet" href="template/mobile/toutiao_mobile/css/tpl.css" type="text/css" media="all">
+<script src="template/mobile/toutiao_mobile/js/TouchSlide.1.1.js"></script>
+
+<section>
+<div class="slide">
+    <div id="slideBox" class="slideBox">
+		<div class="bd">
+			<div class="tempWrap" style="overflow:hidden; position:relative;"><ul style="width: 3360px; position: relative; overflow: hidden; padding: 0px; margin: 0px; transition-duration: 200ms; transform: translate(-1680px, 0px) translateZ(0px);">
+					<li style="display: table-cell; vertical-align: top; width: 560px;">
+						<a class="pic" href="#"><img src="http://www.superslide2.com/TouchSlide/demo/images/4b.jpg"></a>
+						<a class="tit" href="#">济南现"最窄人行道" 仅0.2米宽</a>
+					</li><li style="display: table-cell; vertical-align: top; width: 560px;">
+						<a class="pic" href="#"><img src="http://www.superslide2.com/TouchSlide/demo/images/1b.jpg"></a>
+						<a class="tit" href="#">墨西哥教师罢工 与警察激烈冲突</a>
+					</li>
+					<li style="display: table-cell; vertical-align: top; width: 560px;">
+						<a class="pic" href="#"><img src="http://www.superslide2.com/TouchSlide/demo/images/2b.jpg"></a>
+						<a class="tit" href="#">日右翼游行纪念钓岛"国有化"周年</a>
+					</li>
+					<li style="display: table-cell; vertical-align: top; width: 560px;">
+						<a class="pic" href="#"><img src="http://www.superslide2.com/TouchSlide/demo/images/3b.jpg"></a>
+						<a class="tit" href="#">女兵竞选美国小姐鼓励女性自强</a>
+					</li>
+					<li style="display: table-cell; vertical-align: top; width: 560px;">
+						<a class="pic" href="#"><img src="http://www.superslide2.com/TouchSlide/demo/images/4b.jpg"></a>
+						<a class="tit" href="#">济南现"最窄人行道" 仅0.2米宽</a>
+					</li>
+			<li style="display: table-cell; vertical-align: top; width: 560px;">
+						<a class="pic" href="#"><img src="http://www.superslide2.com/TouchSlide/demo/images/1b.jpg"></a>
+						<a class="tit" href="#">墨西哥教师罢工 与警察激烈冲突</a>
+					</li></ul></div>
+		</div>
+
+		<div class="hd">
+            <span class="prev"></span>
+            <span class="next"></span>
+			<ul><li class="">1</li><li class="">2</li><li class="on">3</li><li class="">4</li></ul>
+		</div>
+	</div>
+	<script type="text/javascript">
+		TouchSlide({ 
+			slideCell:"#slideBox",
+			titCell:".hd ul", //开启自动分页 autoPage:true ，此时设置 titCell 为导航元素包裹层
+			mainCell:".bd ul", 
+			effect:"leftLoop", 
+			autoPage:true,//自动分页
+			autoPlay:true //自动播放
+		});
+	</script>
+</div>
+</section>
+]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="11">
+				<item id="displayorder"><![CDATA[22]]></item>
+				<item id="title"><![CDATA[【版块】子版块是否默认展开]]></item>
+				<item id="description"><![CDATA[设置子版块展开显示]]></item>
+				<item id="variable"><![CDATA[ceo_subopen]]></item>
+				<item id="type"><![CDATA[radio]]></item>
+				<item id="value"><![CDATA[1]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="12">
+				<item id="displayorder"><![CDATA[23]]></item>
+				<item id="title"><![CDATA[【帖子列表】头条模式的版块]]></item>
+				<item id="description"><![CDATA[]]></item>
+				<item id="variable"><![CDATA[ceo_forum_toutiao]]></item>
+				<item id="type"><![CDATA[forums]]></item>
+				<item id="extra"><![CDATA[]]></item>
+				<item id="__value">
+					<item id="0"><![CDATA[]]></item>
+				</item>
+			</item>
+			<item id="13">
+				<item id="displayorder"><![CDATA[24]]></item>
+				<item id="title"><![CDATA[【帖子列表】帖吧模式的版块]]></item>
+				<item id="description"><![CDATA[]]></item>
+				<item id="variable"><![CDATA[ceo_forum_tieba]]></item>
+				<item id="type"><![CDATA[forums]]></item>
+				<item id="extra"><![CDATA[]]></item>
+				<item id="__value">
+					<item id="0"><![CDATA[]]></item>
+				</item>
+			</item>
+			<item id="14">
+				<item id="displayorder"><![CDATA[25]]></item>
+				<item id="title"><![CDATA[【帖子列表】无图帖是否显示简介]]></item>
+				<item id="description"><![CDATA[]]></item>
+				<item id="variable"><![CDATA[ceo_forum_jianjie]]></item>
+				<item id="type"><![CDATA[radio]]></item>
+				<item id="value"><![CDATA[1]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="15">
+				<item id="displayorder"><![CDATA[26]]></item>
+				<item id="title"><![CDATA[【帖子列表】简介显示字数]]></item>
+				<item id="description"><![CDATA[]]></item>
+				<item id="variable"><![CDATA[ceo_forum_jianjienum]]></item>
+				<item id="type"><![CDATA[text]]></item>
+				<item id="value"><![CDATA[100]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="16">
+				<item id="displayorder"><![CDATA[27]]></item>
+				<item id="title"><![CDATA[【帖子列表】图片版块显示方式]]></item>
+				<item id="description"><![CDATA[]]></item>
+				<item id="variable"><![CDATA[ceo_forum_pic]]></item>
+				<item id="type"><![CDATA[select]]></item>
+				<item id="value"><![CDATA[2]]></item>
+				<item id="extra"><![CDATA[0=默认
+1=单列显示
+2=双列显示]]></item>
+			</item>
+			<item id="17">
+				<item id="displayorder"><![CDATA[28]]></item>
+				<item id="title"><![CDATA[【帖子】相关帖子显示数量]]></item>
+				<item id="description"><![CDATA[贴内相关帖子的显示数量]]></item>
+				<item id="variable"><![CDATA[ceo_relateitems]]></item>
+				<item id="type"><![CDATA[text]]></item>
+				<item id="value"><![CDATA[5]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="18">
+				<item id="displayorder"><![CDATA[31]]></item>
+				<item id="title"><![CDATA[【分类信息】是否开启]]></item>
+				<item id="description"><![CDATA[开启后手机版则可以显示分类信息。]]></item>
+				<item id="variable"><![CDATA[ceo_sortopen]]></item>
+				<item id="type"><![CDATA[radio]]></item>
+				<item id="value"><![CDATA[1]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="19">
+				<item id="displayorder"><![CDATA[32]]></item>
+				<item id="title"><![CDATA[【分类信息】是否启用自定模板]]></item>
+				<item id="description"><![CDATA[暂不能使用。]]></item>
+				<item id="variable"><![CDATA[ceo_sortdiyopen]]></item>
+				<item id="type"><![CDATA[radio]]></item>
+				<item id="value"><![CDATA[0]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="20">
+				<item id="displayorder"><![CDATA[41]]></item>
+				<item id="title"><![CDATA[【频道栏目】每列显示数]]></item>
+				<item id="description"><![CDATA[]]></item>
+				<item id="variable"><![CDATA[ceo_catelist]]></item>
+				<item id="type"><![CDATA[number]]></item>
+				<item id="value"><![CDATA[3]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="21">
+				<item id="displayorder"><![CDATA[42]]></item>
+				<item id="title"><![CDATA[【频道栏目】显示方式]]></item>
+				<item id="description"><![CDATA[]]></item>
+				<item id="variable"><![CDATA[ceo_cateliststyle]]></item>
+				<item id="type"><![CDATA[select]]></item>
+				<item id="value"><![CDATA[2]]></item>
+				<item id="extra"><![CDATA[1=单栏目列表
+2=多级栏目列表]]></item>
+			</item>
+			<item id="22">
+				<item id="displayorder"><![CDATA[70]]></item>
+				<item id="title"><![CDATA[【图片墙】是否启用美图]]></item>
+				<item id="description"><![CDATA[如不启用图墙, 下面所有与【图片墙】有关的设置将不起作用。]]></item>
+				<item id="variable"><![CDATA[ceo_photowall]]></item>
+				<item id="type"><![CDATA[radio]]></item>
+				<item id="value"><![CDATA[1]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="23">
+				<item id="displayorder"><![CDATA[71]]></item>
+				<item id="title"><![CDATA[【图片墙】调用的模块]]></item>
+				<item id="description"><![CDATA[选择显示“版块”或“频道”的内容，同时只会显示一种。]]></item>
+				<item id="variable"><![CDATA[ceo_photomodule]]></item>
+				<item id="type"><![CDATA[select]]></item>
+				<item id="value"><![CDATA[2]]></item>
+				<item id="extra"><![CDATA[1=版块
+2=频道]]></item>
+			</item>
+			<item id="24">
+				<item id="displayorder"><![CDATA[72]]></item>
+				<item id="title"><![CDATA[【图片墙】调用的版块fid]]></item>
+				<item id="description"><![CDATA[显示哪些版块中的图片，填上版块的fid，如留空则显示所有版块的图片, 多个版块fid用半角逗号分开, 如:'2,3,4,5'。 【注】：调用的模块选择版块时有效。]]></item>
+				<item id="variable"><![CDATA[ceo_photoforumfids]]></item>
+				<item id="type"><![CDATA[text]]></item>
+				<item id="value"><![CDATA[]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="25">
+				<item id="displayorder"><![CDATA[73]]></item>
+				<item id="title"><![CDATA[【图片墙】调用的频道catid]]></item>
+				<item id="description"><![CDATA[显示哪些频道中的图片，填上频道的catid，如留空则显示所有频道的图片, 多个频道catid用半角逗号分开, 如:'2,3,4,5'。【注】：调用的模块选择频道时有效。]]></item>
+				<item id="variable"><![CDATA[ceo_photocatids]]></item>
+				<item id="type"><![CDATA[text]]></item>
+				<item id="value"><![CDATA[]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="26">
+				<item id="displayorder"><![CDATA[74]]></item>
+				<item id="title"><![CDATA[【图片墙】是否只显示带封面的帖子]]></item>
+				<item id="description"><![CDATA[选择“是”，则只显示版块设置为图版模式的版块内的图片。]]></item>
+				<item id="variable"><![CDATA[ceo_photoionlypic]]></item>
+				<item id="type"><![CDATA[radio]]></item>
+				<item id="value"><![CDATA[1]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="27">
+				<item id="displayorder"><![CDATA[75]]></item>
+				<item id="title"><![CDATA[【图片墙】每页图片数量]]></item>
+				<item id="description"><![CDATA[每页显示调用的图片主题数量]]></item>
+				<item id="variable"><![CDATA[ceo_photonum]]></item>
+				<item id="type"><![CDATA[text]]></item>
+				<item id="value"><![CDATA[20]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="28">
+				<item id="displayorder"><![CDATA[75]]></item>
+				<item id="title"><![CDATA[【图片墙】调用的时间范围]]></item>
+				<item id="description"><![CDATA[单位为天, 超过这个时间发布的图片主题不予调用]]></item>
+				<item id="variable"><![CDATA[ceo_photoday]]></item>
+				<item id="type"><![CDATA[text]]></item>
+				<item id="value"><![CDATA[300]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="29">
+				<item id="displayorder"><![CDATA[75]]></item>
+				<item id="title"><![CDATA[【图片墙】页面缓存时间]]></item>
+				<item id="description"><![CDATA[单位为秒, 每页图片主题调用的间隔缓存时间]]></item>
+				<item id="variable"><![CDATA[ceo_photocache]]></item>
+				<item id="type"><![CDATA[text]]></item>
+				<item id="value"><![CDATA[0]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="30">
+				<item id="displayorder"><![CDATA[75]]></item>
+				<item id="title"><![CDATA[【图片墙】列表展示方式]]></item>
+				<item id="description"><![CDATA[展示的样式。]]></item>
+				<item id="variable"><![CDATA[ceo_photolist]]></item>
+				<item id="type"><![CDATA[select]]></item>
+				<item id="value"><![CDATA[3]]></item>
+				<item id="extra"><![CDATA[1=单列列表
+2=双列列表
+3=瀑布流]]></item>
+			</item>
+			<item id="31">
+				<item id="displayorder"><![CDATA[76]]></item>
+				<item id="title"><![CDATA[【图片墙】图片显示方式]]></item>
+				<item id="description"><![CDATA[选择“宽高百分百”则图片大小不足时会拉伸图片。]]></item>
+				<item id="variable"><![CDATA[ceo_photosize]]></item>
+				<item id="type"><![CDATA[select]]></item>
+				<item id="value"><![CDATA[2]]></item>
+				<item id="extra"><![CDATA[1=宽高百分百（把图像扩展至足够大）
+2=按比例缩放（以宽度为标准）]]></item>
+			</item>
+			<item id="32">
+				<item id="displayorder"><![CDATA[77]]></item>
+				<item id="title"><![CDATA[【图片墙】图片裁剪方式]]></item>
+				<item id="description"><![CDATA[]]></item>
+				<item id="variable"><![CDATA[ceo_phototype]]></item>
+				<item id="type"><![CDATA[select]]></item>
+				<item id="value"><![CDATA[fixwr]]></item>
+				<item id="extra"><![CDATA[fixwr=图片等比例缩小，超出部分裁剪
+fixnone=图片等比例缩小]]></item>
+			</item>
+			<item id="33">
+				<item id="displayorder"><![CDATA[78]]></item>
+				<item id="title"><![CDATA[【图片墙】图片裁剪高度]]></item>
+				<item id="description"><![CDATA[图片显示时裁剪的高度。 单位px]]></item>
+				<item id="variable"><![CDATA[ceo_photoheight]]></item>
+				<item id="type"><![CDATA[text]]></item>
+				<item id="value"><![CDATA[200]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="34">
+				<item id="displayorder"><![CDATA[78]]></item>
+				<item id="title"><![CDATA[【图片墙】图片裁剪宽度]]></item>
+				<item id="description"><![CDATA[图片显示时裁剪的宽度。单位px]]></item>
+				<item id="variable"><![CDATA[ceo_photowidth]]></item>
+				<item id="type"><![CDATA[text]]></item>
+				<item id="value"><![CDATA[150]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="35">
+				<item id="displayorder"><![CDATA[81]]></item>
+				<item id="title"><![CDATA[【广告】是否显示全屏弹出广告]]></item>
+				<item id="description"><![CDATA[]]></item>
+				<item id="variable"><![CDATA[ceo_showadvopen]]></item>
+				<item id="type"><![CDATA[radio]]></item>
+				<item id="value"><![CDATA[0]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="36">
+				<item id="displayorder"><![CDATA[82]]></item>
+				<item id="title"><![CDATA[【广告】全屏弹出广告内容]]></item>
+				<item id="description"><![CDATA[要显示的图片链接，链接与图片用“|”隔开，每行一条，最多五个。]]></item>
+				<item id="variable"><![CDATA[ceo_showadv]]></item>
+				<item id="type"><![CDATA[textarea]]></item>
+				<item id="value"><![CDATA[http://E??/demo/img/ad/showadv_01.jpg|http://addon.discuz.com/?@44228.developer
+http://E??/demo/img/ad/showadv_02.jpg|http://addon.discuz.com/?@44228.developer
+http://E??/demo/img/ad/showadv_03.jpg|http://addon.discuz.com/?@44228.developer
+http://E??/demo/img/ad/showadv_04.jpg|http://addon.discuz.com/?@44228.developer]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="37">
+				<item id="displayorder"><![CDATA[83]]></item>
+				<item id="title"><![CDATA[【广告】全屏弹出广告显示间隔]]></item>
+				<item id="description"><![CDATA[单位为“秒”，一小时=3600秒，一天=86400秒。]]></item>
+				<item id="variable"><![CDATA[ceo_showadvtime]]></item>
+				<item id="type"><![CDATA[number]]></item>
+				<item id="value"><![CDATA[10]]></item>
+				<item id="extra"><![CDATA[1=只显示一次
+2=每月显示一次
+3=每天显示一次]]></item>
+			</item>
+			<item id="38">
+				<item id="displayorder"><![CDATA[85]]></item>
+				<item id="title"><![CDATA[【广告】全站页脚广告位]]></item>
+				<item id="description"><![CDATA[在此填入广告代码]]></item>
+				<item id="variable"><![CDATA[ceo_footer_ad]]></item>
+				<item id="type"><![CDATA[textarea]]></item>
+				<item id="value"><![CDATA[<a href="http://addon.discuz.com/?@mobile.template" target="_blank"><img src="http://E??/demo/img/ad/ad01.jpg" width="100%" ></a>]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="39">
+				<item id="displayorder"><![CDATA[86]]></item>
+				<item id="title"><![CDATA[【广告】贴内广告位]]></item>
+				<item id="description"><![CDATA[在此填入广告代码]]></item>
+				<item id="variable"><![CDATA[ceo_viewthread_ad]]></item>
+				<item id="type"><![CDATA[textarea]]></item>
+				<item id="value"><![CDATA[<a href="http://addon.discuz.com/?@mobile.template" target="_blank"><img src="http://E??/demo/img/ad/ad01.jpg" width="100%" ></a>]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="40">
+				<item id="displayorder"><![CDATA[87]]></item>
+				<item id="title"><![CDATA[【广告】文章广告位]]></item>
+				<item id="description"><![CDATA[在此填入广告代码]]></item>
+				<item id="variable"><![CDATA[ceo_article_ad]]></item>
+				<item id="type"><![CDATA[textarea]]></item>
+				<item id="value"><![CDATA[<a href="http://addon.discuz.com/?@mobile.template" target="_blank"><img src="http://E??/demo/img/ad/ad01.jpg" width="100%" ></a>]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="41">
+				<item id="displayorder"><![CDATA[102]]></item>
+				<item id="title"><![CDATA[【其它】站外分享代码]]></item>
+				<item id="description"><![CDATA[在此填入分享代码]]></item>
+				<item id="variable"><![CDATA[ceo_mshare]]></item>
+				<item id="type"><![CDATA[textarea]]></item>
+				<item id="value"><![CDATA[]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+		</item>
+		<item id="installfile"><![CDATA[install.php]]></item>
+		<item id="uninstallfile"><![CDATA[uninstall.php]]></item>
+		<item id="upgradefile"><![CDATA[upgrade.php]]></item>
+	</item>
+</root>

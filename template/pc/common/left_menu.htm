@@ -1,0 +1,23 @@
+
+<!--frame_menu-->
+<div class="frame_menu" <!--{if $_GET[isadmin]==1}-->style="display:none"<!--{/if}-->>
+	<ul class="one font_yahei">
+    	<li><a href="portal.php" <!--{if $catid==0}-->class="on"<!--{/if}-->>推荐</a></li>
+        <!--{loop $menus $k $v}-->
+        <!--{if $k<=9}-->
+        <li><a href="forum.php?mod=forumdisplay&fid=<!--{$v[fid]}-->" <!--{if $v[fid]==$catid}-->class="on"<!--{/if}-->><!--{$v[name]}--></a></li>
+        <!--{/if}-->
+        <!--{/loop}-->
+      
+        <li class="more"><a href="javascript:;">更多</a>
+        	<ul class="two more_main">
+                <!--{loop $menus $k $v}-->
+        <!--{if $k>9}-->
+        <li><a href="forum.php?mod=forumdisplay&fid=<!--{$v[fid]}-->" <!--{if $v[fid]==$catid}-->class="on"<!--{/if}-->><!--{$v[name]}--></a></li>
+        <!--{/if}-->
+        <!--{/loop}-->
+            </ul>
+        </li>
+    </ul>
+</div>
+<!--frame_menu END-->

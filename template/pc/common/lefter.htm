@@ -1,0 +1,87 @@
+<div class="left">
+    <!--Focus_News-->
+          <div class="Focus_News">
+            <h2 class="caption">24小时要闻</h2>
+            
+            
+           
+            
+           <!--{block/101}-->
+			
+           
+        </div>
+	<!--Focus_News End-->
+    
+    <!--Selected_pic-->
+    	<div class="Selected_pic">
+        	<div class="title">精彩图片</div>
+            
+            <!--{loop $piclist $v}-->
+            <a class="list" href="forum.php?mod=viewthread&tid={$v[tid]}">
+            	<div class="pic">
+                    <span class="pic_number">{$v[picnum]}图</span>
+                    <!--{if $v[picnum]>2}-->
+                    	<!--{eval $i=0;}-->
+                    	 <!--{loop $v[piclist] $vvv}-->
+                         <!--{eval $i++;}-->
+                    <div class="img <!--{if $i==2}-->max<!--{/if}-->" ><img class="left" data-original="data/attachment/forum/{$vvv[attachment]}" src="/public/images/placeholder.png"></div>
+                    	<!--{/loop}-->
+                    <!--{else}-->
+                    
+                    <!--{eval $i=0;}-->
+                     <!--{loop $v[piclist] $vvv}-->
+                     <!--{eval $i++;}-->
+                     <!--{if $i==1}-->
+                    <img class="one left" data-original="data/attachment/forum/{$vvv[attachment]}" src="/public/images/placeholder.png">
+                    <!--{/if}-->
+                    <!--{/loop}-->
+                    <!--{/if}-->
+                </div>
+                <div class="t"><span>{$v[title]}</span></div>
+            </a>
+            
+
+            
+          
+             <!--{/loop}-->
+           
+        </div>
+    <!--Selected_pic END-->
+    
+    <!--Selected_video-->
+    	<div class="Selected_video">
+        	<div class="title">热门视频</div>
+            <!--{loop $videolist $v}-->
+             <a class="list" href="forum.php?mod=viewthread&tid={$v[tid]}&from=portal">
+            	<div class="pic">
+                    <span class="time">{$v[videotime]}</span>
+                    <img class="left" data-original="{$v[thumb]}" src="/public/images/NO_IMG.jpg">
+                </div>
+                <div class="t"><span>{$v[title]}</span></div>
+            </a>
+            <!--{/loop}-->
+            
+            
+        </div>
+    <!--Selected_video END-->
+    
+    <!--friendly_links-->
+    	<div class="friendly_links">
+        	<div class="title">友情链接</div>
+          <div class="main">
+            	 <ul>
+                   <!--{block/102}-->
+            
+                </ul>
+            </div>
+        </div>
+    <!--friendly_links END-->
+    
+  	<!--Copyright-->
+    	<div class="Copyright">
+        	<p>&copy; 2016  <a href="#">weihaitoutiao.com</a></p>
+            <p>中国互联网举报中心 京ICP证140141号</p>
+            <p>京ICP备12025439号-3 网络文化经营许可证</p>
+        </div>
+    <!--Copyright END-->
+    </div>

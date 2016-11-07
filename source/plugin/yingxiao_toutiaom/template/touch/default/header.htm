@@ -1,0 +1,48 @@
+<html>
+<head>
+<title><!--{$ceo_seotitle}--></title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Cache-control" content="no-cache" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+<meta name="format-detection" content="telephone=no" />
+<meta name="keywords" content="<!--{$ceo_seokeywords}-->" />
+<meta name="description" content="<!--{$ceo_seodescription}-->" />
+<script src="source/plugin/yingxiao_toutiaom/template/touch/default/js/jquery-1.8.3.min.js"></script>
+<script src="source/plugin/yingxiao_toutiaom/template/touch/default/js/yingxiaomobile.js"></script>
+<link rel="stylesheet" href="source/plugin/yingxiao_toutiaom/template/touch/default/style.css" type="text/css" />
+<link rel="stylesheet" href="source/plugin/yingxiao_toutiaom/template/touch/font/iconfont.css" type="text/css" />
+<style>
+.header_bg { background: $ceo_headerbg;}#nav.header_bg { background: $ceo_headerbg;}
+.header_bg a { color: $ceo_headertext;}
+</style>
+</head>
+<body>
+<!--{if $_GET[id] == "yingxiao_toutiaom:list"}-->
+<header class="list_top">
+    <div id="backpage" class="backpage"><a href="javascript:history.back(-1)" class="z"><i class="iconfont i_backpage">&#xe801;</i></a></div>
+    <div id="webtitle" class="logo"></a></div>
+    <div id="side_pr" class="hd_mu"><a href="./" id="side_open" class="y"><i class="iconfont i_sidemenu">&#xe804;</i></a></div>
+</header>
+<!--{else}-->
+    <!--{if $ceo_headertemplate == 1}-->
+<header class="header_bg">
+    <div id="userlogin" class="hd_mu">
+<a href="{if $_G[uid]}home.php?mod=space&uid=$_G[uid]&do=profile&mycenter=1{else}member.php?mod=logging&action=login{/if}" class="z"><i class="iconfont i_usermenu">&#xe806;</i></a>
+        <!--{if $_G[member][newpm] || $_G[member][newprompt] || $_G['connectguest'] }--><em></em><!--{/if}-->
+    </div>
+    <div id="webtitle" class="logo"><a href="./forum.php"><img src="./source/plugin/yingxiao_toutiaom/template/touch/default/images/logo.png" /></a></div>
+    <div id="side_pr" class="hd_mu"><a href="./" id="side_open" class="y"><i class="iconfont i_sidemenu">&#xe804;</i></a></div>
+</header>
+    <!--{/if}-->
+<div id="nav" class="{if $ceo_headertemplate == 2}header_bg{/if}">
+	<div class="nl">
+		<ul>
+    {$ceo_navcode}
+		</ul>
+	<div class="y nr"><a href="plugin.php?id=yingxiao_toutiaom:list" class="iconfont">&#xe809;</a></div>
+	</div>
+</div>
+    
+<div class="top" style="display:block; height:<!--{if $ceo_headertemplate == 1}-->81px<!--{else}-->45px<!--{/if}-->; width:100%;"></div>
+    
+<!--{/if}-->

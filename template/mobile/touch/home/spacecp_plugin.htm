@@ -1,0 +1,12 @@
+<!--{template common/header}-->
+<script>SetWebTitle("$navtitle");SetTopLeftNav("backpage");</script>
+
+<div class="ceo_plugin box_bg">
+<!--{if $op == 'credit'}-->
+	<!--{template home/spacecp_credit_header}-->
+<!--{/if}-->
+<!--{eval include(template($_GET['id']));}-->
+</div>
+
+
+<!--{template common/footer}-->

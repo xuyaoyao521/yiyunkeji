@@ -1,0 +1,9 @@
+<div class="tbn">
+	<h2 class="mt bbda">我的消息</h2>
+	<ul>
+		<li $opactives['pm']><a href="home.php?mod=space&do=pm" <!--{if $_GET[do]=='pm'}-->class="on"<!--{/if}-->>{lang news} <!--{if $newpmcount}--><strong class="xi1">($newpmcount)</strong><!--{/if}--></a></li>   <li $opactives['pm']><a href="home.php?mod=space&do=notice&view=system" <!--{if $_GET[do]=='notice'&&$_GET['view']=='system'}-->class="on"<!--{/if}-->>系统</a></li>
+        <li $opactives['pm']><a href="home.php?mod=space&do=notice" <!--{if $_GET[do]=='notice'&&!$_GET['view']}-->class="on"<!--{/if}-->>提醒</a></li>
+     
+		
+  </ul>
+</div>

@@ -1,0 +1,45 @@
+<!--{template common/header}-->
+<!--{if empty($_GET['infloat'])}-->
+<div id="ct" class="bm_c box_bg">
+<!--{/if}-->
+
+<form method="post" autocomplete="off" id="postform" action="forum.php?mod=misc&action=debateumpire&tid=$_G[tid]&umpiresubmit=yes&infloat=yes{if !empty($_GET['from'])}&from=$_GET['from']{/if}"{if !empty($_GET['infloat'])} onsubmit="ajaxpost('postform', 'return_$_GET['handlekey']', 'return_$_GET['handlekey']', 'onerror');return false;"{/if}>
+
+		<input type="hidden" name="formhash" id="formhash" value="{FORMHASH}" />
+		<!--{if !empty($_GET['infloat'])}--><input type="hidden" name="handlekey" value="$_GET['handlekey']" /><!--{/if}-->
+		<div class="post_from">
+			<ul>
+                <li><strong>{lang debate_umpirecomment}</strong></li>
+				<li><strong>{lang debate_winner}</strong>
+<label class="lb"><input type="radio" name="winner" value="1" class="pr" $winnerchecked[1] id="winner1" />{lang debate_square}</label>
+<label class="lb"><input type="radio" name="winner" value="2" class="pr" $winnerchecked[2] id="winner2" />{lang debate_opponent}</label>
+<label class="lb"><input type="radio" name="winner" value="3" class="pr" $winnerchecked[3] id="winner3" />{lang debate_draw}</label>
+					</li>
+
+				<li><label for="bestdebater"><strong>{lang debate_bestdebater}</strong></label></li>
+					<li>
+							<select onchange="document.getElementById('bestdebater').value=this.options[this.options.selectedIndex].value" class="ps">
+								<option value=""><strong>{lang debate_recommend_list}</strong></option>
+								<option value="">------------------------------</option>
+								<!--{loop $candidates $candidate}-->
+									<option value="$candidate[username]"{if $candidate[username] == $debate[bestdebater]} selected="selected"{/if}>$candidate[username] ( $candidate[voters] {lang debate_poll}, <!--{if $candidate[stand] == 1}-->{lang debate_square}<!--{elseif $candidate[stand] == 2}-->{lang debate_opponent}<!--{/if}-->)</option>
+								<!--{/loop}-->
+							</select>
+						</li>
+						<li><input type="text" name="bestdebater" id="bestdebater" class="px" value="$debate[bestdebater]" size="20" /></li>
+						<li>{lang debate_list_nonexistence}</li>
+
+				<li><label for="umpirepoint"><strong>{lang debate_umpirepoint}</strong></label></li>
+					<li><textarea id="umpirepoint" name="umpirepoint" class="pt box_bg" style="height: 100px;">$debate[umpirepoint]</textarea></li>
+			</ul>
+		</div>
+	<div class="o pns">
+		<button type="submit" name="umpiresubmit" value="true" class="btn_default btn_w100 btn_disable"><span>{lang submit}</span></button>
+	</div>
+</form>
+
+
+<!--{if empty($_GET['infloat'])}-->
+</div>
+<!--{/if}-->
+<!--{template common/footer}-->

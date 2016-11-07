@@ -1,0 +1,58 @@
+
+<!--{template common/header_home}-->
+<style>
+	.info_page{ text-align:center}
+</style>
+<div class="usercenter_content">
+
+			<div class="usercenter_content_l usercenter_content_l2 font_yahei">
+				<h5>我的收藏</h5>
+				<ul>
+                    <li><a href="home.php?mod=collection&type=1" <!--{if $type=="1"}-->class="on" <!--{/if}-->>文章收藏</a></li>
+                    <li><a href="home.php?mod=collection&type=2" <!--{if $type=="2"}-->class="on" <!--{/if}-->>图片收藏</a></li>
+                    <li><a href="home.php?mod=collection&type=3" <!--{if $type=="3"}-->class="on" <!--{/if}-->>视频收藏</a></li>
+                    <li><a href="home.php?mod=collection&type=4" <!--{if $type=="4"}-->class="on" <!--{/if}-->>段子收藏</a></li>
+                    <li><a href="home.php?mod=collection&type=5" <!--{if $type=="5"}-->class="on" <!--{/if}-->>帖子收藏</a></li>
+                    
+
+        </li>
+    </ul>
+				
+			</div>
+           
+			<div class="usercenter_content_r font_yahei">
+             <!--{if $allcount<=0}-->
+				<div class="NO_data">
+                暂无收藏
+                </div>
+			<!--{else}-->
+				<div class="usercenter_content_r_bottom">
+				
+			
+							<ul class="tabBox">
+								<li class="on"><a href="javascript:;"><!--{if $type=="1"}-->文章<!--{/if}--><!--{if $type=="2"}-->图片<!--{/if}--><!--{if $type=="3"}-->视频<!--{/if}--><!--{if $type=="4"}-->段子<!--{/if}--><!--{if $type=="5"}-->帖子<!--{/if}--></a></li>
+                               
+							</ul>
+					
+                    <div class="main">
+                    	<div>
+                        <!--{if $type<=3}-->
+                    	<!--{template ceo/collection_arc}-->
+                        <!--{elseif $type==4}-->
+                        <!--{template ceo/collection_duanzi}-->
+                        <!--{else}-->
+                          <!--{template ceo/collection_tiezi}-->
+                          <!--{/if}-->
+                        </div>
+                       
+                    </div>
+                   <!--{/if}-->
+				
+				</div>
+			
+			</div>
+            
+			<div class="clear"></div>
+		</div>
+		<script type="text/javascript" src="/public/js/Public_index.js"></script>
+<!--{template common/footer}-->

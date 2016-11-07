@@ -1,0 +1,9 @@
+/*分类信息显示*/
+.viewsort {margin: 0 0 10px 0;border: 1px solid #ebe8dc;border-radius: 3px; background:#fff;}
+.viewsort img {width:100%;}
+.viewsort h4 {padding: 5px 10px;font-weight: 400;background: #f5f5f5;border-bottom: 1px solid #ebebeb;}
+.viewsort ul li {padding:5px 10px;border-bottom: 1px dashed #EEE;}
+.viewsort ul li div {display:table; line-height:150%; font-size:14px;}
+.viewsort ul li span {display:table-cell;width: 65px; line-height:16px;font-size: 14px;color: #1f97fd;}
+.viewsort ul li div.sortblock {display:block;}
+.viewsort ul li div.sortblock span {display:block; width:100%; line-height:30px;}

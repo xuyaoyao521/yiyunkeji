@@ -1,0 +1,28 @@
+/** forum::misc **/
+
+/*发帖导航*/
+.forumlistpbl_box{width:100%; background:#fff; overflow:hidden;}
+.forumlistpbl_box .pbnv{ line-height:40px; font-size:14px; margin:0 3%;}
+.forumlistpbl{overflow: hidden;margin: 0 auto 20px auto;width: 96%;border: solid;border-color: #ddd;border-width: 1px 1px 1px 0;
+background: #fff;}
+.forumlistpbl li{float: left;overflow-x: hidden;overflow-y: auto;padding: 5px 1.5%;width: 30%;min-height: 260px;border-left: 1px solid #CCC;}
+.forumlistpbl li p{height:30px; line-height:30px;}
+.forumlistpbl li a{display: block;white-space: nowrap;overflow: hidden;padding: 0 4px;text-decoration: none;border-width: 1px 0; font-size:14px; text-overflow: ellipsis;}
+.forumlistpbl li .pbls a{background: #ddd;}
+.forumlistpbl_box .pbut{width: 50%;margin: 0 25% 30px 25%; display:block;}
+.forumlistpbl_box .pn{background: #CFCFCF;padding: 3px 28px;border: none;width: 100%;height: 35px;line-height: 32px;border-radius:3px;;}
+.forumlistpbl_box .pnc{background:#F29337;padding: 3px 28px;border: none;width: 100%;height: 35px;line-height: 32px; color:#fff;}
+
+/** end **/
+
+/** misc::misc **/
+/*主题购买记录*/
+.payview { padding:15px; background:#fff;}
+.payview h3{ line-height:30px; font-size:18px; margin-bottom:5px;}
+.payview h3 span{ float:right; font-size:12px; margin-right:5px;}
+.payview table { width:100%;border:1px solid #f5f5f5; font-size:14px;}
+.payview table th { width:33.3%; background:#f5f5f5; line-height:30px; padding:0 5px;}
+.payview table td { width:33.3%; line-height:30px; padding:0 5px; border-bottom:1px solid #f5f5f5; border-left:1px solid #f5f5f5;}
+.payview table td a { color:#C90;}
+
+/** end **/

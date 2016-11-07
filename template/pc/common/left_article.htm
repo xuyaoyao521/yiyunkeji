@@ -1,0 +1,70 @@
+
+    <!--Focus_News-->
+          <div class="Focus_News">
+            <h2 class="caption">24小时要闻</h2>
+            
+            
+           
+            
+           <!--{block/101}-->
+			
+           
+        </div>
+	<!--Focus_News End-->
+    
+    <!--Selected_pic-->
+    	<div class="Selected_pic">
+        	<div class="title">精彩图片</div>
+            
+            <!--{loop $piclist $v}-->
+            <a class="list" href="forum.php?mod=viewthread&tid={$v[tid]}">
+            	<div class="pic">
+                    <span class="pic_number">{$v[picnum]}图</span>
+                    <!--{if $v[picnum]>2}-->
+                    	<!--{eval $i=0;}-->
+                    	 <!--{loop $v[piclist] $vvv}-->
+                         <!--{eval $i++;}-->
+                    <div class="img <!--{if $i==2}-->max<!--{/if}-->" ><img src="data/attachment/forum/{$vvv[attachment]}"></div>
+                    	<!--{/loop}-->
+                    <!--{else}-->
+                    
+                    <!--{eval $i=0;}-->
+                     <!--{loop $v[piclist] $vvv}-->
+                     <!--{eval $i++;}-->
+                     <!--{if $i==1}-->
+                    <img class="one" src="data/attachment/forum/{$vvv[attachment]}">
+                    <!--{/if}-->
+                    <!--{/loop}-->
+                    <!--{/if}-->
+                </div>
+                <div class="t"><span>{$v[title]}</span></div>
+            </a>
+            
+
+            
+          
+             <!--{/loop}-->
+           
+        </div>
+    <!--Selected_pic END-->
+    
+    <!--Selected_video-->
+    	<div class="Selected_video">
+        	<div class="title">热门视频</div>
+            <!--{loop $videolist $v}-->
+             <a class="list" href="forum.php?mod=viewthread&tid={$v[tid]}&from=portal">
+            	<div class="pic">
+                    <span class="time">{$v[videotime]}</span>
+                    <img class="left" data-original="{$v[thumb]}" src="/public/images/NO_IMG.jpg">
+                </div>
+                <div class="t"><span>{$v[title]}</span></div>
+            </a>
+            <!--{/loop}-->
+            
+            
+        </div>
+    <!--Selected_video END-->
+   
+    
+  	
+   

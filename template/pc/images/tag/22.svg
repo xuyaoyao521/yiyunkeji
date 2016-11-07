@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="21" height="5" viewBox="0 0 21 5">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #439fcf;
+        fill-rule: evenodd;
+      }
+    </style>
+  </defs>
+  <path id="more_channel.svg" class="cls-1" d="M402.5,575a2.5,2.5,0,1,1-2.5,2.5A2.5,2.5,0,0,1,402.5,575Zm8,0a2.5,2.5,0,1,1-2.5,2.5A2.5,2.5,0,0,1,410.5,575Zm8,0a2.5,2.5,0,1,1-2.5,2.5A2.5,2.5,0,0,1,418.5,575Z" transform="translate(-400 -575)"/>
+</svg>

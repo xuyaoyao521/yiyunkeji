@@ -1,0 +1,49 @@
+/* 发表主题 */
+.postbox{padding:10px;}
+.postbox .post_from{width:100%;}
+.postbox .post_from select{height: 34px;background: #FFF;border: 1px solid #ebe8dc;border-radius: 3px;}
+.postbox .post_from .post_select select{width:100%;}
+.postbox .post_from .post_input input,.postbox .post_from textarea,.postbox .post_from .px,.postbox .post_from .post_message .pt{width:100%;}
+.postbox .post_from .wid .px{width:50%;}
+.postbox .post_from li{margin:0;}
+.postbox .post_from li .px,.postbox .post_from li .pt{padding: 6px;line-height: 19px;font-size: 14px;border: 1px solid #ebe8dc;border-radius: 3px;}
+.postbox .post_from li .nrk{min-height: 100px;}
+.postbox .post_from .post_sort{margin-top: 10px;padding: 10px;background: #FFF;border: 1px solid #ebe8dc;border-radius: 3px;}
+.postbox .post_from .post_sort p{line-height: 26px;padding-top: 5px;}
+.postbox .post_from .post_sort p .px{width: 30%;}
+.postbox .post_from .post_sort .xi1{color: #bc8766;}
+.postbox .post_from .post_sort .txt{border: 1px solid #ebe8dc;border-radius: 3px;}
+.postbox .post_from .post_sort tr{margin: 5px 0;}
+.postbox .post_from .post_sort .redc{color: #F26C4F;}
+.post_sort .btn_default{width: 80px;border: 1px solid #EDEDED;font-size: 14px;color: #fff;background-color: #F60;}
+.post_sort th{font-size: 14px;width: 80px;}
+.post_sort td{}
+.post_sort th,.post_sort td{padding: 8px 0; line-height:20px;}
+.post_imglist{padding: 0 0 0 5px;;}
+.post_imglist li{position:relative;float:left;padding:0 10px 0 0;}
+.post_imglist li .del{position:absolute;left:48px;top:-9px;}
+.post_imglist li .p_img img{padding:2px;border:1px solid #DDD;}
+.post_sort_img img{max-width:100%;max-height:300px;border: 1px solid #ebe8dc; padding:2px;}
+.post_upload{color: #333;position: relative;border-radius: 3px;margin: 0 auto;position: fixed;top: 30%;left: 15%;width: 70%;height: auto;z-index: 99;visibility: visible;border: 3px solid #bbb;border-radius: 5px;background: #fff;}
+.post_upload .filebtn{overflow:hidden;}
+.post_upload .pf{border: none; background:none;}
+.post_upload .c{background: #fff;padding: 15px 20px 20px;}
+.post_upload h3{line-height: 30px;height: 30px;padding: 5px 10px;font-size: 14px;}
+.post_upload h3 em{font-size: 18px;float: left; margin-left:5px;}
+.post_upload h3 span{float: right;}
+.post_btn{}
+.post_btn .btn_default{width: 100%;height: 40px;line-height: 38px;}
+.post_btn .btn_default span{font-size: 18px;}
+.delthread{height:30px; line-height:30px;}
+/*
+*/
+.sec_code{padding:0px;color:#999;}
+.sec_code .px{color:#999;}
+.post_photo{display:block;width:24px;height:20px;margin-right:10px;background:url(../../img/icon_photo.png) no-repeat 0 0;background-size:auto 20px;overflow:hidden;}
+.post_photo input{width:24px;height:20px;font-size:20px;padding:0px;float:left;opacity:0;}
+.post_plus{height:20px;overflow:hidden;}
+.post_plus #fastsmiliesdiv_data{height:20px;overflow:hidden;}
+.smilies{}
+.smilies td{width:20px;height:24px;padding-right:4px;vertical-align:top;}
+.smilies img{float:left;width:20px;height:20px;}
+.smilie_open{display:block;width:20px;height:20px;background:url(../../img/icon_smilie.png) no-repeat 0 0;background-size:auto 20px;}

@@ -1,0 +1,42 @@
+
+<!--{template common/header_home}-->
+<div class="usercenter_content">
+
+			<div class="usercenter_content_l usercenter_content_l2 font_yahei">
+				<h5>我的订阅</h5>
+				<ul>
+                    <li><a href="javascript:;" class="on">全部<span>$dycount</span></a></li>
+                   
+
+        </li>
+    </ul>
+				
+			</div>
+			<div class="usercenter_content_r font_yahei">
+             <!--{if $dycount<=0}-->
+				<div class="NO_data">
+                暂无订阅
+                </div>
+			<!--{else}-->
+				<div class="usercenter_Subscribe_list">
+                	<ul>
+                    
+                    
+                    	<!--{loop $dylist $list}-->
+                        <li>
+                            <div class="pic"><a href="home.php?mod=auther&uid=$list[uid]"><img src="uc_server/avatar.php?uid=$list[uid]&size=middle"></a></div>
+                            <div class="info"><p class="font_yahei"><a href="home.php?mod=auther&uid=$list[uid]">$list[username]</a></p><p>$list[jianjie]</p></div>
+                            <a href="javascript:;" class="cancel" onClick="dingyue_del($list[uid],this)" title="取消订阅"></a>
+                        </li>
+                        <!--{/loop}-->
+                        
+                    </ul>
+                </div>
+				 <!--{/if}-->
+			</div>
+			<div class="clear"></div>
+		</div>
+		<script type="text/javascript" src="/public/js/Public_index.js"></script>
+        
+        
+<!--{template common/footer}-->

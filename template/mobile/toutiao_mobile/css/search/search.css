@@ -1,0 +1,8 @@
+/**search**/
+.searchform{background:#fff;}
+.hot_search a {display:inline-block;padding:2px 8px;background:#e6e6e6;	border-radius:3px;margin:0;margin-bottom:5px;}
+
+.searchlist {}
+.searchlist .title {padding: 0px 10px 5px;font-size: 16px;border-bottom: 1px solid #ededed;padding-bottom: 5px;}
+.searchlist .title .emfont {color:#ff0000;}
+.searchlist li {padding: 10px;font-size: 16px; border-bottom: 1px solid #ededed;}

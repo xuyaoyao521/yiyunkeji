@@ -1,0 +1,26 @@
+/******portal::list,portal::view********/
+li.clt{padding:10px 10px 9px;border-bottom:1px solid #ebebeb;}
+.clt h1{padding:2px 0 8px;font-size:22px;line-height:24px;}
+.clt h1 span{margin-left:6px;font-size:14px;color:#f60;}
+.clt .mess{line-height:20px;font-size:12px;color:#666;overflow:hidden;}
+.clt img{float:left;width:100px;height:75px;margin:3px 9px 0 1px;}
+.clt .sp{padding:8px 0 0;text-align:left;font-size:10px;}
+.clt .sp a{font-size:10px;}
+.clt .sp .pipe{margin:0 5px;}
+
+.ctt{padding:0 10px;}
+.ctt .mess{padding:10px 0;line-height:150%;font-size:12px;}
+.ctt .mess img{max-width:100%;}
+.ctt .mess embed{max-width:100% !important;height:260px !important;}
+.ctt .pgbox,.ctt .pg{border:none;}
+.nsj{padding:9px 10px 7px;background:#fcfcfc;overflow:hidden;border-top:1px solid #fff;border-bottom:1px solid #e5e5e5;}
+.nsj li{padding:4px 0px 4px 1px;overflow:hidden;}
+.nsj,.nsj a{color:#777;}
+.celi{padding:0px 10px 0 48px;min-height:70px;position:relative;border-bottom:1px solid #e5e5e5;}
+.celi:first-child{border-top:1px solid #e5e5e5;}
+.celi .avatar img{width:28px;height:28px;position:absolute;left:10px;top:10px;}
+.celi .user{padding:8px 0px;}
+.celi .vtrim{margin-top:5px;}
+.celi .mess{padding-bottom:3px;line-height:20px;color:#555;}
+.celi .quote{font-size:12px;border-top:1px dashed #d9d9d9;border-bottom:1px dashed #d9d9d9;margin:5px 0px;color:#999;}
+

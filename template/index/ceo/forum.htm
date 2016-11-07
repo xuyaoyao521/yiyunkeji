@@ -1,0 +1,36 @@
+
+        <!--{eval $i = 0;}-->
+        <!--{loop $toutiaolist $thread}-->
+            <!--{eval $i++;}-->
+            <li>
+                <div class="item-inner">
+            <!--{if $thread[attachment] == 2}-->
+                <!--{if $thread['piccount'] >= 1 && $thread['piccount'] < 3}-->
+                    <div class="lbox z">
+                    <!--{subtemplate ceo/forumdisplay_list_pic}-->
+                    </div>
+                    <div class="rbox">
+                        <div class="rbox-inner">
+                        <!--{subtemplate ceo/forumdisplay_list_title1}-->
+                        <!--{subtemplate ceo/forumdisplay_list_message}-->
+                        <!--{subtemplate ceo/forumdisplay_list_info}-->
+                        </div>
+                    </div>
+                <!--{elseif  $thread['piccount'] >= 3}-->
+                    <!--{subtemplate ceo/forumdisplay_list_title1}-->
+                    <!--{subtemplate ceo/forumdisplay_list_piclist}-->
+                    <!--{subtemplate ceo/forumdisplay_list_info}-->
+                <!--{else}-->
+                    <!--{subtemplate ceo/forumdisplay_list_title1}-->
+                    <!--{subtemplate ceo/forumdisplay_list_message}-->
+                    <!--{subtemplate ceo/forumdisplay_list_info}-->
+                <!--{/if}-->
+            <!--{else}-->
+                <!--{subtemplate ceo/forumdisplay_list_title1}-->
+                <!--{subtemplate ceo/forumdisplay_list_message}-->
+                <!--{subtemplate ceo/forumdisplay_list_info}-->
+            <!--{/if}-->
+                </div>
+            </li>
+        <!--{/loop}-->
+

@@ -1,0 +1,50 @@
+
+<!--{subtemplate common/header_common}-->
+
+
+<link rel="Shortcut Icon" href="/public/images/favicon.ico">
+<link rel="Bookmark" href="/public/images/favicon.ico">
+<link rel="apple-touch-icon" href="/public/images/apple-touch-icon.png" />
+<link rel="apple-touch-icon" sizes="72x72" href="/public/images/apple-touch-icon-72x72.png" />
+<link rel="apple-touch-icon" sizes="114x114" href="/public/images/apple-touch-icon-114x114.png" />
+<link href="/public/css/Public_index.css" rel="stylesheet" type="text/css">
+
+<script type="text/javascript" src="/public/js/jquery-1.11.0.min.js"></script>
+<script type="text/javascript"> var jq=jQuery.noConflict();</script>
+<script type="text/javascript" src="/public/js/jquery-2.1.1.js"></script>
+
+<script type="text/javascript" src="/public/js/jquery.lazyload.js"></script>
+</head>
+
+<body>
+<!--frame_top-->
+<div id="append_parent"></div><div id="ajaxwaitid"></div>
+<div class="frame_top" <!--{if $_GET[isadmin]==1}-->style="display:none"<!--{/if}-->>
+	
+    	<div class="left">
+        	<iframe width="550" class="weather" scrolling="no" height="20" frameborder="0" allowtransparency="true" src="http://i.tianqi.com/index.php?c=code&id=1&color=%23FFFFFF&icon=1&py=weihai&wind=1&num=2"></iframe>
+        </div>
+        <div class="right"><a class="app" href="javascript:;">APP下载<div class="app_QR_code"><img src="/public/images/QR_code.jpg"><p>手机扫码下载APP</p></div></a><span>|</span>
+        
+       <!--{template common/header_userstatus}--> 
+        
+        
+        </div>
+        
+   
+</div>
+<!--frame_top END-->
+
+<!--frame_head-->
+<div class="frame_head" <!--{if $_GET[isadmin]==1}-->style="display:none"<!--{/if}-->>
+	<div class="public_width">
+		<div class="logo"><a href="/"><img src="/public/images/logo.png" alt="E云网"></a></div>
+        <div class="nav font_yahei">
+        	<a href="/">首页</a><a href="forum.php">论坛</a><a href="portal.php?mod=feedback">反馈</a>
+        </div>
+        <form action="portal.php" method="get">
+        <div class="search"><input type="text" id="KeyWord" name="keyword" placeholder="请输入您想搜索的关键词！"><input type="submit" class="submit" value="&#xe601;" ><!--<div class="hot" style="display:none"><a href="/portal.php?keyword=威海">威海</a><a href="/portal.php?keyword=旅游">旅游</a><a href="/portal.php?keyword=乳山">乳山</a></div>--></div>
+        </form>
+    </div>
+</div>
+<!--frame_head END-->

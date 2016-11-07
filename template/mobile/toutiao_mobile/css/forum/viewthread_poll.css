@@ -1,0 +1,39 @@
+/*thread_btn*/
+.thread_btn { text-align:center; margin:10px 0;}
+.thread_btn button{ padding:0 30px;}
+
+/*投票 poll */
+	.pcht { margin-bottom: 15px; }
+	.polltd { padding: 4px; border: 1px #dfdfdf solid; border-radius: 3px; background:#fff; }
+		.pcht h4 a { text-decoration: underline; }
+		.pcht table { table-layout: fixed; }
+		.pcht table td { padding: 4px; vertical-align: top;  padding-left:5px;}
+			.pslt { width: 20px; vertical-align: middle !important; }
+			.pvt { width: auto; }
+				.pvt label { cursor: pointer; }
+			.pvts { width: 100px; }
+		.pcht .ptl dl { padding: 10px 5px; }
+		.pcht .ptl dl dt { line-height:20px; font-size:12px;padding:0 100px 10px 20px;; position:relative; }
+		.pcht .ptl dl dt .pvts{ position:absolute; top:0px; right:0px; text-align:right; font-size:12px; }
+		.pcht .ptl dl dt input{ position:absolute; top:3px; left:0px; text-align:center; font-size:12px; }
+		.pcht { width: 100%; }
+		.pinf { margin: 5px 0;  padding: 1px 0px; background: #f0f0f0; position: relative; border-radius: 4px; font-size: 14px;}
+			.pinf p {padding: 6px 12px;border-bottom: 1px solid #fff;color: #F26C4F;}
+			.pinf p:last-child {border-bottom: none;}
+			.pinf strong {}
+			.pinf a { color:#F60; }
+		.imgf2 { position: relative; height: 20px; background: #e9e9e9; border-radius: 0 10px 10px 0; }
+		.jdt { display: block; width: 1px; height: 20px; background: #f2a61f; border-radius: 0 10px 10px 0;}
+		.imgfc { position: absolute; left: 0; top: 0; padding: 0 5%; width: 90%; line-height: 20px; font-size:12px; }
+		.imgfc .vote_fff { color:#fff; }
+		.warning { margin-top:15px; padding: 10px; border: 1px dashed #ff9a9a; font-size: 14px; background: #f9f9f9; border-radius: 4px; overflow: hidden;}
+		
+			/* 进度条 */
+		.pbg { height: 10px; background-color: #ddd; -webkit-border-radius: 0 6px 6px 0; -moz-border-radius: 0 6px 6px 0; border-radius: 0 6px 6px 0; }
+		.pbr { height: 10px; background-color: #5AAF4A; background-position: 0 -16px; background-repeat: repeat-x; -webkit-border-radius: 0 6px 6px 0; -moz-border-radius: 0 6px 6px 0; border-radius: 0 6px 6px 0; }
+
+.voterlist {padding:20px;}	
+.voterlist h3 { height:40px; line-height:40px; font-size:18px;}
+.voterlist .voterl{height:30px; line-height:30px; font-size:14px; background:#e8e8e8; margin:10px 0;}	
+.voterlist .voterl li { padding:0 15px; margin-bottom:1px;}	
+	

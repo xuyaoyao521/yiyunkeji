@@ -1,0 +1,149 @@
+section{ margin-bottom:10px;}
+.mybox {background: #fff;}
+
+/* 焦点图 */
+.slide{  padding:10px; overflow:hidden;background: #fff; }
+.slide2{ overflow:hidden; }
+.slideBox{ position:relative; overflow:hidden; margin:0 auto; max-width:560px;/* 设置焦点图最大宽度 */ }
+.slideBox .hd{ position:absolute; height:28px; line-height:28px; bottom:0; right:0; z-index:1; }
+.slideBox .hd li{ display:inline-block; width:6px; height:6px; -webkit-border-radius:5px; -moz-border-radius:5px; border-radius:5px; background:#666; text-indent:-9999px; overflow:hidden; margin-right:6px;}
+.slideBox .hd li.on{ background:#fff;}
+/*
+.slideBox .hd{ position:absolute; width:100%; height:28px; line-height:28px; top:50%; margin-top:-14px; z-index:1; }
+.slideBox .prev,.slideBox .next{ position:absolute; left:15px; top:0; display:block; width:23px; height:27px; line-height:27px; text-align:center; background:url(../img/side-prev.png);}
+.slideBox .next{ left:auto; right:15px; background:url(../img/side-next.png);}*/
+.slideBox .bd{ position:relative; z-index:0; overflow:hidden;}
+.slideBox .bd li{ position:relative; text-align:center;  overflow:hidden; }
+.slideBox .bd li img{ background:url(../img/loading.gif) center center no-repeat; vertical-align:top; width:100%; min-height:160px;}
+.slideBox .bd li a{ -webkit-tap-highlight-color:rgba(0,0,0,0); display: block; }  /* 去掉链接触摸高亮 */
+.slideBox .bd li .tit{ display:block; width:100%;  position:absolute; bottom:0; text-indent:10px; height:28px; line-height:28px;background: rgba(0,0,0,.7); color:#fff; text-align:left; }
+
+/* Tab切换 */
+.mytabBox{ padding:0 15px; overflow:hidden;background: #fff;}
+.mytabBox .hd{ height:26px; line-height:26px; font-size:12px; overflow:hidden;}
+.mytabBox .hd h3{ float:left;  font-size:12px; color:#fff; background:#fe3a3a; padding:0 10px;border-bottom-right-radius:5px;
+border-bottom-left-radius:5px; font-weight:100;height:26px; line-height:26px;}
+.mytabBox .hd h3 a { color:#fff;}
+.mytabBox .hd h4{ margin:0 auto; display:inline-block;font-size:14px; color:#fff; background:#fe3a3a; padding:0 10px;border-bottom-right-radius:5px;border-bottom-left-radius:5px; font-weight:100;height:30px; line-height:30px;}
+.mytabBox .hd h4 a { color:#fff;}
+/*.tabBox .hd h3 span{color:#ccc; font-family:microsoft Yahei; margin-left:10px;  }*/
+.mytabBox .hd ul{ float:right; overflow:hidden;border-bottom-right-radius:5px;border-bottom-left-radius:5px;}
+.mytabBox .hd ul li{ float:left;  padding:0 10px; vertical-align:top;   background:#f1f1f1;}
+.mytabBox .hd ul li.on a{ color:#fe3a3a; display:block; height:28px; line-height:30px; border-bottom:2px solid #fe3a3a; }
+.mytabBox .bd{}
+.mytabBox .bd ul{ }
+.mytabBox .bd ul li{ border-bottom:1px dotted #ddd; line-height:30px;  }
+.mytabBox .bd li a{ -webkit-tap-highlight-color:rgba(0,0,0,0); }  /* 去掉链接触摸高亮 */
+.mytabBox .threadlist li { margin:0;}
+
+.mytabBox2{ padding:0 10px; overflow:hidden;}
+.mytabBox2 .hd{ height:40px; line-height:40px; font-size:16px; overflow:hidden;}
+.mytabBox2 .hd h3{line-height:40px;height:40px; font-size:14px;font-weight:700;color:#222; background:none; padding:0px;border-radius:0px; width:100%;}
+.mytabBox2 .hd h3:before{content:" "; display:inline-block; width:4px; height:14px; border-radius:2px; vertical-align:middle; margin: -2px 5px 0 0;background: #ed344a;}
+.mytabBox2 .hd h3 a{ color:#222;}
+.mytabBox2 .hd h3 span{ display:inline-block;vertical-align:middle; height:20px; line-height:22px; border:1px solid #d8d8d8; border-radius:11px; padding:0 5px; margin-top:9px;}
+.mytabBox2 .hd h3 span a{ color:#999; font-size:12px; font-weight:100;}
+
+.tqual {
+    padding: 10px 0px;
+    background: #fff;
+    font-size: 16px;
+}
+.tqual ul {
+    display: table;
+    table-layout: fixed;
+    width: 100%;
+}
+.tqual li {
+    padding: 0px 5px;
+    display: table-cell;
+    text-align: center;
+}
+.tqual li a {
+    padding: 8px 0px;
+    line-height: 14px;
+    display: block;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.mypic{ padding:5px;}
+.mypic li{ display:block; float:left; overflow:hidden;}
+.mypic li a { display:block; float:left; margin: 0 5px 10px 5px; overflow:hidden; position:relative;}
+.mypic li a .imgbox {display: block;position: relative;height: 0px;padding-bottom: 80%;}
+.mypic li a img { width:100%; height:100%; vertical-align:top;position: absolute;}
+.mypic li a h3 { height:30px; line-height:30px; overflow:hidden; padding:0 5px;}
+.mypic2 li{ display:block; float:left; width:50%; overflow:hidden;}
+.mypic3 li{ display:block; float:left; width:33.33%; overflow:hidden;}
+
+.mybox {background: #fff;font-size: 16px;}
+.mybox .tit { display:block; height:40px;line-height: 40px; padding:0 15px; position:relative;}
+.mybox .tit h3 { display:inline-block; width:100px;}
+.mybox .tit ul { display:inline-block; float:right; height:20px;}
+.mybox .tit ul li { display:inline-block; padding:0 10px;  border-left:1px solid #eaeaea; }
+.mybox .tit span { position:absolute; top:12px; right:10px; padding:0 5px;-webkit-border-radius: 9px;-moz-border-radius: 9px;border-radius: 9px; display:block; height:18px; line-height:18px; color:#aaa;border:1px solid #aaa;}
+.mybox .tit span a { font-size:12px; color:#aaa;}
+.mybox .h1, .mybox .h3, .mybox .h4 { color:#4c4c4c;}
+.mybox .ft {height: 40px;padding: 0 15px;border-bottom: 1px solid #eaeaea;border-top: 0px solid #eaeaea; text-align:right;}
+.mybox a { color:#4c4c4c;}
+
+
+/* 灯箱 */
+.autoscroll { margin:auto; position:relative; overflow:hidden; }
+.autoscroll #slider li { position:relative; overflow:hidden; }
+.autoscroll, .autoscroll #slider, .autoscroll #slider li, .autoscroll #slider li img { width:100%; }
+.autoscroll #slider li a { display:block; }
+.autoscroll .stbg { width:100%; height:15px; padding:5px 0px; color:#fff; text-indent:10px; margin-top:-30px; position:relative; z-index:1; }
+
+.autoscroll #position { position:absolute; bottom:0px; right:10px; }
+.autoscroll #position em { display: inline-block; width:8px; height:8px; margin:0px 2px; text-indent:-9999px; background:#aaa; border-radius:6px; overflow:hidden; }
+.autoscroll #position em.on { background: #fff; }
+
+.th_tab { height:39px; border-bottom:1px solid #eaeaea;position:relative; }
+.th_tab a { float:left; display:block; padding:0 10px; color:#333; text-align:center; font-size:16px; line-height:40px; font-weight:700; overflow:hidden; } 
+.th_tab a.on {position:relative; height:38px; background:#fff; border-bottom:2px solid #ed344a; bottom:0px; z-index:1; } 
+
+.th { display:none; }
+.th a { display:block; height:64px; padding:10px 105px 10px 10px; position:relative; }
+.th h1 { line-height:16px; font-size:16px; margin:2px 0px 5px; }
+.th p { color:#999; line-height:18px; font-size:13px; }
+.th img { position:absolute; top:9px; right:10px; width:80px; height:64px; }
+
+.th_np a { height:auto; padding:10px; }
+.th_np h1 { margin:0px 0px 4px; line-height:22px; }
+
+/* 热门频道 */
+.hot_channel { padding:0 15px; height:40px; line-height:40px; overflow:hidden;}
+.hot_channel span.ct { color:#999; font-size:14px; }
+.hot_channel span { color:#bbb; font-size:12px; }
+.hot_channel a { color:#4c4c4c; font-size:14px; margin:0 8px;}
+
+.th li, .hot_channel li { border-bottom:1px solid #eaeaea; }
+
+.mypic3 ul{padding:0 10px 10px 10px;overflow: hidden; background:#fff;height:auto;}
+.mypic3 ul li{width: 33.33%;padding-top: 10px;display: table-cell;vertical-align: middle;text-align: center;float: left;overflow: hidden;}
+.mypic3 ul li a{ display:block; margin:0 auto;overflow: hidden;position: relative;}
+.mypic3 ul li img{width:100%; vertical-align: bottom; width:105px; height:80px;background-color: #efefef;-webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px;border:1px solid #eaeaea;}
+.mypic3 ul li h4{font-size: 12px;font-weight: normal;overflow: hidden;white-space: nowrap;
+text-overflow: ellipsis;padding: 0 3%;text-align: center;height: 24px;line-height: 24px;width: 94%;}
+.mypic3 ul li p{font-size: 12px;overflow: hidden;padding: 0 5%;text-align: center;line-height: 16px;width: 90%;}
+
+.myforum3 ul{padding:0px 10px 5px 10px;overflow: hidden; background:#fff;}
+.myforum3 ul li{width: 33.33%;display: table-cell;vertical-align: middle;float: left;}
+.myforum3 ul li a { display:block; height:32px; padding:10px 10px 10px 40px; position:relative;}
+.myforum3 ul li img{ position:absolute; top:9px; left:0px;width: 32px;height: 32px;-webkit-border-radius: 6px;-moz-border-radius: 6px;border-radius: 6px;}
+.myforum3 ul li h4{height: 18px;line-height: 18px; font-size:14px; overflow: hidden;}
+.myforum3 ul li p {color: #999;font-size: 12px;line-height: 14px;height: 14px;overflow: hidden;text-overflow: ellipsis;}
+.myforum3 ul li.hr { display:block; width:100%; height:1px;border-top: 1px solid #eaeaea;font-size:1px; padding:0;}
+
+.myforum4 ul{padding:0 0 10px 0;width: 100%;overflow: hidden; background:#fff;}
+.myforum4 ul li{width: 24.925%;padding-top: 10px;display: table-cell;vertical-align: middle;text-align: center;float: left;}
+.myforum4 ul li img{middle;width: 40px;height: 40px;-webkit-border-radius: 6px;-moz-border-radius: 6px;border-radius: 6px;}
+.myforum4 ul li h4{margin: 0 auto;height: 22px;line-height: 20px;overflow: hidden;text-align: center; font-weight:400; font-size:14px;}
+
+.my_ttl{width: 96%; margin: 0 auto; padding-top:5px;}
+.my_ttl .list{padding:10px;}
+.my_ttl .my_nnbox a{font-size: 18px;font-weight: 700;display: block;text-align: center;height: 20px;line-height: 20px;overflow: hidden; }
+.my_ttl .my_nnbox span{margin-top: 3px;height: 44px; text-align:center;line-height: 22px;font-size: 14px;color: #999;overflow: hidden;display: block;}
+

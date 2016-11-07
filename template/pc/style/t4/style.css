@@ -1,0 +1,44 @@
+@charset "utf-8";
+/*
+[name]黄色[/name]
+[iconbgcolor]#fccb01[/iconbgcolor]
+name：E云网
+Powered by YingxiangCEO.com
+*/
+
+a:hover{color:#fccb01;}
+#toptb{background:#2d2d2d;}
+#toptb a{ color: #fff;}
+#hd{background:#fccb01;}
+#nv li a {color:#2d2d2d;}
+#nv li.a a {color:#2d2d2d;}
+#nv li:hover{background:#2d2d2d;}
+#nv li:hover a{color:#fff;}
+#um i.arrow-w{background:url(um_arrow.png) 0 0 no-repeat;}
+#umLogin_menu a { color: #333;}
+
+#hd #scbar {background:#2d2d2d;}
+#scbar_type{background:url(../../images/scbar_type.png) no-repeat 45px 13px #2d2d2d;color:#fff;}
+#scbar #scbar_txt{background:#2d2d2d;color:#fff !important}
+#scbar_btn {background:#2d2d2d url(../../images/scbar_btn.png) center center no-repeat;}
+#hd .p_pop.h_pop,.hot_act .act_item a:hover,#fwin_nav .pn.pnc,#comment .ptn .pn,.esMod .hd li.on,.hot_act .act_item a,.pages a:hover,.pages span{background:#fccb01;color:#2d2d2d;}
+#hd .p_pop.h_pop a{border-bottom-color:#e3ae07;}
+.sd_btn a.post_btn,.listTit .post_btn,.xr_list .ttp .a span,.xr_guide .ttp li.a a,#fwin_content_login .rfm .pn.pnc,#main_message .rfm .pn.pnc{background-color:#fccb01;color:#2d2d2d;}
+#hd .p_pop.h_pop a:hover,.tl_tit .views.y,.xr_waterfall li:hover,.xr_waterfall li .desc em,.category_newlist li a:hover,.listTit a:hover,.tl_tit h3 em a:hover,.tl_tit h3 a.xst:hover,.tl_txt a:hover,.xr_article_list .xld li h3 a:hover,#um .um_info a:hover,#um .um_op a:hover{color:#fccb01;}
+
+.listTit h1{color:#666;}
+#comment .ptn .pn:hover,.sd_btn a.post_btn:hover,.listTit .post_btn:hover,#fwin_nav .pn.pnc:hover,#fwin_content_login .rfm .pn.pnc:hover,#main_message .rfm .pn.pnc:hover{background-color:#e2af0c;color:#2d2d2d;}
+
+.sd_btn a.signin{background-image: url(sd_btn.png);color:#999 !important;}
+.xr_tl #fd_page_bottom .pg strong,.xr_tl #fd_page_bottom .pg a:hover,.pgt .pg strong,.pgt .pg a:hover,.pgs .pg strong,.pgs .pg a:hover{background:#e2af0c;border-color:#fccb01;color:#2d2d2d;}
+#fastpostsubmit,#postsubmit.pn.pnc,#nv_portal.pg_portalcp #ct #issuance.pn.pnc{background-color:#fccb01;color:#2d2d2d;}
+
+/* 重定义按钮 */
+.pgs #newspecial, .pgs #newspecialtmp { float: left; background: url(pn_post.png) no-repeat 0 0; }
+#post_reply, #post_replytmp { float: left; background: url(pn_reply.png) no-repeat 0 0; }
+.sd_btn a.post_btn{background-color:#fccb01;border:solid 1px #e2af0c;}
+
+.ranking-list li .bgcolor {background: #fccb01;}
+.ceo_portal_slide .slidebar li.on{background:#fccb01;}
+.ceo_article_list .xld li h3 a:hover{color:#fccb01;}
+.ceo_tl #fd_page_bottom .pg strong,.ceo_tl #fd_page_bottom .pg a:hover,.pgt .pg strong,.pgt .pg a:hover,.pgs .pg strong,.pgs .pg a:hover{background: #fccb01;border-color: #fccb01; color: #2d2d2d;}

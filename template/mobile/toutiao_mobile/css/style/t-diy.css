@@ -1,0 +1,71 @@
+/*红色（默认）*/
+@charset "utf-8";
+html,.content{background:#f3f3f3;} /*背景色*/
+.box_bg, .wmt{background:#fff;} /*区块背景色*/
+.header_bg{background:#ed344a;color:#fff;;} /*头部背景和头部字体色*/
+.header_bg a{color:#fff;} /*头部链接字体色*/
+.a, .a a, .pg strong {background-color:#ed344a !important;color:#fff !important;} /*链接焦点背景色和字体色*/
+.button2,.btn_default,a.btn_default,.btn_submit,.btn_search { border: 1px solid #ed344a; background: #ed344a; color:#fff; padding-left:10px;padding-right:10px;} /*默认按钮背景色和字体色*/
+a{ outline:none;-webkit-tap-highlight-color: rgba(0,0,0,0);}
+/******************/
+.box_br{ border-top:1px solid #d8d8d8; border-bottom:1px solid #d8d8d8;} /*区块上下边颜色*/
+.box_brt{ border-top:1px solid #d8d8d8;} /*区块上边颜色*/
+.box_brb{ border-bottom:1px solid #d8d8d8;} /*区块下边颜色*/
+
+
+@font-face {font-family: "mobile_icon";
+  src: url('/public/font/mobile_icon/iconfont.eot'); /* IE9*/
+  src: url('/public/font/mobile_icon/iconfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('/public/font/mobile_icon/iconfont.woff') format('woff'), /* chrome、firefox */
+  url('/public/font/mobile_icon/iconfont.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+  url('/public/font/mobile_icon/iconfont.svg#public_icon') format('svg'); /* iOS 4.1- */
+}   
+.mobile_icon{ font-family:mobile_icon}
+
+
+h1,h3,h3 a{ color:#222222;} /*标题字体色*/
+a{ color:#505050;} /*链接默认字体色*/
+body {color:#505050;} /*页面默认字体色*/
+.ceo_info, .item_info {color:#999;} /*帖子列表查看、浏览等参数默认字体色*/
+input,textarea,select{border:1px solid #ddd;background:#fff;color:#999;} /*发布，回复，编辑框默认边颜色，背景颜色，字体色*/
+
+.postlist, .ctt{background:#f8f8f8;} /*帖子详情页默认背景颜色*/
+.postlist .li_brb, .ctt .li_brb{border-bottom:1px solid #e8e8e8;} /*帖子详情页回复默认底边颜色*/
+.plc .pi .message,.plc .pi .message p,.ctt .mess,.ctt .mess p{color:#505050;} /*帖子详情页默认字体颜色*/
+.plc .pi .message_pl, .plc .pi .message_pl p{color:#6c6c6c;} /*帖子详情页回复默认字体颜色*/
+.plc a{color:#999;} /*帖子详情页链接默认字体颜色*/
+.plc a.author{ color:#406599;} /*帖子详情页楼主用户名默认字体颜色*/
+.plc em a, .ctt em a{color:#406599;} /*帖子详情页操作链接默认字体颜色*/
+.plc p{color:#d4d4d4;} /*帖子详情页发帖时间默认字体颜色*/
+.titls dt {border-bottom-color:#ed344a; color:#505050;} /*帖子详情页回复列表头部默认底边颜色和字体颜色*/
+
+.catlist h1:before{ background:#ed344a;} /*论坛首页分区标题前面竖条默认颜色*/
+.catlist ul li{border-bottom:1px solid #e8e8e8;} /*论坛首页版块下边默认颜色*/
+.catlist h3 span{color:#ed344a;} /*论坛首页版块今日新帖数文字默认颜色*/
+
+.tabox .hd ul li{ border-bottom:1px solid #d8d8d8;} /*并列菜单默认底边颜色*/
+.tabox .hd ul li.on a{ color:#ed344a; border-bottom:2px solid #ed344a;  } /*并列菜单当前页面默认底边颜色和字体色*/
+.tabBox .bd li a {border: 1px solid #ed344a;color:#ed344a;} /*主题、分类信息、子版块、下级分类等菜单列表默认边颜色和字体色*/
+
+.nv li, .nv li a{color:#fff;} /*右侧菜单字体色*/
+.nv_menu li a{ border:1px dashed #fff;} /*右侧菜单边颜色*/
+
+.threadlist li a.act_link{border-bottom:1px solid #e8e8e8;} /*列表默认底边色*/
+.pg_space #alist li{ border-bottom:1px solid #e8e8e8;} /*会员中心列表底边色*/
+
+/************各页面头部颜色（可分别设置）************/
+/*帖子详情页*/
+.pg_viewthread .header_bg{ background:#fff !important; color:#222; border-bottom:1px solid #b4b4b4;}
+.pg_viewthread .header_bg a{ color:#222;}
+/*帖子发布页*/
+.pg_post .header_bg{ background:#fff !important; color:#222; border-bottom:1px solid #b4b4b4;}
+.pg_post .header_bg a{ color:#222;}
+/*所有会员中心页*/
+.pg_space .header_bg{ background:#fff !important; color:#222; border-bottom:1px solid #b4b4b4;}
+.pg_space .header_bg a{ color:#222;}
+.pg_spacecp .header_bg{ background:#fff !important; color:#222; border-bottom:1px solid #b4b4b4;}
+.pg_spacecp .header_bg a{ color:#222;}
+/*所有频道页*/
+.pg_view .header_bg{ background:#fff !important; color:#222; border-bottom:1px solid #b4b4b4;}
+.pg_view .header_bg a{ color:#222;}
+

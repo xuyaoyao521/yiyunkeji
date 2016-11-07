@@ -1,0 +1,44 @@
+<!--{template yingxiao_toutiaom:default/header}-->
+<style>
+<!--{eval $wid = 100 / $ceo_listcell;}-->
+.list li {width:$wid%;}
+</style>
+
+<div id="wp">
+<!--{if $ceo_listclass == 4}-->
+<section>
+    <div class="con">
+    <div class="msg">{echo p_lang('listdiy')}</div>
+    <ul class="list">
+        <!--{$ceo_listcode}-->
+    </ul>
+    </div>
+</section>
+<!--{/if}-->
+<!--{if $ceo_listclass != 2 && $ceo_listclass != 4}-->
+<section>
+    <div class="con">
+    <div class="msg">{echo p_lang('channel')}</div>
+    <ul class="list">
+        <li class="fixed"><a href="plugin.php?id=yingxiao_toutiaom&mod=portal"><span>{echo p_lang('all')}</span></a></li>
+    <!--{loop $catelist $cate}-->
+        <li><a href="plugin.php?id=yingxiao_toutiaom&mod=portal&cats=$cate[catid]"><span>$cate['catname']</span></a></li>
+    <!--{/loop}-->
+    </ul>
+    </div>
+</section>
+<!--{/if}-->
+<!--{if $ceo_listclass != 1 && $ceo_listclass != 4}-->
+<section>
+    <div class="con">
+    <div class="msg">{echo p_lang('forum')}</div>
+    <ul class="list">
+        <li class="fixed"><a href="plugin.php?id=yingxiao_toutiaom&mod=forum"><span>{echo p_lang('all')}</span></a></li>
+    <!--{loop $forumlist $forums}-->
+        <li><a href="plugin.php?id=yingxiao_toutiaom&mod=forum&fids=$forums[fid]"><span>$forums['name']</span></a></li>
+    <!--{/loop}-->
+    </ul>
+    </div>
+</section>
+<!--{/if}-->
+</div>

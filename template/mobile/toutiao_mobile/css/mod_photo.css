@@ -1,0 +1,56 @@
+/** forum::photo **/
+
+.sub h1,.sub span {background:rgba(0,0,0,0.5);color:#fff;position:absolute;font-size:12px;overflow:hidden;box-sizing: border-box; padding:0 5px;}
+.sub h1 {width:100%;bottom:0px;right:0px;height:30px;line-height:30px; font-weight:100;}
+.sub span {display:inline-block;top:5px;right:5px;height:20px;line-height:20px;border-radius:10px;text-align:center;}
+.sub img { width:100%; }
+
+.photo_list1 { padding: 10px; border-bottom: 1px solid #ededed; overflow: hidden; text-align:center;}
+.photo_list1 .imgbox {overflow: hidden;}
+.photo_list1 .sub {display:block; margin:0 auto; margin-bottom: 10px; background:#fff;}
+.photo_list1 .sub a {display: block;position:relative;}
+.photo_list1 .sub img {vertical-align: top;border-radius: 3px;box-shadow: 1px 1px 10px 1px #BEBEBE;}
+
+.photo_list2 { padding: 10px 5px 0px; border-bottom: 1px solid #ededed; overflow: hidden;}
+.photo_list2 .imgbox {overflow: hidden;}
+.photo_list2 .sub {float: left;width: 50%;margin-bottom: 10px;overflow: hidden; background:#fff;}
+.photo_list2 .sub a {display: block;height: 0px;padding-bottom: 116.72%;position: relative;margin: 0px 5px;overflow: hidden;}
+.photo_list2 .sub img {vertical-align: top;position: absolute;}
+
+/*瀑布流开始*/
+.wall {display: block;position: relative; overflow:hidden;}
+.wall-column {display: block;position: relative;width: 50%;float: left;padding: 2%;box-sizing: border-box;}
+.article {display: block;margin: 0 0 8% 0; padding: 5%; background: white;border-radius: 3px;box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.05); transition: all 100;overflow: hidden;position: relative;}
+.article:hover{ transform: scale(1.01);}
+.article img {display: block;width: 100%;margin: 0 0 5% 0;}
+.article a{ color: #666;}
+.article p{ overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font-size: 1.2em; line-height: 1.5;}
+.article small{ font-size: 1em; color: #ff0000; line-height: 1.5;}
+.article input{ width: 20%; padding: 0.6em; border-radius: 0.4em; font-size: 1.1em; z-index: 100; background-color: #f60; border: none; position: absolute; bottom: 3%; right: 5%; color: #fff; box-shadow: 0 0 7px #d7d7d7;}
+/*瀑布流结束*/
+
+.container-fluid {padding:5px; background:#fff;}
+.container-fluid .sub {
+margin-bottom: 5px;
+float: left;
+width: 50%; position:relative; overflow:hidden;
+}
+.container-fluid .sub a{display:block; position:relative; margin:5px; min-height:80px; background:#fff; vertical-align:top;
+}
+.container-fluid .sub img {
+max-width: 100%; vertical-align:top;
+}
+
+
+@media screen and (min-width: 760px){
+	.photo_list {padding:10px 2%;}
+	.photo_list li {width:22%;margin:0 1%;margin-bottom:20px !important;}
+}
+@media screen and (max-width: 600px){
+	.photo_list {padding:10px 2%;}
+	.photo_list li {width:29%;margin:0 1.5%;margin-bottom:10px !important;}
+}
+@media screen and (max-width: 450px){
+	.photo_list {padding:5px 1%;}
+	.photo_list li {width:47%;margin:0 1%;}
+}

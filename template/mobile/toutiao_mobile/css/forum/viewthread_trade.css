@@ -1,0 +1,63 @@
+/*--------------------special--------------------*/
+/*thread_btn*/
+.thread_btn{}
+.thread_btn a{ display:block;}
+.thread_btn span{ color:#fff;}
+
+/*商品*/
+.t-box-sum { padding: 0 10px;
+    height: 40px; line-height:40px;
+    background: #2D8EE0;
+    margin-top: 20px;margin-bottom: 10px; color:#FFF;
+}
+.t-box-sum em { display:inline-block; font-size:18px; margin-right:20px; }
+.t-box-sum span { font-size:14px; float:right; }
+.t-box-sum span.xi1 {color: #ff0 !important; }
+
+.message img { margin:0; vertical-align:top;}
+.t-box { font-size:12px; margin-bottom:10px; border:1px solid #ddd;}
+.t-box .trade_img { position:relative; background:#fafafa; border-bottom:1px solid #ddd; text-align:center;}
+.t-box .trade_img img { vertical-align:top; max-width:100%;}
+.t-box .trade_img p { background:#ebebeb; display:block; height:30px; line-height:30px;}
+.t-box .trade_img p a { float:left; }
+/* 推荐商品 by dfox */
+.t-box em.hot { display:inline-block; margin-left:5px;background: #F60; overflow: hidden; padding:3px 3px; height: 12px; line-height:12px; font-size:12px; color:#fff; vertical-align:middle;border-radius: 3px; font-weight:100; }
+
+.t-box h4 { padding: 0 10px; margin-top:5px; line-height:24px;}
+.t-box h4 a { font-size:18px; line-height:24px; color:#000;}
+.t-box .trade_pay {padding: 0 10px; }
+.t-box .trade_pay strong{ font-size:20px; color:#f00;}
+.t-box dl { background:#ebebeb; height:30px; line-height:30px;}
+.t-box dl dt{ display:inline-block; float:left; width:50%}
+.t-box dl dt.z{ text-indent:10px;}
+.t-box dl dt.y{ }
+.t-box dl dt em{ margin-right:10px; color:#F60;}
+
+.trade_info { padding:0;}
+.trade_info .t-box { border:0;}
+.trade_info .t-box .spi { border-right:1px solid #ddd; margin:10px;}
+.trade_info .t-box dl { background:none;font-size:14px;}
+.trade_info .t-box dl:first-child {border-top:1px solid #ddd;}
+.trade_info .t-box dl dt { width:80px; padding-left:10px;  border-bottom:1px solid #ddd; background:#ebebeb; margin-right:10px; color:#333;}
+.trade_info .t-box dl dd { border-bottom:1px solid #ddd;}
+
+.trade_info_message { padding:10px;}
+.trade_info_message img { max-width:100%;}
+
+.trade_sell_info { background:#ebebeb; border-bottom:1px solid #ddd; border:1px solid #ddd; margin:10px;}
+.trade_sell_info li { height:40px; line-height:40px;}
+.trade_sell_info li .y { margin-right:15px; }
+.trade_sell_info li .avt { margin: 0 10px;}
+.trade_sell_info li .avt img { width:24px; height:24px;border-radius: 12px; vertical-align:middle;margin-right:5px;}
+.trade_sell_info li.fs { border-bottom:1px solid #ddd;}
+.trade_sell_info li td { text-align:center;}
+
+.bm{margin-bottom:10px;margin-top:10px;}
+.bm_h .o{float:right;width:31px;}
+.bm_h .o img{float:right;cursor:pointer;}
+.bm_h .i{padding-left:10px;}
+.bm_h .btn_default{margin-top:4px;}
+.bm_h{height:54px;background:url(../img/titlebg.png) repeat-x left bottom;line-height:54px;white-space:nowrap;overflow:hidden;}
+.bm_h h2{height:54px;background:url(../img/titlebg.png) no-repeat left top;}
+.bm_h:hover{background:url(../img/titlebg.png) repeat-x left -54px;}
+.bm_h h2 a{display:block;margin:0 31px 0 10px;padding-left:10px;font-size:18px;line-height:54px;font-weight:400;}

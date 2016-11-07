@@ -1,0 +1,17 @@
+<!--{template common/header}-->
+<link rel="stylesheet" href="template/mobile/toutiao_mobile/css/forum/forumdisplay.css" type="text/css" media="all">
+
+<div class="bm_c box_bg forum_pay">
+    <p>{lang youneedpay} $paycredits {$_G['setting']['extcredits'][$_G['setting']['creditstransextra'][1]]['unit']}{$_G['setting']['extcredits'][$_G['setting']['creditstransextra'][1]]['title']} {lang onlyintoforum}</p>
+    <div class="box_content">
+        <form method="post" autocomplete="off" action="forum.php?mod=forumdisplay&fid=$_G[fid]&action=paysubmit">
+            <input type="hidden" name="formhash" value="{FORMHASH}" />
+            <div class="tip_btn p10">
+            <button class="btn_default" type="submit" name="loginsubmit" value="true"><strong>{lang confirmyourpay}</strong></button>
+            &nbsp;<button class="btn_default btn_reset" type="button" onclick="history.go(-1)"><strong>{lang cancel}</strong></button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<!--{template common/footer}-->

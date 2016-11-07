@@ -1,0 +1,48 @@
+
+        <!--{eval $i = 0;}-->
+        <!--{loop $toutiaolist $thread}-->
+            <!--{eval $i++;}-->
+            
+                
+            <!--{if $thread[attachment] == 2}-->
+                <!--{if $thread['piccount'] >= 1 && $thread['piccount'] < 3}-->
+                	
+                <li>
+                	
+                             <a class="list" href="forum.php?mod=viewthread&tid=$thread[tid]">
+                                    <div class="pic">
+                                        <span class="pic_number">{$thread['piccount']}图</span>
+                                        <img class="one fade" data-original="$thread['pic']" src="/public/images/placeholder.png">
+                                    </div>
+                                    <div class="t"><span>{$thread[subject]}</span></div>
+                          </a>
+                       
+                </li>
+                
+                	
+                	
+               
+                <!--{elseif  $thread['piccount'] >= 3}-->
+                	
+                	<li>
+                         <a class="list" href="forum.php?mod=viewthread&tid=$thread[tid]">
+                                <div class="pic">
+                                    <span class="pic_number">{$thread['piccount']}图</span>
+                                    <!--{eval $iii=0;}-->
+                        <!--{loop $thread['pics'] $key}--> 
+                         <!--{eval $iii++;}-->    
+                                    <div class="img  <!--{if $iii==2}-->max<!--{/if}-->"><img class="fade" data-original="$key" src="/public/images/placeholder.png"></div>
+                                   <!--{/loop}-->
+                                </div>
+                                <div class="t"><span>{$thread[subject]}</span></div>
+                            </a>
+                   
+                    </li>
+                
+                <!--{/if}-->
+         
+            <!--{/if}-->
+                
+        
+        <!--{/loop}-->
+
